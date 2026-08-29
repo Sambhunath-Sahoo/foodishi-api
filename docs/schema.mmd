@@ -1,0 +1,285 @@
+erDiagram
+    USERS ||--o{ ADDRESSES : "has"
+    USERS ||--o{ ORDERS : "places"
+    USERS ||--o{ COUPON_REDEMPTIONS : "redeems"
+    USERS ||--o{ CONVERSATIONS : "opens"
+    USERS ||--o{ RESTAURANT_STAFF : "works for"
+
+    RESTAURANTS ||--|| RESTAURANT_POLICIES : "governed by"
+    RESTAURANTS ||--o{ RESTAURANT_CUISINES : "tagged"
+    CUISINES    ||--o{ RESTAURANT_CUISINES : "tags"
+    RESTAURANTS ||--o{ MENU_CATEGORIES : "organizes"
+    RESTAURANTS ||--o{ MENU_ITEMS : "offers"
+    RESTAURANTS ||--o{ RESTAURANT_STAFF : "staffed by"
+    MENU_CATEGORIES ||--o{ MENU_ITEMS : "groups"
+    MENU_ITEMS ||--o{ MENU_ITEM_IMAGES : "illustrated by"
+
+    RESTAURANTS ||--o{ ORDERS : "fulfils"
+    ADDRESSES   ||--o{ ORDERS : "delivered to"
+    COUPONS     ||--o{ ORDERS : "discounts"
+
+    ORDERS ||--|{ ORDER_ITEMS : "contains"
+    MENU_ITEMS ||--o{ ORDER_ITEMS : "referenced by"
+    ORDERS ||--o{ ORDER_STATUS_EVENTS : "logs"
+
+    ORDERS   ||--o{ PAYMENTS : "paid by"
+    PAYMENTS ||--o{ REFUNDS : "reversed by"
+    ORDERS   ||--o{ REFUNDS : "refunded via"
+
+    COUPONS ||--o{ COUPON_REDEMPTIONS : "redeemed as"
+    ORDERS  ||--o| COUPON_REDEMPTIONS : "records"
+
+    ORDERS ||--o| DELIVERIES : "shipped as"
+    DELIVERY_PARTNERS ||--o{ DELIVERIES : "carries"
+
+    ORDERS ||--o{ CONVERSATIONS : "discussed in"
+    CONVERSATIONS ||--o{ MESSAGES : "contains"
+
+    USERS {
+        int id PK
+        uuid auth_user_id UK "FK auth.users, nullable"
+        varchar name
+        varchar email UK
+        varchar phone
+        varchar city
+        bool is_active
+        timestamptz created_at
+        timestamptz updated_at
+    }
+
+    RESTAURANT_STAFF {
+        int id PK
+        int user_id FK "unique with restaurant_id"
+        int restaurant_id FK
+        enum role "owner, manager, staff"
+        bool is_active "revoke, do not delete"
+        timestamptz created_at
+        timestamptz updated_at
+    }
+
+    ADDRESSES {
+        int id PK
+        int user_id FK
+        varchar label "home, work"
+        varchar line1
+        varchar line2
+        varchar city
+        varchar pincode
+        numeric latitude
+        numeric longitude
+        bool is_default "one per user"
+    }
+
+    CUISINES {
+        int id PK
+        varchar name
+        varchar slug UK
+    }
+
+    RESTAURANTS {
+        int id PK
+        varchar name
+        varchar slug UK
+        text description
+        varchar city
+        varchar area
+        varchar address_line
+        numeric latitude
+        numeric longitude
+        varchar phone
+        numeric rating
+        int rating_count
+        numeric price_for_two
+        int avg_prep_minutes "feeds ETA"
+        time opens_at
+        time closes_at
+        bool is_active
+        text image_url "nullable"
+    }
+
+    RESTAURANT_CUISINES {
+        int restaurant_id PK,FK
+        int cuisine_id PK,FK
+    }
+
+    RESTAURANT_POLICIES {
+        int restaurant_id PK,FK
+        int cancellation_window_mins
+        numeric cancellation_fee_percent
+        int refund_sla_hours
+        numeric delivery_fee_base
+        numeric delivery_fee_per_km
+        numeric free_delivery_above "nullable"
+        numeric packaging_fee
+        numeric min_order_value
+        numeric max_delivery_distance_km
+    }
+
+    MENU_CATEGORIES {
+        int id PK
+        int restaurant_id FK
+        varchar name
+        int sort_order
+    }
+
+    MENU_ITEMS {
+        int id PK
+        int restaurant_id FK
+        int category_id FK
+        varchar name
+        text description
+        numeric price
+        bool is_veg
+        enum spice_level
+        int serves
+        int calories
+        bool is_available
+    }
+
+    MENU_ITEM_IMAGES {
+        int id PK
+        int menu_item_id FK "UK with sort_order"
+        text storage_path
+        text alt_text "nullable"
+        int sort_order "CHECK 0..6"
+        int width "nullable"
+        int height "nullable"
+        int bytes "nullable"
+    }
+
+    ORDERS {
+        int id PK
+        int user_id FK
+        int restaurant_id FK
+        int address_id FK
+        int coupon_id FK "nullable"
+        enum status
+        numeric subtotal
+        numeric packaging_fee
+        numeric delivery_fee
+        numeric tax_amount
+        numeric discount_amount
+        numeric total_amount "CHECK reconciles"
+        numeric distance_km
+        timestamptz placed_at
+        timestamptz cancellable_until "frozen policy"
+        timestamptz promised_at "quoted ETA"
+        timestamptz cancelled_at
+        text cancellation_reason
+        timestamptz delivered_at
+    }
+
+    ORDER_ITEMS {
+        int id PK
+        int order_id FK
+        int menu_item_id FK "analytics only"
+        varchar item_name "snapshot"
+        numeric unit_price "snapshot"
+        int quantity "CHECK gt 0"
+        numeric line_total
+        text notes
+    }
+
+    ORDER_STATUS_EVENTS {
+        int id PK
+        int order_id FK
+        enum from_status
+        enum to_status
+        varchar actor_type "user, restaurant, system, agent"
+        int actor_id
+        text reason
+        timestamptz created_at
+    }
+
+    PAYMENTS {
+        int id PK
+        int order_id FK
+        enum method "upi, card, netbanking, wallet, cod"
+        varchar provider
+        varchar provider_ref
+        numeric amount
+        char currency "INR"
+        enum status
+        timestamptz authorized_at
+        timestamptz captured_at
+        text failed_reason
+    }
+
+    REFUNDS {
+        int id PK
+        int payment_id FK
+        int order_id FK
+        numeric amount "partial allowed"
+        enum reason
+        enum status
+        timestamptz sla_due_at "frozen policy"
+        timestamptz initiated_at
+        timestamptz completed_at
+        varchar provider_ref
+    }
+
+    COUPONS {
+        int id PK
+        varchar code UK
+        text description
+        enum discount_type "flat, percent"
+        numeric discount_value
+        numeric max_discount_amount "caps percent"
+        numeric min_order_value
+        enum scope "global, restaurant, cuisine"
+        int restaurant_id FK "nullable"
+        int cuisine_id FK "nullable"
+        timestamptz valid_from
+        timestamptz valid_until
+        int usage_limit_total
+        int usage_limit_per_user
+        int times_used
+        bool is_active
+    }
+
+    COUPON_REDEMPTIONS {
+        int id PK
+        int coupon_id FK
+        int user_id FK
+        int order_id FK,UK
+        numeric discount_applied
+        timestamptz redeemed_at
+    }
+
+    DELIVERY_PARTNERS {
+        int id PK
+        varchar name
+        varchar phone
+        varchar vehicle_type
+        bool is_available
+    }
+
+    DELIVERIES {
+        int id PK
+        int order_id FK,UK
+        int partner_id FK
+        numeric distance_km
+        int eta_minutes
+        enum status
+        timestamptz assigned_at
+        timestamptz picked_up_at
+        timestamptz delivered_at
+    }
+
+    CONVERSATIONS {
+        int id PK
+        int user_id FK
+        int order_id FK "nullable"
+        varchar status
+        timestamptz created_at
+    }
+
+    MESSAGES {
+        int id PK
+        int conversation_id FK
+        varchar role "user, assistant, tool"
+        text content
+        varchar tool_name
+        jsonb tool_payload
+        timestamptz created_at
+    }

@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local environment
+.env
+.env.*
+# ...but the template is not a secret and is the only record of what a
+# deployment needs. AUTH_ENABLED now defaults to TRUE, so a missing variable
+# fails closed rather than silently disabling authentication -- which makes
+# having the list written down matter more, not less.
+!.env.example
+# supabase-root-2021-ca.crt is deliberately NOT ignored: it is Supabase's
+# PUBLIC root CA, not a secret, and app/db.py refuses to start without it. It
+# was ignored here, which is why the database connection ran with unverified
+# TLS -- a deploy had no CA to verify against.

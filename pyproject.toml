@@ -1,0 +1,58 @@
+[project]
+name = "foodishi-api"
+version = "0.1.0"
+description = "Foodishi AI — food ordering & support platform (backend)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30.0",
+    "python-dotenv>=1.0.1",
+    "supabase>=2.31.0",
+    "pydantic[email]>=2.13.4",
+    "pyjwt[crypto]>=2.13.0",
+]
+
+[tool.uv]
+package = false
+
+# Pinned so `uv run ruff check app` gives the same answer on every machine.
+# Without ruff as a dependency the only way to run it was `uvx ruff`, which
+# resolves the newest release -- so the config was pinned and the TOOL was not,
+# which is half a fix.
+[dependency-groups]
+dev = ["ruff==0.16.4"]
+
+# Pinned deliberately. With no [tool.ruff] section, `ruff check` ran on whatever
+# the installed version's defaults happened to be -- 82 findings under 0.16.4, 36
+# of them a cosmetic Decimal("0") -> Decimal(0) preference -- so the answer
+# changed with the tool rather than with the code, and nobody could tell a real
+# regression from a version bump.
+#
+# ASYNC and DTZ are the two worth having beyond the obvious for THIS codebase:
+# ASYNC catches a blocking call inside an async handler, which is the failure mode
+# of a fully-async FastAPI service, and DTZ catches naive datetimes in a schema
+# that stores timestamptz throughout and compares against aware now().
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "BLE", "ASYNC", "DTZ", "S", "RUF"]
+ignore = [
+    # Long lines are already rare here and the existing comments are prose that
+    # reads better unwrapped than folded.
+    "E501",
+    # Decimal("0") over Decimal(0) is intentional throughout: money literals are
+    # written as strings so nobody is tempted to write Decimal(0.1).
+    "RUF046",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# A health check must report EVERY failure, including ones it cannot name.
+"app/routers/health.py" = ["BLE001"]
+# The seeder builds fixed datasets from a fixed RNG seed; S311 is about crypto.
+# S105: DEV_PASSWORD is a documented laptop-only seed credential that nothing
+# outside its module imports. Rotate the real thing in Supabase, not here.
+"app/seed/*" = ["S311", "S608", "S105"]

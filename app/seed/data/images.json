@@ -1,0 +1,3938 @@
+{
+ "_keying": "covers are keyed by RESTAURANT NAME and dishes by 'Restaurant Name::Dish Name'. They were keyed on database ids, which are volatile: a reseed that renumbered the catalog silently matched nothing and every photo vanished. Names are the stable identity in this seed data. NOTE: the storage_path values still embed the ORIGINAL restaurant and menu-item ids, because that is where the bytes actually live in Supabase Storage -- do not rewrite them to match new ids without copying the objects first.",
+ "covers": {
+  "Tandoori Nights": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/1/cover/f366926ca84359739a41b25e9b52e66b.jpg",
+  "Idli Factory": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/10/cover/1179ffdc9bfc5cf88a04978af8f0004b.jpg",
+  "Dragon Bowl": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/11/cover/25fa6fb9063b432758f728a68ee44f64.jpg",
+  "Hyderabadi Dum": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/12/cover/2d41adb1b49fa83feaa6735767c51969.jpg",
+  "Napoli Slice": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/13/cover/3c148a77d995e1638ae06b9b22572ed4.jpg",
+  "The Dessert Room": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/14/cover/e0aecc2dd6c1fba1ede74d44ae458aa5.jpg",
+  "Filter Coffee Co": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/15/cover/0dcb8bb93454beededb6fdf81275efd0.jpg",
+  "Mumbai Vada Pav": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/16/cover/b33883107f32f4f1c6fd928668dadad1.jpg",
+  "Curry Leaf Kitchen": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/17/cover/383fe4211e7891db44e177fd212f318e.jpg",
+  "Anna's Tiffin Room": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/18/cover/fc62c84ca1581b671a8aa939799f2ba5.jpg",
+  "Sichuan Street": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/19/cover/4328ac6679f5360a54c8ffb2cbdeecdb.jpg",
+  "Dakshin Diaries": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/2/cover/ec0dcae92f37b30ff695f50a16a60ebc.jpg",
+  "Lucknowi Handi": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/20/cover/c7ff1f6514180b98f295bc080c6c7a61.jpg",
+  "Cheese Republic": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/21/cover/30354f75bcbb6771ac40158895f98579.jpg",
+  "Gulab Junction": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/22/cover/882992560ce6605e26bf9f43d97b43f7.jpg",
+  "Nimbu Soda Bar": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/23/cover/0d23429aa7c75a165c865811de908bff.jpg",
+  "Kathi Roll Corner": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/24/cover/7da3c90cb10e7c4f4489876348a1ebe4.jpg",
+  "Spice Route Deli": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/25/cover/9d33311c149e3b408f74fa2175c22578.jpg",
+  "Wok This Way": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/3/cover/8acb19d92cecc2b5323982250e12ccff.jpg",
+  "Paradise Biryani House": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/4/cover/bebd3d8969d2d55a28a117545390e83e.jpg",
+  "Crust & Coal": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/5/cover/173f7951a58dfe1744bdff0c9ed58c4d.jpg",
+  "Sugar Theory": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/6/cover/1fa7ae09ee72f3220d99ac762a4329a0.jpg",
+  "Chai Point Cafe": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/7/cover/61966a3d6b62e9150ebdf8263542b3e4.jpg",
+  "Chaat Chowk": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/8/cover/1f8fb865c2ce225dc24f613aefd48513.jpg",
+  "Punjab Grill Express": "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/restaurants/9/cover/bc5f3ac312088097e92737fd52f8afab.jpg"
+ },
+ "dishes": {
+  "Tandoori Nights::Paneer Tikka": {
+   "storage_path": "restaurants/1/menu-items/1/87d26226fac2cefc6580c10a7b72dc41.jpg",
+   "name": "Paneer Tikka"
+  },
+  "Tandoori Nights::Rogan Josh": {
+   "storage_path": "restaurants/1/menu-items/10/3e287607c84c41d89dde608f32958fe6.jpg",
+   "name": "Rogan Josh"
+  },
+  "Chai Point Cafe::Bhel Puri": {
+   "storage_path": "restaurants/7/menu-items/100/bc424e426ca7dec3286555e60706c333.jpg",
+   "name": "Bhel Puri"
+  },
+  "Chai Point Cafe::Dahi Puri": {
+   "storage_path": "restaurants/7/menu-items/101/27aeb3df5e5d645fc3988135e38ebbed.jpg",
+   "name": "Dahi Puri"
+  },
+  "Chai Point Cafe::Samosa Chaat": {
+   "storage_path": "restaurants/7/menu-items/102/120eb9c7c85abbb49fb5980333309c2e.jpg",
+   "name": "Samosa Chaat"
+  },
+  "Chai Point Cafe::Vada Pav": {
+   "storage_path": "restaurants/7/menu-items/103/11ce09f0276ef7a35b239482c75ccda6.jpg",
+   "name": "Vada Pav"
+  },
+  "Chai Point Cafe::Misal Pav": {
+   "storage_path": "restaurants/7/menu-items/104/c48c204404f62baf41f27537a21783c5.jpg",
+   "name": "Misal Pav"
+  },
+  "Chai Point Cafe::Chicken Kathi Roll": {
+   "storage_path": "restaurants/7/menu-items/105/014ba5da6ef1b8bf5d60be235a171d99.jpg",
+   "name": "Chicken Kathi Roll"
+  },
+  "Chai Point Cafe::Paneer Kathi Roll": {
+   "storage_path": "restaurants/7/menu-items/106/17f7f7fe13e167f189a280fc5f9c4c9f.jpg",
+   "name": "Paneer Kathi Roll"
+  },
+  "Chaat Chowk::Pani Puri (6 pcs)": {
+   "storage_path": "restaurants/8/menu-items/107/7b51797b72788b2bdfe3bc235b6da911.jpg",
+   "name": "Pani Puri (6 pcs)"
+  },
+  "Chaat Chowk::Bhel Puri": {
+   "storage_path": "restaurants/8/menu-items/108/c03ef96a9c62485bc6e5d82fe6a42787.jpg",
+   "name": "Bhel Puri"
+  },
+  "Chaat Chowk::Dahi Puri": {
+   "storage_path": "restaurants/8/menu-items/109/66991f5d4eba0de128d12ed176fdbea7.jpg",
+   "name": "Dahi Puri"
+  },
+  "Tandoori Nights::Chole Bhature": {
+   "storage_path": "restaurants/1/menu-items/11/7a27e69c584d8fd5e460fa90342ce3ca.jpg",
+   "name": "Chole Bhature"
+  },
+  "Chaat Chowk::Samosa Chaat": {
+   "storage_path": "restaurants/8/menu-items/110/291f11e7267af47f11129eaeabb3672e.jpg",
+   "name": "Samosa Chaat"
+  },
+  "Chaat Chowk::Vada Pav": {
+   "storage_path": "restaurants/8/menu-items/111/bd3587b0f09b825ee698684189973d81.jpg",
+   "name": "Vada Pav"
+  },
+  "Chaat Chowk::Misal Pav": {
+   "storage_path": "restaurants/8/menu-items/112/410a7fd05b544cf100c9cad5d6d5d747.jpg",
+   "name": "Misal Pav"
+  },
+  "Chaat Chowk::Chicken Kathi Roll": {
+   "storage_path": "restaurants/8/menu-items/113/e1877036358f27967df819df3186c991.jpg",
+   "name": "Chicken Kathi Roll"
+  },
+  "Chaat Chowk::Paneer Kathi Roll": {
+   "storage_path": "restaurants/8/menu-items/114/d6decba79538c09a062a5bce228a60ec.jpg",
+   "name": "Paneer Kathi Roll"
+  },
+  "Punjab Grill Express::Paneer Tikka": {
+   "storage_path": "restaurants/9/menu-items/115/e4233ec039eac070ed1c4d9c3561db20.jpg",
+   "name": "Paneer Tikka"
+  },
+  "Punjab Grill Express::Hara Bhara Kebab": {
+   "storage_path": "restaurants/9/menu-items/116/a129be573bfd1b7d360078637d816784.jpg",
+   "name": "Hara Bhara Kebab"
+  },
+  "Punjab Grill Express::Chicken Malai Tikka": {
+   "storage_path": "restaurants/9/menu-items/117/497d8afe8d398ceccad628803790d5f9.jpg",
+   "name": "Chicken Malai Tikka"
+  },
+  "Punjab Grill Express::Tandoori Chicken (Half)": {
+   "storage_path": "restaurants/9/menu-items/118/5eb44d345675420eb971fdd7e8ec4431.jpg",
+   "name": "Tandoori Chicken (Half)"
+  },
+  "Punjab Grill Express::Amritsari Fish Fry": {
+   "storage_path": "restaurants/9/menu-items/119/4e97fc45cc6ed27f73195d88444a32fc.jpg",
+   "name": "Amritsari Fish Fry"
+  },
+  "Tandoori Nights::Butter Naan": {
+   "storage_path": "restaurants/1/menu-items/12/d9ee45ddfa37c7aa19e2b3291103645a.jpg",
+   "name": "Butter Naan"
+  },
+  "Punjab Grill Express::Dal Makhani": {
+   "storage_path": "restaurants/9/menu-items/120/d20618e2b6bc47abaedef04af370069d.jpg",
+   "name": "Dal Makhani"
+  },
+  "Punjab Grill Express::Paneer Butter Masala": {
+   "storage_path": "restaurants/9/menu-items/121/635b41e95ff641e2ffa9e435444916ec.jpg",
+   "name": "Paneer Butter Masala"
+  },
+  "Punjab Grill Express::Kadai Paneer": {
+   "storage_path": "restaurants/9/menu-items/122/d50d76bff3c27cf8426f1377c9f4a390.jpg",
+   "name": "Kadai Paneer"
+  },
+  "Punjab Grill Express::Butter Chicken": {
+   "storage_path": "restaurants/9/menu-items/123/a4f8360bf07f7da4ef1c3fd248fa7517.jpg",
+   "name": "Butter Chicken"
+  },
+  "Punjab Grill Express::Rogan Josh": {
+   "storage_path": "restaurants/9/menu-items/124/93977fd3c1d07f596b91927da082ba1d.jpg",
+   "name": "Rogan Josh"
+  },
+  "Punjab Grill Express::Chole Bhature": {
+   "storage_path": "restaurants/9/menu-items/125/3711dafb16fe748a38e0cdc6718c2fc6.jpg",
+   "name": "Chole Bhature"
+  },
+  "Punjab Grill Express::Butter Naan": {
+   "storage_path": "restaurants/9/menu-items/126/fc1409375bd2f25ee2b8c6276ac043d0.jpg",
+   "name": "Butter Naan"
+  },
+  "Punjab Grill Express::Garlic Naan": {
+   "storage_path": "restaurants/9/menu-items/127/7ce104f468b693ef522d28b2ad403fe6.jpg",
+   "name": "Garlic Naan"
+  },
+  "Punjab Grill Express::Laccha Paratha": {
+   "storage_path": "restaurants/9/menu-items/128/59d2746f1c6532d174dcc332993f6312.jpg",
+   "name": "Laccha Paratha"
+  },
+  "Punjab Grill Express::Tandoori Roti": {
+   "storage_path": "restaurants/9/menu-items/129/684bf10bc8f390e486b36327607f9ab2.jpg",
+   "name": "Tandoori Roti"
+  },
+  "Tandoori Nights::Garlic Naan": {
+   "storage_path": "restaurants/1/menu-items/13/9eaf3062dc86bc6726f372ce578adb82.jpg",
+   "name": "Garlic Naan"
+  },
+  "Idli Factory::Masala Dosa": {
+   "storage_path": "restaurants/10/menu-items/130/bd8a3c4024b452a8a54de2880374bf65.jpg",
+   "name": "Masala Dosa"
+  },
+  "Idli Factory::Plain Dosa": {
+   "storage_path": "restaurants/10/menu-items/131/830a66e95b4d2552749e000d10f40996.jpg",
+   "name": "Plain Dosa"
+  },
+  "Idli Factory::Rava Dosa": {
+   "storage_path": "restaurants/10/menu-items/132/1b60b153c45beb60177e503ff9e34158.jpg",
+   "name": "Rava Dosa"
+  },
+  "Idli Factory::Idli (2 pcs)": {
+   "storage_path": "restaurants/10/menu-items/133/b15c13fe7aa64e5e23e5f3300fc1dca8.jpg",
+   "name": "Idli (2 pcs)"
+  },
+  "Idli Factory::Medu Vada (2 pcs)": {
+   "storage_path": "restaurants/10/menu-items/134/3057867acda6c141e275ed0f17084e76.jpg",
+   "name": "Medu Vada (2 pcs)"
+  },
+  "Idli Factory::Pongal": {
+   "storage_path": "restaurants/10/menu-items/135/04568392ff8f7833b588074a9d9bff5f.jpg",
+   "name": "Pongal"
+  },
+  "Idli Factory::South Indian Thali": {
+   "storage_path": "restaurants/10/menu-items/136/dbc29d362e24873e7a4094e69e0022bd.jpg",
+   "name": "South Indian Thali"
+  },
+  "Idli Factory::Curd Rice": {
+   "storage_path": "restaurants/10/menu-items/137/9b30ecdbe4d288544fa080b405aaf530.jpg",
+   "name": "Curd Rice"
+  },
+  "Idli Factory::Lemon Rice": {
+   "storage_path": "restaurants/10/menu-items/138/3638115217e9a2f549be3c2396d2c1d5.jpg",
+   "name": "Lemon Rice"
+  },
+  "Idli Factory::Bisi Bele Bath": {
+   "storage_path": "restaurants/10/menu-items/139/b3a8a147bd026720edd181baf8ca368c.jpg",
+   "name": "Bisi Bele Bath"
+  },
+  "Tandoori Nights::Laccha Paratha": {
+   "storage_path": "restaurants/1/menu-items/14/83554db5ca9d8706721abb9060f96b99.jpg",
+   "name": "Laccha Paratha"
+  },
+  "Idli Factory::Sambar Bowl": {
+   "storage_path": "restaurants/10/menu-items/140/ad36ed3397f579a9dac175be7f54acdd.jpg",
+   "name": "Sambar Bowl"
+  },
+  "Idli Factory::Coconut Chutney": {
+   "storage_path": "restaurants/10/menu-items/141/966851a066f92367ff4b5c714692e14a.jpg",
+   "name": "Coconut Chutney"
+  },
+  "Idli Factory::Ghee Podi": {
+   "storage_path": "restaurants/10/menu-items/142/1992c919daa8542816c02fed96864b9b.jpg",
+   "name": "Ghee Podi"
+  },
+  "Dragon Bowl::Veg Manchurian Dry": {
+   "storage_path": "restaurants/11/menu-items/143/7377924d5df767c044b34593581ee18e.jpg",
+   "name": "Veg Manchurian Dry"
+  },
+  "Dragon Bowl::Chilli Paneer": {
+   "storage_path": "restaurants/11/menu-items/144/f2cc0e1448ad540fbedcaa21838b802f.jpg",
+   "name": "Chilli Paneer"
+  },
+  "Dragon Bowl::Chicken Lollipop": {
+   "storage_path": "restaurants/11/menu-items/145/ad6de5ba9637ccf4103888890f099a68.jpg",
+   "name": "Chicken Lollipop"
+  },
+  "Dragon Bowl::Crispy Corn": {
+   "storage_path": "restaurants/11/menu-items/146/bacba29783bee662da8c2c95b5c280fd.jpg",
+   "name": "Crispy Corn"
+  },
+  "Dragon Bowl::Hakka Noodles": {
+   "storage_path": "restaurants/11/menu-items/147/420ce3fe6c2c3280e64a10fe1aa8ad9a.jpg",
+   "name": "Hakka Noodles"
+  },
+  "Dragon Bowl::Schezwan Fried Rice": {
+   "storage_path": "restaurants/11/menu-items/148/e9510c7edef56ee3ea696cee8ae24328.jpg",
+   "name": "Schezwan Fried Rice"
+  },
+  "Dragon Bowl::Chicken Fried Rice": {
+   "storage_path": "restaurants/11/menu-items/149/12ea7608057c5cd70a2ef8c8ce255c84.jpg",
+   "name": "Chicken Fried Rice"
+  },
+  "Tandoori Nights::Tandoori Roti": {
+   "storage_path": "restaurants/1/menu-items/15/465c9ac0cbfaca2fe2e51434d56639cd.jpg",
+   "name": "Tandoori Roti"
+  },
+  "Dragon Bowl::Triple Schezwan Rice": {
+   "storage_path": "restaurants/11/menu-items/150/a3cac4393c5b4f94a9edcafd8e421889.jpg",
+   "name": "Triple Schezwan Rice"
+  },
+  "Dragon Bowl::Kung Pao Chicken": {
+   "storage_path": "restaurants/11/menu-items/151/8b6c11136fafdc6b0bd47715c25d1ef7.jpg",
+   "name": "Kung Pao Chicken"
+  },
+  "Dragon Bowl::Mapo Tofu": {
+   "storage_path": "restaurants/11/menu-items/152/6d4057ae85c8ad4ecf5f62fa84e49813.jpg",
+   "name": "Mapo Tofu"
+  },
+  "Hyderabadi Dum::Hyderabadi Chicken Biryani": {
+   "storage_path": "restaurants/12/menu-items/153/fb518f489eb0788e8ad8a446f6d4ecc9.jpg",
+   "name": "Hyderabadi Chicken Biryani"
+  },
+  "Hyderabadi Dum::Mutton Dum Biryani": {
+   "storage_path": "restaurants/12/menu-items/154/f951be81aaabb7ec3bac8ad5a5cc1437.jpg",
+   "name": "Mutton Dum Biryani"
+  },
+  "Hyderabadi Dum::Veg Dum Biryani": {
+   "storage_path": "restaurants/12/menu-items/155/912160a1c5d537f5bd870d3e7db62b9f.jpg",
+   "name": "Veg Dum Biryani"
+  },
+  "Hyderabadi Dum::Egg Biryani": {
+   "storage_path": "restaurants/12/menu-items/156/7d2533ca29f09112db976e05fbfd5f68.jpg",
+   "name": "Egg Biryani"
+  },
+  "Hyderabadi Dum::Prawn Biryani": {
+   "storage_path": "restaurants/12/menu-items/157/162f20698a808f5a9459632151c6f082.jpg",
+   "name": "Prawn Biryani"
+  },
+  "Hyderabadi Dum::Mirchi Ka Salan": {
+   "storage_path": "restaurants/12/menu-items/158/5a5ecb73803176a787715fdf95c1597d.jpg",
+   "name": "Mirchi Ka Salan"
+  },
+  "Hyderabadi Dum::Raita": {
+   "storage_path": "restaurants/12/menu-items/159/67439f7bb99d9e04580d72292a71de3e.jpg",
+   "name": "Raita"
+  },
+  "Tandoori Nights::Hyderabadi Chicken Biryani": {
+   "storage_path": "restaurants/1/menu-items/16/b1035ce3676bcee8095771a1b23ce8f9.jpg",
+   "name": "Hyderabadi Chicken Biryani"
+  },
+  "Hyderabadi Dum::Double Ka Meetha": {
+   "storage_path": "restaurants/12/menu-items/160/208ff89d6ea7ddb0aff4c499045aa8ff.jpg",
+   "name": "Double Ka Meetha"
+  },
+  "Napoli Slice::Margherita": {
+   "storage_path": "restaurants/13/menu-items/161/d8e9110b9815654e6ae08db271fdcd5a.jpg",
+   "name": "Margherita"
+  },
+  "Napoli Slice::Farmhouse": {
+   "storage_path": "restaurants/13/menu-items/162/f63731b589505e3363d0cf28e8266d3e.jpg",
+   "name": "Farmhouse"
+  },
+  "Napoli Slice::Peri Peri Chicken": {
+   "storage_path": "restaurants/13/menu-items/163/af0db851f0a105739a6e2f011851cf0a.jpg",
+   "name": "Peri Peri Chicken"
+  },
+  "Napoli Slice::Paneer Makhani Pizza": {
+   "storage_path": "restaurants/13/menu-items/164/93d4176d0bf5e4a3cd421d8830488c69.jpg",
+   "name": "Paneer Makhani Pizza"
+  },
+  "Napoli Slice::Pepperoni": {
+   "storage_path": "restaurants/13/menu-items/165/425045f342a3f32d1ae9f1608708103f.jpg",
+   "name": "Pepperoni"
+  },
+  "Napoli Slice::Garlic Breadsticks": {
+   "storage_path": "restaurants/13/menu-items/166/2009c523270ed03e002616c4fb101397.jpg",
+   "name": "Garlic Breadsticks"
+  },
+  "Napoli Slice::Cheesy Dip": {
+   "storage_path": "restaurants/13/menu-items/167/14fb2e0017046e2f83bcf5aa5985b335.jpg",
+   "name": "Cheesy Dip"
+  },
+  "Napoli Slice::Peri Peri Fries": {
+   "storage_path": "restaurants/13/menu-items/168/30d5c96e78444f9ad53bd5eaaee6908a.jpg",
+   "name": "Peri Peri Fries"
+  },
+  "The Dessert Room::Gulab Jamun (2 pcs)": {
+   "storage_path": "restaurants/14/menu-items/169/d0e236cf6d87d030f28c3ac61295238b.jpg",
+   "name": "Gulab Jamun (2 pcs)"
+  },
+  "Tandoori Nights::Mutton Dum Biryani": {
+   "storage_path": "restaurants/1/menu-items/17/25ad0773a4590e2ef9f134e8851c3ff6.jpg",
+   "name": "Mutton Dum Biryani"
+  },
+  "The Dessert Room::Rasmalai (2 pcs)": {
+   "storage_path": "restaurants/14/menu-items/170/4cb0920833da38c561dc517c6a1d71c2.jpg",
+   "name": "Rasmalai (2 pcs)"
+  },
+  "The Dessert Room::Gajar Ka Halwa": {
+   "storage_path": "restaurants/14/menu-items/171/5544b315c17d84e54a3a7ac5b61c54b7.jpg",
+   "name": "Gajar Ka Halwa"
+  },
+  "The Dessert Room::Chocolate Truffle Slice": {
+   "storage_path": "restaurants/14/menu-items/172/539440c81ecacc5d0a43ad53d60918b6.jpg",
+   "name": "Chocolate Truffle Slice"
+  },
+  "The Dessert Room::New York Cheesecake": {
+   "storage_path": "restaurants/14/menu-items/173/4ba0012e814ac21376e1a2f958359b96.jpg",
+   "name": "New York Cheesecake"
+  },
+  "The Dessert Room::Tiramisu Jar": {
+   "storage_path": "restaurants/14/menu-items/174/644059b0132e9dbd84c8bc7b9ae70624.jpg",
+   "name": "Tiramisu Jar"
+  },
+  "The Dessert Room::Brownie with Ice Cream": {
+   "storage_path": "restaurants/14/menu-items/175/b825766d1a42698d80582998a1e06923.jpg",
+   "name": "Brownie with Ice Cream"
+  },
+  "Filter Coffee Co::Masala Chai": {
+   "storage_path": "restaurants/15/menu-items/176/113222dce01a044b34aa8f3e27fbd6a4.jpg",
+   "name": "Masala Chai"
+  },
+  "Filter Coffee Co::Filter Coffee": {
+   "storage_path": "restaurants/15/menu-items/177/34c9ba58b56c51d737eccea25da3c225.jpg",
+   "name": "Filter Coffee"
+  },
+  "Filter Coffee Co::Cappuccino": {
+   "storage_path": "restaurants/15/menu-items/178/fedebb8f1a0038ec2e2fd126b1963bc7.jpg",
+   "name": "Cappuccino"
+  },
+  "Filter Coffee Co::Sweet Lassi": {
+   "storage_path": "restaurants/15/menu-items/179/9fdc33bb50bf58470f92022474506248.jpg",
+   "name": "Sweet Lassi"
+  },
+  "Tandoori Nights::Veg Dum Biryani": {
+   "storage_path": "restaurants/1/menu-items/18/06cc6f68a139ceeae5dc4485a3d00953.jpg",
+   "name": "Veg Dum Biryani"
+  },
+  "Filter Coffee Co::Cold Coffee": {
+   "storage_path": "restaurants/15/menu-items/180/8b56dfb8ed61395175b23f24de4d1365.jpg",
+   "name": "Cold Coffee"
+  },
+  "Filter Coffee Co::Fresh Lime Soda": {
+   "storage_path": "restaurants/15/menu-items/181/fd70da2b2c402f11797f4ac1fcfbea28.jpg",
+   "name": "Fresh Lime Soda"
+  },
+  "Filter Coffee Co::Mango Shake": {
+   "storage_path": "restaurants/15/menu-items/182/e0e3c9d29fdc6a3ff07f2b5594778d40.jpg",
+   "name": "Mango Shake"
+  },
+  "Filter Coffee Co::Masala Dosa": {
+   "storage_path": "restaurants/15/menu-items/183/949ccdc1b89b9e3dc510409adea63af1.jpg",
+   "name": "Masala Dosa"
+  },
+  "Filter Coffee Co::Plain Dosa": {
+   "storage_path": "restaurants/15/menu-items/184/3516d90b28fa5fe0824105d3b6bdb522.jpg",
+   "name": "Plain Dosa"
+  },
+  "Filter Coffee Co::Rava Dosa": {
+   "storage_path": "restaurants/15/menu-items/185/2eda9894edb6629db8d7fbf541895aba.jpg",
+   "name": "Rava Dosa"
+  },
+  "Filter Coffee Co::Idli (2 pcs)": {
+   "storage_path": "restaurants/15/menu-items/186/37ea9006d9d00aab95db46db10f3bacc.jpg",
+   "name": "Idli (2 pcs)"
+  },
+  "Filter Coffee Co::Medu Vada (2 pcs)": {
+   "storage_path": "restaurants/15/menu-items/187/8a0ef3f5f639026d13ddf380ce09805f.jpg",
+   "name": "Medu Vada (2 pcs)"
+  },
+  "Filter Coffee Co::Pongal": {
+   "storage_path": "restaurants/15/menu-items/188/7bad1539ca922651289c0279cfd80a8b.jpg",
+   "name": "Pongal"
+  },
+  "Filter Coffee Co::South Indian Thali": {
+   "storage_path": "restaurants/15/menu-items/189/f8693f9fca295aa93f5546ba1cfe2a4c.jpg",
+   "name": "South Indian Thali"
+  },
+  "Tandoori Nights::Egg Biryani": {
+   "storage_path": "restaurants/1/menu-items/19/02142dd63632b7f911a6798fad1569b6.jpg",
+   "name": "Egg Biryani"
+  },
+  "Filter Coffee Co::Curd Rice": {
+   "storage_path": "restaurants/15/menu-items/190/859a7a1d074fb58e074230e546066a63.jpg",
+   "name": "Curd Rice"
+  },
+  "Filter Coffee Co::Lemon Rice": {
+   "storage_path": "restaurants/15/menu-items/191/353f52a141e15781719fa1eeff54b6a2.jpg",
+   "name": "Lemon Rice"
+  },
+  "Filter Coffee Co::Bisi Bele Bath": {
+   "storage_path": "restaurants/15/menu-items/192/58a5d5af136cf7e548b533b46e3a874a.jpg",
+   "name": "Bisi Bele Bath"
+  },
+  "Filter Coffee Co::Sambar Bowl": {
+   "storage_path": "restaurants/15/menu-items/193/91995006b51f364504cf854ca4ef6939.jpg",
+   "name": "Sambar Bowl"
+  },
+  "Filter Coffee Co::Coconut Chutney": {
+   "storage_path": "restaurants/15/menu-items/194/a905ea477029d792adb727a6c7327a43.jpg",
+   "name": "Coconut Chutney"
+  },
+  "Filter Coffee Co::Ghee Podi": {
+   "storage_path": "restaurants/15/menu-items/195/6cfca4be7e7ba45e8b89605b7e5c7e78.jpg",
+   "name": "Ghee Podi"
+  },
+  "Mumbai Vada Pav::Pani Puri (6 pcs)": {
+   "storage_path": "restaurants/16/menu-items/196/b351eeadc66f560654de386b551ef664.jpg",
+   "name": "Pani Puri (6 pcs)"
+  },
+  "Mumbai Vada Pav::Bhel Puri": {
+   "storage_path": "restaurants/16/menu-items/197/c0a04dca9b223502e9957ea46b4cad7a.jpg",
+   "name": "Bhel Puri"
+  },
+  "Mumbai Vada Pav::Dahi Puri": {
+   "storage_path": "restaurants/16/menu-items/198/3394cdcbe224c0884c0b9f341bd08104.jpg",
+   "name": "Dahi Puri"
+  },
+  "Mumbai Vada Pav::Samosa Chaat": {
+   "storage_path": "restaurants/16/menu-items/199/6ac1d35d19739768c035df0cb21f41cf.jpg",
+   "name": "Samosa Chaat"
+  },
+  "Tandoori Nights::Hara Bhara Kebab": {
+   "storage_path": "restaurants/1/menu-items/2/ed457d033511c5a5cccf76de3263705d.jpg",
+   "name": "Hara Bhara Kebab"
+  },
+  "Tandoori Nights::Prawn Biryani": {
+   "storage_path": "restaurants/1/menu-items/20/a3e09a3085c317a64bd817e24d7d41d5.jpg",
+   "name": "Prawn Biryani"
+  },
+  "Mumbai Vada Pav::Vada Pav": {
+   "storage_path": "restaurants/16/menu-items/200/e39e8111647e6cd4a2361a5f30b36b9f.jpg",
+   "name": "Vada Pav"
+  },
+  "Mumbai Vada Pav::Misal Pav": {
+   "storage_path": "restaurants/16/menu-items/201/22ba51822f4b88e18a0eba3821cd5e18.jpg",
+   "name": "Misal Pav"
+  },
+  "Mumbai Vada Pav::Chicken Kathi Roll": {
+   "storage_path": "restaurants/16/menu-items/202/ece087396f9d53a796e8f9b86e2c008d.jpg",
+   "name": "Chicken Kathi Roll"
+  },
+  "Mumbai Vada Pav::Paneer Kathi Roll": {
+   "storage_path": "restaurants/16/menu-items/203/cf77e5964d4f1fe9a84ac23581da8c71.jpg",
+   "name": "Paneer Kathi Roll"
+  },
+  "Curry Leaf Kitchen::Paneer Tikka": {
+   "storage_path": "restaurants/17/menu-items/204/ed6c06db0e4c22107ecef3b965212c73.jpg",
+   "name": "Paneer Tikka"
+  },
+  "Curry Leaf Kitchen::Hara Bhara Kebab": {
+   "storage_path": "restaurants/17/menu-items/205/caa73de0a72d84e2930f9eafbb42f3b4.jpg",
+   "name": "Hara Bhara Kebab"
+  },
+  "Curry Leaf Kitchen::Chicken Malai Tikka": {
+   "storage_path": "restaurants/17/menu-items/206/0ea09b9d0081982248e497758c585be7.jpg",
+   "name": "Chicken Malai Tikka"
+  },
+  "Curry Leaf Kitchen::Tandoori Chicken (Half)": {
+   "storage_path": "restaurants/17/menu-items/207/0fb889898b3ccc5fcf9fc92c89e4f464.jpg",
+   "name": "Tandoori Chicken (Half)"
+  },
+  "Curry Leaf Kitchen::Amritsari Fish Fry": {
+   "storage_path": "restaurants/17/menu-items/208/60bdb648c36a72fae3ad4cfde2b563a5.jpg",
+   "name": "Amritsari Fish Fry"
+  },
+  "Curry Leaf Kitchen::Dal Makhani": {
+   "storage_path": "restaurants/17/menu-items/209/ffe7d523e47f9a679ef0ae4a124c11ec.jpg",
+   "name": "Dal Makhani"
+  },
+  "Tandoori Nights::Mirchi Ka Salan": {
+   "storage_path": "restaurants/1/menu-items/21/948c76331c7716bdd797ebb0c716dc9f.jpg",
+   "name": "Mirchi Ka Salan"
+  },
+  "Curry Leaf Kitchen::Paneer Butter Masala": {
+   "storage_path": "restaurants/17/menu-items/210/a31328e645e910ec4bbb3f43443f1029.jpg",
+   "name": "Paneer Butter Masala"
+  },
+  "Curry Leaf Kitchen::Kadai Paneer": {
+   "storage_path": "restaurants/17/menu-items/211/05873eb764bd6d49d6c277d41d2bcba0.jpg",
+   "name": "Kadai Paneer"
+  },
+  "Curry Leaf Kitchen::Butter Chicken": {
+   "storage_path": "restaurants/17/menu-items/212/e80dc664e978f319b31688e9e78be7a9.jpg",
+   "name": "Butter Chicken"
+  },
+  "Curry Leaf Kitchen::Rogan Josh": {
+   "storage_path": "restaurants/17/menu-items/213/9d67bbbc6fe6b021eefe59226b8aafc9.jpg",
+   "name": "Rogan Josh"
+  },
+  "Curry Leaf Kitchen::Chole Bhature": {
+   "storage_path": "restaurants/17/menu-items/214/af68e56303d96a7a66bda1a120b5a975.jpg",
+   "name": "Chole Bhature"
+  },
+  "Curry Leaf Kitchen::Butter Naan": {
+   "storage_path": "restaurants/17/menu-items/215/2543d180cce8f0cac286839792f48a42.jpg",
+   "name": "Butter Naan"
+  },
+  "Curry Leaf Kitchen::Garlic Naan": {
+   "storage_path": "restaurants/17/menu-items/216/b164e2ce211c843c7303da08685c7126.jpg",
+   "name": "Garlic Naan"
+  },
+  "Curry Leaf Kitchen::Laccha Paratha": {
+   "storage_path": "restaurants/17/menu-items/217/466025675cdf125c6fcb786cff050e25.jpg",
+   "name": "Laccha Paratha"
+  },
+  "Curry Leaf Kitchen::Tandoori Roti": {
+   "storage_path": "restaurants/17/menu-items/218/adc8f900ae0d28ae9c98846a2108bd4f.jpg",
+   "name": "Tandoori Roti"
+  },
+  "Curry Leaf Kitchen::Masala Dosa": {
+   "storage_path": "restaurants/17/menu-items/219/03234be197f9d142592b494abbfb74e0.jpg",
+   "name": "Masala Dosa"
+  },
+  "Tandoori Nights::Raita": {
+   "storage_path": "restaurants/1/menu-items/22/16d6576254a0a95b072525cf4f755667.jpg",
+   "name": "Raita"
+  },
+  "Curry Leaf Kitchen::Plain Dosa": {
+   "storage_path": "restaurants/17/menu-items/220/4afb0fe73b25d4f22ffc6700be62f013.jpg",
+   "name": "Plain Dosa"
+  },
+  "Curry Leaf Kitchen::Rava Dosa": {
+   "storage_path": "restaurants/17/menu-items/221/73a55a29179c3b689526b7ae7060b339.jpg",
+   "name": "Rava Dosa"
+  },
+  "Curry Leaf Kitchen::Idli (2 pcs)": {
+   "storage_path": "restaurants/17/menu-items/222/91e48b2b11b0da6afa7a1d6f45528c65.jpg",
+   "name": "Idli (2 pcs)"
+  },
+  "Curry Leaf Kitchen::Medu Vada (2 pcs)": {
+   "storage_path": "restaurants/17/menu-items/223/3892861d7c4c75d49998ef5d05eb6442.jpg",
+   "name": "Medu Vada (2 pcs)"
+  },
+  "Curry Leaf Kitchen::Pongal": {
+   "storage_path": "restaurants/17/menu-items/224/b478f7605e28e59d86cf1aa340e7693b.jpg",
+   "name": "Pongal"
+  },
+  "Curry Leaf Kitchen::South Indian Thali": {
+   "storage_path": "restaurants/17/menu-items/225/ae3ddad83da610e93fdd1f2775a65a79.jpg",
+   "name": "South Indian Thali"
+  },
+  "Curry Leaf Kitchen::Curd Rice": {
+   "storage_path": "restaurants/17/menu-items/226/a1c41d3309a00e2df33fb1cab370a164.jpg",
+   "name": "Curd Rice"
+  },
+  "Curry Leaf Kitchen::Lemon Rice": {
+   "storage_path": "restaurants/17/menu-items/227/2c9f86344c3940009c77f04b734ae05f.jpg",
+   "name": "Lemon Rice"
+  },
+  "Curry Leaf Kitchen::Bisi Bele Bath": {
+   "storage_path": "restaurants/17/menu-items/228/2bcd2f1cb10480b74462e903b39cb7bc.jpg",
+   "name": "Bisi Bele Bath"
+  },
+  "Curry Leaf Kitchen::Sambar Bowl": {
+   "storage_path": "restaurants/17/menu-items/229/04148a53b9826c00e15264034782010e.jpg",
+   "name": "Sambar Bowl"
+  },
+  "Tandoori Nights::Double Ka Meetha": {
+   "storage_path": "restaurants/1/menu-items/23/e3c99a59095dc908ca6136887e226af4.jpg",
+   "name": "Double Ka Meetha"
+  },
+  "Curry Leaf Kitchen::Coconut Chutney": {
+   "storage_path": "restaurants/17/menu-items/230/44cac25febd5a4d63bcf393c14a0a388.jpg",
+   "name": "Coconut Chutney"
+  },
+  "Curry Leaf Kitchen::Ghee Podi": {
+   "storage_path": "restaurants/17/menu-items/231/13759e6e20029dfcd4d67007429ced2b.jpg",
+   "name": "Ghee Podi"
+  },
+  "Anna's Tiffin Room::Masala Dosa": {
+   "storage_path": "restaurants/18/menu-items/232/52bc88e2a2d0eff1e1837e917d85f1d4.jpg",
+   "name": "Masala Dosa"
+  },
+  "Anna's Tiffin Room::Plain Dosa": {
+   "storage_path": "restaurants/18/menu-items/233/7c9f62c485c777e833bd602a2e0127f8.jpg",
+   "name": "Plain Dosa"
+  },
+  "Anna's Tiffin Room::Rava Dosa": {
+   "storage_path": "restaurants/18/menu-items/234/658c57d92b50c795b4a87b0383b9a0a6.jpg",
+   "name": "Rava Dosa"
+  },
+  "Anna's Tiffin Room::Idli (2 pcs)": {
+   "storage_path": "restaurants/18/menu-items/235/25dacf05fcec81103dcfae2c879f600a.jpg",
+   "name": "Idli (2 pcs)"
+  },
+  "Anna's Tiffin Room::Medu Vada (2 pcs)": {
+   "storage_path": "restaurants/18/menu-items/236/ab5151b74f88337803eefded4959723a.jpg",
+   "name": "Medu Vada (2 pcs)"
+  },
+  "Anna's Tiffin Room::Pongal": {
+   "storage_path": "restaurants/18/menu-items/237/b6678adfb29418647a3f0c0749eb5138.jpg",
+   "name": "Pongal"
+  },
+  "Anna's Tiffin Room::South Indian Thali": {
+   "storage_path": "restaurants/18/menu-items/238/9787db66d4e773deff4c1ccd88a69518.jpg",
+   "name": "South Indian Thali"
+  },
+  "Anna's Tiffin Room::Curd Rice": {
+   "storage_path": "restaurants/18/menu-items/239/1cc1bcecd56678f0e3f2561d4e143a3c.jpg",
+   "name": "Curd Rice"
+  },
+  "Dakshin Diaries::Masala Dosa": {
+   "storage_path": "restaurants/2/menu-items/24/0750b3e7fdb88600f52fe9fe4168aaca.jpg",
+   "name": "Masala Dosa"
+  },
+  "Anna's Tiffin Room::Lemon Rice": {
+   "storage_path": "restaurants/18/menu-items/240/f0f81558d56b7b58961c91605c63381d.jpg",
+   "name": "Lemon Rice"
+  },
+  "Anna's Tiffin Room::Bisi Bele Bath": {
+   "storage_path": "restaurants/18/menu-items/241/c5d8418c95cdd10cec1b0dd4a74231c2.jpg",
+   "name": "Bisi Bele Bath"
+  },
+  "Anna's Tiffin Room::Sambar Bowl": {
+   "storage_path": "restaurants/18/menu-items/242/1fa3e0d7ba382d8494ddad256486e2c1.jpg",
+   "name": "Sambar Bowl"
+  },
+  "Anna's Tiffin Room::Coconut Chutney": {
+   "storage_path": "restaurants/18/menu-items/243/27ddfe92b028ee865ce262aa29de7cc1.jpg",
+   "name": "Coconut Chutney"
+  },
+  "Anna's Tiffin Room::Ghee Podi": {
+   "storage_path": "restaurants/18/menu-items/244/9236201d24f7cb1e0384283a1e4dc729.jpg",
+   "name": "Ghee Podi"
+  },
+  "Sichuan Street::Veg Manchurian Dry": {
+   "storage_path": "restaurants/19/menu-items/245/e565636993a4ad04c37a1236b5bfcd90.jpg",
+   "name": "Veg Manchurian Dry"
+  },
+  "Sichuan Street::Chilli Paneer": {
+   "storage_path": "restaurants/19/menu-items/246/dd3367f69cc5b7b8c1d963bc1f7c1bd6.jpg",
+   "name": "Chilli Paneer"
+  },
+  "Sichuan Street::Chicken Lollipop": {
+   "storage_path": "restaurants/19/menu-items/247/6a272e29832441ada4d6840a31df3bc0.jpg",
+   "name": "Chicken Lollipop"
+  },
+  "Sichuan Street::Crispy Corn": {
+   "storage_path": "restaurants/19/menu-items/248/e7146678a53a29c0541bb747f9038e73.jpg",
+   "name": "Crispy Corn"
+  },
+  "Sichuan Street::Hakka Noodles": {
+   "storage_path": "restaurants/19/menu-items/249/604207c7330eec4bf568ab3f6442a300.jpg",
+   "name": "Hakka Noodles"
+  },
+  "Dakshin Diaries::Plain Dosa": {
+   "storage_path": "restaurants/2/menu-items/25/e5dcaf14aa6c262a5c297ef96573f8f1.jpg",
+   "name": "Plain Dosa"
+  },
+  "Sichuan Street::Schezwan Fried Rice": {
+   "storage_path": "restaurants/19/menu-items/250/04c6ac6eedfb60363ed7ee61b73cafcb.jpg",
+   "name": "Schezwan Fried Rice"
+  },
+  "Sichuan Street::Chicken Fried Rice": {
+   "storage_path": "restaurants/19/menu-items/251/50bcda406bd91e7a327d2c5927daa44b.jpg",
+   "name": "Chicken Fried Rice"
+  },
+  "Sichuan Street::Triple Schezwan Rice": {
+   "storage_path": "restaurants/19/menu-items/252/f4154bda52df860b68f809908d2fe1e0.jpg",
+   "name": "Triple Schezwan Rice"
+  },
+  "Sichuan Street::Kung Pao Chicken": {
+   "storage_path": "restaurants/19/menu-items/253/2df79b1ad82fb96c7c9f3ee71b129600.jpg",
+   "name": "Kung Pao Chicken"
+  },
+  "Sichuan Street::Mapo Tofu": {
+   "storage_path": "restaurants/19/menu-items/254/bc9bc4177077924b83cad379711fb07e.jpg",
+   "name": "Mapo Tofu"
+  },
+  "Lucknowi Handi::Hyderabadi Chicken Biryani": {
+   "storage_path": "restaurants/20/menu-items/255/4c28cdecdd01d24de0f8911c3b34ff98.jpg",
+   "name": "Hyderabadi Chicken Biryani"
+  },
+  "Lucknowi Handi::Mutton Dum Biryani": {
+   "storage_path": "restaurants/20/menu-items/256/5fa4347b5b9679693179f0fcc0f39c23.jpg",
+   "name": "Mutton Dum Biryani"
+  },
+  "Lucknowi Handi::Veg Dum Biryani": {
+   "storage_path": "restaurants/20/menu-items/257/74ebd3ff9438f638a6a39d83c03ca3cf.jpg",
+   "name": "Veg Dum Biryani"
+  },
+  "Lucknowi Handi::Egg Biryani": {
+   "storage_path": "restaurants/20/menu-items/258/2393ea9f3e9ac6a819f9732744e85f15.jpg",
+   "name": "Egg Biryani"
+  },
+  "Lucknowi Handi::Prawn Biryani": {
+   "storage_path": "restaurants/20/menu-items/259/87e4f4d6369b59d8d742f7985c873526.jpg",
+   "name": "Prawn Biryani"
+  },
+  "Dakshin Diaries::Rava Dosa": {
+   "storage_path": "restaurants/2/menu-items/26/95edefdb6410f0f6541d7a01b8f398e7.jpg",
+   "name": "Rava Dosa"
+  },
+  "Lucknowi Handi::Mirchi Ka Salan": {
+   "storage_path": "restaurants/20/menu-items/260/f8d75860028ebf43c72aeb115dd47e2d.jpg",
+   "name": "Mirchi Ka Salan"
+  },
+  "Lucknowi Handi::Raita": {
+   "storage_path": "restaurants/20/menu-items/261/0c174015a6ef5913ed30877e2b5996b7.jpg",
+   "name": "Raita"
+  },
+  "Lucknowi Handi::Double Ka Meetha": {
+   "storage_path": "restaurants/20/menu-items/262/0bece256fc06e8b99dc6ca4eaa56abea.jpg",
+   "name": "Double Ka Meetha"
+  },
+  "Lucknowi Handi::Paneer Tikka": {
+   "storage_path": "restaurants/20/menu-items/263/2a7a5592c9c94b04f7ee737ba27d8330.jpg",
+   "name": "Paneer Tikka"
+  },
+  "Lucknowi Handi::Hara Bhara Kebab": {
+   "storage_path": "restaurants/20/menu-items/264/0389f3d8b2f53a10b4bf1ce8c1a40946.jpg",
+   "name": "Hara Bhara Kebab"
+  },
+  "Lucknowi Handi::Chicken Malai Tikka": {
+   "storage_path": "restaurants/20/menu-items/265/04e1d37a77d72bf03fec0f65fde0ea9f.jpg",
+   "name": "Chicken Malai Tikka"
+  },
+  "Lucknowi Handi::Tandoori Chicken (Half)": {
+   "storage_path": "restaurants/20/menu-items/266/646dc1b88b158f3a2e0dd174162f2d15.jpg",
+   "name": "Tandoori Chicken (Half)"
+  },
+  "Lucknowi Handi::Amritsari Fish Fry": {
+   "storage_path": "restaurants/20/menu-items/267/8aecf76aa5b9e87eeef21ba05f451d63.jpg",
+   "name": "Amritsari Fish Fry"
+  },
+  "Lucknowi Handi::Dal Makhani": {
+   "storage_path": "restaurants/20/menu-items/268/67ccecc68884a28a595dc610a567a10e.jpg",
+   "name": "Dal Makhani"
+  },
+  "Lucknowi Handi::Paneer Butter Masala": {
+   "storage_path": "restaurants/20/menu-items/269/b2b94320a6de30dbbf4a8307cc2a7979.jpg",
+   "name": "Paneer Butter Masala"
+  },
+  "Dakshin Diaries::Idli (2 pcs)": {
+   "storage_path": "restaurants/2/menu-items/27/ba4672554e34c61b196105d063c4a446.jpg",
+   "name": "Idli (2 pcs)"
+  },
+  "Lucknowi Handi::Kadai Paneer": {
+   "storage_path": "restaurants/20/menu-items/270/cb01e1d0bd425af3e6c53c59f28881f2.jpg",
+   "name": "Kadai Paneer"
+  },
+  "Lucknowi Handi::Butter Chicken": {
+   "storage_path": "restaurants/20/menu-items/271/b1c0ae52a6d1b6d1da736901087445b2.jpg",
+   "name": "Butter Chicken"
+  },
+  "Lucknowi Handi::Rogan Josh": {
+   "storage_path": "restaurants/20/menu-items/272/ecb5c2ca4fcae14a89c097290745f9f9.jpg",
+   "name": "Rogan Josh"
+  },
+  "Lucknowi Handi::Chole Bhature": {
+   "storage_path": "restaurants/20/menu-items/273/799e0f8887b47de4ad8112b787ecbba4.jpg",
+   "name": "Chole Bhature"
+  },
+  "Lucknowi Handi::Butter Naan": {
+   "storage_path": "restaurants/20/menu-items/274/d9ea8a29c97480e367f2a20414746b4f.jpg",
+   "name": "Butter Naan"
+  },
+  "Lucknowi Handi::Garlic Naan": {
+   "storage_path": "restaurants/20/menu-items/275/ca12e921b96b464b924e26744e50dcba.jpg",
+   "name": "Garlic Naan"
+  },
+  "Lucknowi Handi::Laccha Paratha": {
+   "storage_path": "restaurants/20/menu-items/276/bfbf284632cb89dc557bbba850ff60f3.jpg",
+   "name": "Laccha Paratha"
+  },
+  "Lucknowi Handi::Tandoori Roti": {
+   "storage_path": "restaurants/20/menu-items/277/6d1654c0ce3301818fe34b3408a29a00.jpg",
+   "name": "Tandoori Roti"
+  },
+  "Cheese Republic::Margherita": {
+   "storage_path": "restaurants/21/menu-items/278/02608f0bc4e6546084155a2b35fbfbfa.jpg",
+   "name": "Margherita"
+  },
+  "Cheese Republic::Farmhouse": {
+   "storage_path": "restaurants/21/menu-items/279/bb0538628455c13db7e0064bfe124285.jpg",
+   "name": "Farmhouse"
+  },
+  "Dakshin Diaries::Medu Vada (2 pcs)": {
+   "storage_path": "restaurants/2/menu-items/28/2b69942139c7dc6e64ecf82aac73fb19.jpg",
+   "name": "Medu Vada (2 pcs)"
+  },
+  "Cheese Republic::Peri Peri Chicken": {
+   "storage_path": "restaurants/21/menu-items/280/afc98afcad3f3f13572080f7144b2ac7.jpg",
+   "name": "Peri Peri Chicken"
+  },
+  "Cheese Republic::Paneer Makhani Pizza": {
+   "storage_path": "restaurants/21/menu-items/281/50a67f214f50ec95f1f9e07ecd3e8aea.jpg",
+   "name": "Paneer Makhani Pizza"
+  },
+  "Cheese Republic::Pepperoni": {
+   "storage_path": "restaurants/21/menu-items/282/f66bca6f57982cf168ea2e46be4f6779.jpg",
+   "name": "Pepperoni"
+  },
+  "Cheese Republic::Garlic Breadsticks": {
+   "storage_path": "restaurants/21/menu-items/283/1c3067fa5b0602cb5dc48d6592e769d8.jpg",
+   "name": "Garlic Breadsticks"
+  },
+  "Cheese Republic::Cheesy Dip": {
+   "storage_path": "restaurants/21/menu-items/284/d239d106a3b128e67a724c9185826ce2.jpg",
+   "name": "Cheesy Dip"
+  },
+  "Cheese Republic::Peri Peri Fries": {
+   "storage_path": "restaurants/21/menu-items/285/5e314f77af3f677a2641f96315a59c0e.jpg",
+   "name": "Peri Peri Fries"
+  },
+  "Cheese Republic::Gulab Jamun (2 pcs)": {
+   "storage_path": "restaurants/21/menu-items/286/6ad8478d9c49f04a0a1fc612493a0a36.jpg",
+   "name": "Gulab Jamun (2 pcs)"
+  },
+  "Cheese Republic::Rasmalai (2 pcs)": {
+   "storage_path": "restaurants/21/menu-items/287/13b5df414f7d0173c7e389c197ed2dfe.jpg",
+   "name": "Rasmalai (2 pcs)"
+  },
+  "Cheese Republic::Gajar Ka Halwa": {
+   "storage_path": "restaurants/21/menu-items/288/5b6fabea7c38f6c6f4277b4cdf4140e0.jpg",
+   "name": "Gajar Ka Halwa"
+  },
+  "Cheese Republic::Chocolate Truffle Slice": {
+   "storage_path": "restaurants/21/menu-items/289/6ecd35f4e05cb0cb16d60400d1d1d4d9.jpg",
+   "name": "Chocolate Truffle Slice"
+  },
+  "Dakshin Diaries::Pongal": {
+   "storage_path": "restaurants/2/menu-items/29/2457ca02e552a8fdf5386bb3a3d1962a.jpg",
+   "name": "Pongal"
+  },
+  "Cheese Republic::New York Cheesecake": {
+   "storage_path": "restaurants/21/menu-items/290/ac39a5686218707e9ba9176346ffba82.jpg",
+   "name": "New York Cheesecake"
+  },
+  "Cheese Republic::Tiramisu Jar": {
+   "storage_path": "restaurants/21/menu-items/291/ff8cd75b6789048ca7e7115a836be9c9.jpg",
+   "name": "Tiramisu Jar"
+  },
+  "Cheese Republic::Brownie with Ice Cream": {
+   "storage_path": "restaurants/21/menu-items/292/24a2ba49c9bad861277bf963d922509a.jpg",
+   "name": "Brownie with Ice Cream"
+  },
+  "Gulab Junction::Gulab Jamun (2 pcs)": {
+   "storage_path": "restaurants/22/menu-items/293/61ab07ad1a8a6c7c3c58660b56db41ee.jpg",
+   "name": "Gulab Jamun (2 pcs)"
+  },
+  "Gulab Junction::Rasmalai (2 pcs)": {
+   "storage_path": "restaurants/22/menu-items/294/e7544962bb913ccef43986ae9b9522ee.jpg",
+   "name": "Rasmalai (2 pcs)"
+  },
+  "Gulab Junction::Gajar Ka Halwa": {
+   "storage_path": "restaurants/22/menu-items/295/484f08f499f5cd9d1eec85dfe261bcd8.jpg",
+   "name": "Gajar Ka Halwa"
+  },
+  "Gulab Junction::Chocolate Truffle Slice": {
+   "storage_path": "restaurants/22/menu-items/296/c5004b29c1a1e335dba263c4bea34baf.jpg",
+   "name": "Chocolate Truffle Slice"
+  },
+  "Gulab Junction::New York Cheesecake": {
+   "storage_path": "restaurants/22/menu-items/297/7a1464182c9397bebb8c9aedd71c3312.jpg",
+   "name": "New York Cheesecake"
+  },
+  "Gulab Junction::Tiramisu Jar": {
+   "storage_path": "restaurants/22/menu-items/298/8f4331f51c07be563fb91c9f341e91aa.jpg",
+   "name": "Tiramisu Jar"
+  },
+  "Gulab Junction::Brownie with Ice Cream": {
+   "storage_path": "restaurants/22/menu-items/299/6f40d29eae89267790dc2a688180c131.jpg",
+   "name": "Brownie with Ice Cream"
+  },
+  "Tandoori Nights::Chicken Malai Tikka": {
+   "storage_path": "restaurants/1/menu-items/3/9b06e31ccdb7e085da75e1fc48377f01.jpg",
+   "name": "Chicken Malai Tikka"
+  },
+  "Dakshin Diaries::South Indian Thali": {
+   "storage_path": "restaurants/2/menu-items/30/f191f32a0d68ca3c16bd4b875e63d518.jpg",
+   "name": "South Indian Thali"
+  },
+  "Nimbu Soda Bar::Masala Chai": {
+   "storage_path": "restaurants/23/menu-items/300/6458c0a7f58f07b0c90ca74afe4d15f0.jpg",
+   "name": "Masala Chai"
+  },
+  "Nimbu Soda Bar::Filter Coffee": {
+   "storage_path": "restaurants/23/menu-items/301/fb06ec27d275424173ca30242a7edb46.jpg",
+   "name": "Filter Coffee"
+  },
+  "Nimbu Soda Bar::Cappuccino": {
+   "storage_path": "restaurants/23/menu-items/302/8c4487a7e21d764d0bd0fc1d1c282979.jpg",
+   "name": "Cappuccino"
+  },
+  "Nimbu Soda Bar::Sweet Lassi": {
+   "storage_path": "restaurants/23/menu-items/303/2588a13fb1ef08c23a7c45104cab42fd.jpg",
+   "name": "Sweet Lassi"
+  },
+  "Nimbu Soda Bar::Cold Coffee": {
+   "storage_path": "restaurants/23/menu-items/304/5bf1f1ae3be33d797ffd065474a6e0b9.jpg",
+   "name": "Cold Coffee"
+  },
+  "Nimbu Soda Bar::Fresh Lime Soda": {
+   "storage_path": "restaurants/23/menu-items/305/873e38cd3627b82c2aec0e1fd63fdaf2.jpg",
+   "name": "Fresh Lime Soda"
+  },
+  "Nimbu Soda Bar::Mango Shake": {
+   "storage_path": "restaurants/23/menu-items/306/62dbf3ff01c2400a851c87243a39c9ed.jpg",
+   "name": "Mango Shake"
+  },
+  "Kathi Roll Corner::Pani Puri (6 pcs)": {
+   "storage_path": "restaurants/24/menu-items/307/6a1d1f28364c2f78fcf97227ef70dee4.jpg",
+   "name": "Pani Puri (6 pcs)"
+  },
+  "Kathi Roll Corner::Bhel Puri": {
+   "storage_path": "restaurants/24/menu-items/308/1cb306fb31918f7135b0ec12a18b701e.jpg",
+   "name": "Bhel Puri"
+  },
+  "Kathi Roll Corner::Dahi Puri": {
+   "storage_path": "restaurants/24/menu-items/309/70a3448fce3afde2f1757994d0be4ec5.jpg",
+   "name": "Dahi Puri"
+  },
+  "Dakshin Diaries::Curd Rice": {
+   "storage_path": "restaurants/2/menu-items/31/8ba39331236f2fc087fcc8654525b22c.jpg",
+   "name": "Curd Rice"
+  },
+  "Kathi Roll Corner::Samosa Chaat": {
+   "storage_path": "restaurants/24/menu-items/310/30186ac83e003128e5960e7d250bc20a.jpg",
+   "name": "Samosa Chaat"
+  },
+  "Kathi Roll Corner::Vada Pav": {
+   "storage_path": "restaurants/24/menu-items/311/2c6f928c699594302184ea85ce9d9e3b.jpg",
+   "name": "Vada Pav"
+  },
+  "Kathi Roll Corner::Misal Pav": {
+   "storage_path": "restaurants/24/menu-items/312/064f9d5fd6f050db324ba235eb84e6ae.jpg",
+   "name": "Misal Pav"
+  },
+  "Kathi Roll Corner::Chicken Kathi Roll": {
+   "storage_path": "restaurants/24/menu-items/313/9fe646d8d4647b7a8e64d04e4ce91d30.jpg",
+   "name": "Chicken Kathi Roll"
+  },
+  "Kathi Roll Corner::Paneer Kathi Roll": {
+   "storage_path": "restaurants/24/menu-items/314/6714572f4ff30d8b2816c1150462687b.jpg",
+   "name": "Paneer Kathi Roll"
+  },
+  "Spice Route Deli::Paneer Tikka": {
+   "storage_path": "restaurants/25/menu-items/315/834ef8347c0877b393e4c5f4d4897544.jpg",
+   "name": "Paneer Tikka"
+  },
+  "Spice Route Deli::Hara Bhara Kebab": {
+   "storage_path": "restaurants/25/menu-items/316/c296d988297a35e13c62ae9e422a1a91.jpg",
+   "name": "Hara Bhara Kebab"
+  },
+  "Spice Route Deli::Chicken Malai Tikka": {
+   "storage_path": "restaurants/25/menu-items/317/0645b9936bc83b0a7f75d8afec517749.jpg",
+   "name": "Chicken Malai Tikka"
+  },
+  "Spice Route Deli::Tandoori Chicken (Half)": {
+   "storage_path": "restaurants/25/menu-items/318/802e75cf51b0791e0009b9c39b2a3e17.jpg",
+   "name": "Tandoori Chicken (Half)"
+  },
+  "Spice Route Deli::Amritsari Fish Fry": {
+   "storage_path": "restaurants/25/menu-items/319/de2f59bab2d42a654e2e05c0e00e7208.jpg",
+   "name": "Amritsari Fish Fry"
+  },
+  "Dakshin Diaries::Lemon Rice": {
+   "storage_path": "restaurants/2/menu-items/32/a9df79b139e422b94ddd4df57c3ea78c.jpg",
+   "name": "Lemon Rice"
+  },
+  "Spice Route Deli::Dal Makhani": {
+   "storage_path": "restaurants/25/menu-items/320/b4486060705ea2e1b0cf40f375ca4942.jpg",
+   "name": "Dal Makhani"
+  },
+  "Spice Route Deli::Paneer Butter Masala": {
+   "storage_path": "restaurants/25/menu-items/321/3e914d9d14c83881615f6155d9d37df3.jpg",
+   "name": "Paneer Butter Masala"
+  },
+  "Spice Route Deli::Kadai Paneer": {
+   "storage_path": "restaurants/25/menu-items/322/a7e246328f1d052e2b584e0d4c465a18.jpg",
+   "name": "Kadai Paneer"
+  },
+  "Spice Route Deli::Butter Chicken": {
+   "storage_path": "restaurants/25/menu-items/323/f3cd6bb1326436ca985288ebc8cd7b8a.jpg",
+   "name": "Butter Chicken"
+  },
+  "Spice Route Deli::Rogan Josh": {
+   "storage_path": "restaurants/25/menu-items/324/42ecb38608a42d919da1b01dfe05a4c6.jpg",
+   "name": "Rogan Josh"
+  },
+  "Spice Route Deli::Chole Bhature": {
+   "storage_path": "restaurants/25/menu-items/325/ad9f5cbe550ef6fbaaf568961f076eea.jpg",
+   "name": "Chole Bhature"
+  },
+  "Spice Route Deli::Butter Naan": {
+   "storage_path": "restaurants/25/menu-items/326/79884e5d4ed75b8c8eae45a383ece1a6.jpg",
+   "name": "Butter Naan"
+  },
+  "Spice Route Deli::Garlic Naan": {
+   "storage_path": "restaurants/25/menu-items/327/38b2e062da54874baa1790b848b57563.jpg",
+   "name": "Garlic Naan"
+  },
+  "Spice Route Deli::Laccha Paratha": {
+   "storage_path": "restaurants/25/menu-items/328/ccec2957f6a7ca61972639f41d718bec.jpg",
+   "name": "Laccha Paratha"
+  },
+  "Spice Route Deli::Tandoori Roti": {
+   "storage_path": "restaurants/25/menu-items/329/a9bf61daf728e13a0ab1a6ab6fcc7b1a.jpg",
+   "name": "Tandoori Roti"
+  },
+  "Dakshin Diaries::Bisi Bele Bath": {
+   "storage_path": "restaurants/2/menu-items/33/68b825bb8a1c276d8dbcfc6f91830a53.jpg",
+   "name": "Bisi Bele Bath"
+  },
+  "Spice Route Deli::Hakka Noodles": {
+   "storage_path": "restaurants/25/menu-items/330/dc6e79b841747eb0f754a5f6faf0dfa2.jpg",
+   "name": "Hakka Noodles"
+  },
+  "Spice Route Deli::Schezwan Fried Rice": {
+   "storage_path": "restaurants/25/menu-items/331/0a36845c46cb1403cb6a95400a78d871.jpg",
+   "name": "Schezwan Fried Rice"
+  },
+  "Spice Route Deli::Chicken Fried Rice": {
+   "storage_path": "restaurants/25/menu-items/332/631e8f03e7066cf8d965e8481a53b98e.jpg",
+   "name": "Chicken Fried Rice"
+  },
+  "Spice Route Deli::Triple Schezwan Rice": {
+   "storage_path": "restaurants/25/menu-items/333/0e52b618a954da446617e563558782e9.jpg",
+   "name": "Triple Schezwan Rice"
+  },
+  "Dakshin Diaries::Sambar Bowl": {
+   "storage_path": "restaurants/2/menu-items/34/b7b490cf8b8cbc60df5230b62ebf3a25.jpg",
+   "name": "Sambar Bowl"
+  },
+  "Dakshin Diaries::Coconut Chutney": {
+   "storage_path": "restaurants/2/menu-items/35/6eb28724b5582b640c74d23bf7c89d29.jpg",
+   "name": "Coconut Chutney"
+  },
+  "Dakshin Diaries::Ghee Podi": {
+   "storage_path": "restaurants/2/menu-items/36/97ce33986c0db495b89d3a5c9e7c5baa.jpg",
+   "name": "Ghee Podi"
+  },
+  "Wok This Way::Veg Manchurian Dry": {
+   "storage_path": "restaurants/3/menu-items/37/db1c8ae28cb6391b03bfd5d53306b8fb.jpg",
+   "name": "Veg Manchurian Dry"
+  },
+  "Wok This Way::Chilli Paneer": {
+   "storage_path": "restaurants/3/menu-items/38/cbe8b7d2ff5a7aa2d55ce4f1ac405d16.jpg",
+   "name": "Chilli Paneer"
+  },
+  "Wok This Way::Chicken Lollipop": {
+   "storage_path": "restaurants/3/menu-items/39/ec4454a297c56b79ba2aaaa089241da8.jpg",
+   "name": "Chicken Lollipop"
+  },
+  "Tandoori Nights::Tandoori Chicken (Half)": {
+   "storage_path": "restaurants/1/menu-items/4/1938a8b20abd27e206954aeb074e16ae.jpg",
+   "name": "Tandoori Chicken (Half)"
+  },
+  "Wok This Way::Crispy Corn": {
+   "storage_path": "restaurants/3/menu-items/40/56c1344cb4c57f550cfb99304c49346c.jpg",
+   "name": "Crispy Corn"
+  },
+  "Wok This Way::Hakka Noodles": {
+   "storage_path": "restaurants/3/menu-items/41/6b5422a8bda1981cc84dd41134f14897.jpg",
+   "name": "Hakka Noodles"
+  },
+  "Wok This Way::Schezwan Fried Rice": {
+   "storage_path": "restaurants/3/menu-items/42/8da6d1460dc89c810a3dc6e0d6992b06.jpg",
+   "name": "Schezwan Fried Rice"
+  },
+  "Wok This Way::Chicken Fried Rice": {
+   "storage_path": "restaurants/3/menu-items/43/695de5fcf01c5dc17dedc9cbb52509d8.jpg",
+   "name": "Chicken Fried Rice"
+  },
+  "Wok This Way::Triple Schezwan Rice": {
+   "storage_path": "restaurants/3/menu-items/44/bf35d3bacb723c2e46f3d92d5b37b7a5.jpg",
+   "name": "Triple Schezwan Rice"
+  },
+  "Wok This Way::Kung Pao Chicken": {
+   "storage_path": "restaurants/3/menu-items/45/887b5277e4c2600f3a3ff343c399b461.jpg",
+   "name": "Kung Pao Chicken"
+  },
+  "Wok This Way::Mapo Tofu": {
+   "storage_path": "restaurants/3/menu-items/46/5e3b45425b6b4187d3b71088652ff11c.jpg",
+   "name": "Mapo Tofu"
+  },
+  "Paradise Biryani House::Hyderabadi Chicken Biryani": {
+   "storage_path": "restaurants/4/menu-items/47/c7874fdef79c60543c988ba14051b156.jpg",
+   "name": "Hyderabadi Chicken Biryani"
+  },
+  "Paradise Biryani House::Mutton Dum Biryani": {
+   "storage_path": "restaurants/4/menu-items/48/d5086aa2b12a7d0d8ffb75561539b762.jpg",
+   "name": "Mutton Dum Biryani"
+  },
+  "Paradise Biryani House::Veg Dum Biryani": {
+   "storage_path": "restaurants/4/menu-items/49/00ae32d9066043acbcddaa3355b89f2b.jpg",
+   "name": "Veg Dum Biryani"
+  },
+  "Tandoori Nights::Amritsari Fish Fry": {
+   "storage_path": "restaurants/1/menu-items/5/43c24d9193cbbf34d1ff28872d8d1357.jpg",
+   "name": "Amritsari Fish Fry"
+  },
+  "Paradise Biryani House::Egg Biryani": {
+   "storage_path": "restaurants/4/menu-items/50/57d6742cadca4ab0f283cc3e21b8e342.jpg",
+   "name": "Egg Biryani"
+  },
+  "Paradise Biryani House::Prawn Biryani": {
+   "storage_path": "restaurants/4/menu-items/51/699c4677cc08aefcb9326673c1674f90.jpg",
+   "name": "Prawn Biryani"
+  },
+  "Paradise Biryani House::Mirchi Ka Salan": {
+   "storage_path": "restaurants/4/menu-items/52/dc48956ce143f7e1d3acbecb1a23b98e.jpg",
+   "name": "Mirchi Ka Salan"
+  },
+  "Paradise Biryani House::Raita": {
+   "storage_path": "restaurants/4/menu-items/53/5086ebc1fa30a54d862160e179f78526.jpg",
+   "name": "Raita"
+  },
+  "Paradise Biryani House::Double Ka Meetha": {
+   "storage_path": "restaurants/4/menu-items/54/01a69696a1fc4d20f7404c012dd734f2.jpg",
+   "name": "Double Ka Meetha"
+  },
+  "Paradise Biryani House::Paneer Tikka": {
+   "storage_path": "restaurants/4/menu-items/55/6459967f5cd9800fb1330c6d98ee13e0.jpg",
+   "name": "Paneer Tikka"
+  },
+  "Paradise Biryani House::Hara Bhara Kebab": {
+   "storage_path": "restaurants/4/menu-items/56/fd541536902b4f2706f2021d33b6ad08.jpg",
+   "name": "Hara Bhara Kebab"
+  },
+  "Paradise Biryani House::Chicken Malai Tikka": {
+   "storage_path": "restaurants/4/menu-items/57/01ff20d09ab71229710ed5ca9db5e1ac.jpg",
+   "name": "Chicken Malai Tikka"
+  },
+  "Paradise Biryani House::Tandoori Chicken (Half)": {
+   "storage_path": "restaurants/4/menu-items/58/a36859266d6cc4a5445ebafbcd966e6e.jpg",
+   "name": "Tandoori Chicken (Half)"
+  },
+  "Paradise Biryani House::Amritsari Fish Fry": {
+   "storage_path": "restaurants/4/menu-items/59/e7ab10eba5e9b2d6b5f4c665f75bcb7f.jpg",
+   "name": "Amritsari Fish Fry"
+  },
+  "Tandoori Nights::Dal Makhani": {
+   "storage_path": "restaurants/1/menu-items/6/234225cb9a3445154920b4a5fde57d99.jpg",
+   "name": "Dal Makhani"
+  },
+  "Paradise Biryani House::Dal Makhani": {
+   "storage_path": "restaurants/4/menu-items/60/71656f519bc4780a48a122ec0f4e4a18.jpg",
+   "name": "Dal Makhani"
+  },
+  "Paradise Biryani House::Paneer Butter Masala": {
+   "storage_path": "restaurants/4/menu-items/61/72d9adc999d27188d5f8d0632d813d53.jpg",
+   "name": "Paneer Butter Masala"
+  },
+  "Paradise Biryani House::Kadai Paneer": {
+   "storage_path": "restaurants/4/menu-items/62/c92afb19e1758be330b8bbc5f9b56b72.jpg",
+   "name": "Kadai Paneer"
+  },
+  "Paradise Biryani House::Butter Chicken": {
+   "storage_path": "restaurants/4/menu-items/63/8efd739b420dc43bc17a8f304731ab92.jpg",
+   "name": "Butter Chicken"
+  },
+  "Paradise Biryani House::Rogan Josh": {
+   "storage_path": "restaurants/4/menu-items/64/79a308c37b21d7852dc8d65a51358611.jpg",
+   "name": "Rogan Josh"
+  },
+  "Paradise Biryani House::Chole Bhature": {
+   "storage_path": "restaurants/4/menu-items/65/58f3b83dd5925773342d2b63a34ed242.jpg",
+   "name": "Chole Bhature"
+  },
+  "Paradise Biryani House::Butter Naan": {
+   "storage_path": "restaurants/4/menu-items/66/9d71c43b46e01052fc8cf296afca4bf6.jpg",
+   "name": "Butter Naan"
+  },
+  "Paradise Biryani House::Garlic Naan": {
+   "storage_path": "restaurants/4/menu-items/67/5aaed37cabdbe622bfd3da648a711c7a.jpg",
+   "name": "Garlic Naan"
+  },
+  "Paradise Biryani House::Laccha Paratha": {
+   "storage_path": "restaurants/4/menu-items/68/9649239b4fd778a6ed6804cbf9dccbf2.jpg",
+   "name": "Laccha Paratha"
+  },
+  "Paradise Biryani House::Tandoori Roti": {
+   "storage_path": "restaurants/4/menu-items/69/e1a7acabe1b0b9c9fcf88eada5a8f47c.jpg",
+   "name": "Tandoori Roti"
+  },
+  "Tandoori Nights::Paneer Butter Masala": {
+   "storage_path": "restaurants/1/menu-items/7/129a2dd16d45b9ff207e352b9343ca09.jpg",
+   "name": "Paneer Butter Masala"
+  },
+  "Crust & Coal::Margherita": {
+   "storage_path": "restaurants/5/menu-items/70/aae378ba4373787ac3f5b37ac8f225bb.jpg",
+   "name": "Margherita"
+  },
+  "Crust & Coal::Farmhouse": {
+   "storage_path": "restaurants/5/menu-items/71/eb9c6ded442af379c9de82a84617da4b.jpg",
+   "name": "Farmhouse"
+  },
+  "Crust & Coal::Peri Peri Chicken": {
+   "storage_path": "restaurants/5/menu-items/72/dd92924e825f41964373fbd61da77890.jpg",
+   "name": "Peri Peri Chicken"
+  },
+  "Crust & Coal::Paneer Makhani Pizza": {
+   "storage_path": "restaurants/5/menu-items/73/f907bc996aafd0d5094f6b8a3a728f1d.jpg",
+   "name": "Paneer Makhani Pizza"
+  },
+  "Crust & Coal::Pepperoni": {
+   "storage_path": "restaurants/5/menu-items/74/2bdb4c96a154fa1fa544905a6c15c60a.jpg",
+   "name": "Pepperoni"
+  },
+  "Crust & Coal::Garlic Breadsticks": {
+   "storage_path": "restaurants/5/menu-items/75/d4686b1ac8d01a82b9399b0e03c13fca.jpg",
+   "name": "Garlic Breadsticks"
+  },
+  "Crust & Coal::Cheesy Dip": {
+   "storage_path": "restaurants/5/menu-items/76/bd8f93e7d9b72d32c27d61b9dca50845.jpg",
+   "name": "Cheesy Dip"
+  },
+  "Crust & Coal::Peri Peri Fries": {
+   "storage_path": "restaurants/5/menu-items/77/a2562d6ba078f2677582bfa719869372.jpg",
+   "name": "Peri Peri Fries"
+  },
+  "Sugar Theory::Gulab Jamun (2 pcs)": {
+   "storage_path": "restaurants/6/menu-items/78/ab05bd2330ae1bbedfbeb34533891f61.jpg",
+   "name": "Gulab Jamun (2 pcs)"
+  },
+  "Sugar Theory::Rasmalai (2 pcs)": {
+   "storage_path": "restaurants/6/menu-items/79/d86f91a0d6aebc1d7bd2b626c75a98cf.jpg",
+   "name": "Rasmalai (2 pcs)"
+  },
+  "Tandoori Nights::Kadai Paneer": {
+   "storage_path": "restaurants/1/menu-items/8/8231a340fcd22374884ce14a6e721b63.jpg",
+   "name": "Kadai Paneer"
+  },
+  "Sugar Theory::Gajar Ka Halwa": {
+   "storage_path": "restaurants/6/menu-items/80/e584a33f5e69e98e5c7233afd493e783.jpg",
+   "name": "Gajar Ka Halwa"
+  },
+  "Sugar Theory::Chocolate Truffle Slice": {
+   "storage_path": "restaurants/6/menu-items/81/a810082038770d68fe3f69e44715657e.jpg",
+   "name": "Chocolate Truffle Slice"
+  },
+  "Sugar Theory::New York Cheesecake": {
+   "storage_path": "restaurants/6/menu-items/82/ef4fbde24c76c300e366efe62f72ac6e.jpg",
+   "name": "New York Cheesecake"
+  },
+  "Sugar Theory::Tiramisu Jar": {
+   "storage_path": "restaurants/6/menu-items/83/cb731e7b0e28de938319420063429132.jpg",
+   "name": "Tiramisu Jar"
+  },
+  "Sugar Theory::Brownie with Ice Cream": {
+   "storage_path": "restaurants/6/menu-items/84/12055224a674ccc06485c2351d15d928.jpg",
+   "name": "Brownie with Ice Cream"
+  },
+  "Sugar Theory::Masala Chai": {
+   "storage_path": "restaurants/6/menu-items/85/ea11194976cafd44fb3932aa73bf05bd.jpg",
+   "name": "Masala Chai"
+  },
+  "Sugar Theory::Filter Coffee": {
+   "storage_path": "restaurants/6/menu-items/86/497fe80f14732df3ca915235bdcdd3ca.jpg",
+   "name": "Filter Coffee"
+  },
+  "Sugar Theory::Cappuccino": {
+   "storage_path": "restaurants/6/menu-items/87/3f5a86975cce0e32ac62e241cb8607d0.jpg",
+   "name": "Cappuccino"
+  },
+  "Sugar Theory::Sweet Lassi": {
+   "storage_path": "restaurants/6/menu-items/88/01e790221157d9e5be134868d26c1e02.jpg",
+   "name": "Sweet Lassi"
+  },
+  "Sugar Theory::Cold Coffee": {
+   "storage_path": "restaurants/6/menu-items/89/62d1dba2e7b1175f1952e1df878200f0.jpg",
+   "name": "Cold Coffee"
+  },
+  "Tandoori Nights::Butter Chicken": {
+   "storage_path": "restaurants/1/menu-items/9/97bffa2d075aefa7488bbb0a7932209e.jpg",
+   "name": "Butter Chicken"
+  },
+  "Sugar Theory::Fresh Lime Soda": {
+   "storage_path": "restaurants/6/menu-items/90/1f4901d83e6d2dce7999cb51399f685a.jpg",
+   "name": "Fresh Lime Soda"
+  },
+  "Sugar Theory::Mango Shake": {
+   "storage_path": "restaurants/6/menu-items/91/190cb26b528b7c2859cea21f0eb859ad.jpg",
+   "name": "Mango Shake"
+  },
+  "Chai Point Cafe::Masala Chai": {
+   "storage_path": "restaurants/7/menu-items/92/f3ebcfc8c01339ea98bbe0de1bf901bd.jpg",
+   "name": "Masala Chai"
+  },
+  "Chai Point Cafe::Filter Coffee": {
+   "storage_path": "restaurants/7/menu-items/93/2efa7efd5cb397ccbccea30ef08e20b0.jpg",
+   "name": "Filter Coffee"
+  },
+  "Chai Point Cafe::Cappuccino": {
+   "storage_path": "restaurants/7/menu-items/94/22bd718534022e6389df69f28789ca3d.jpg",
+   "name": "Cappuccino"
+  },
+  "Chai Point Cafe::Sweet Lassi": {
+   "storage_path": "restaurants/7/menu-items/95/3fb8f07e7ed91adb0d0ecd344ffd2071.jpg",
+   "name": "Sweet Lassi"
+  },
+  "Chai Point Cafe::Cold Coffee": {
+   "storage_path": "restaurants/7/menu-items/96/ca36632fd9ea80dcd3e8a550bec554dd.jpg",
+   "name": "Cold Coffee"
+  },
+  "Chai Point Cafe::Fresh Lime Soda": {
+   "storage_path": "restaurants/7/menu-items/97/c4a843071d42c5d02abe81f3a3b4794b.jpg",
+   "name": "Fresh Lime Soda"
+  },
+  "Chai Point Cafe::Mango Shake": {
+   "storage_path": "restaurants/7/menu-items/98/d10c002024958963634a112f9c7d3fb1.jpg",
+   "name": "Mango Shake"
+  },
+  "Chai Point Cafe::Pani Puri (6 pcs)": {
+   "storage_path": "restaurants/7/menu-items/99/693507ec531c0f578a86d876551d0d59.jpg",
+   "name": "Pani Puri (6 pcs)"
+  }
+ },
+ "avatars": [
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-0.jpg",
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-1.jpg",
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-2.jpg",
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-3.jpg",
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-4.jpg",
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-5.jpg",
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-6.jpg",
+  "https://xvtorrqykrxyveiqsicg.supabase.co/storage/v1/object/public/menu-images/avatars/avatar-7.jpg"
+ ],
+ "credits": [
+  {
+   "subject": "avatar:avatar-0",
+   "file": "File:Etel Adnan, 2008 (headshot).jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Nanwieser",
+   "source": "https://commons.wikimedia.org/wiki/File:Etel_Adnan,_2008_(headshot).jpg"
+  },
+  {
+   "subject": "avatar:avatar-1",
+   "file": "File:Woman in bikini smiling.jpg",
+   "licence": "CC0",
+   "author": "AnthonyRob2026",
+   "source": "https://commons.wikimedia.org/wiki/File:Woman_in_bikini_smiling.jpg"
+  },
+  {
+   "subject": "avatar:avatar-2",
+   "file": "File:Laotian laughing man with hat.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Basile Morin",
+   "source": "https://commons.wikimedia.org/wiki/File:Laotian_laughing_man_with_hat.jpg"
+  },
+  {
+   "subject": "avatar:avatar-3",
+   "file": "File:Portrait of a Carpathian Lynx.jpg",
+   "licence": "CC0",
+   "author": "Wilfredor",
+   "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_Carpathian_Lynx.jpg"
+  },
+  {
+   "subject": "avatar:avatar-4",
+   "file": "File:Red tabby staring at camera (2023-08-27).jpg",
+   "licence": "CC0",
+   "author": "Roc0ast3r",
+   "source": "https://commons.wikimedia.org/wiki/File:Red_tabby_staring_at_camera_(2023-08-27).jpg"
+  },
+  {
+   "subject": "avatar:avatar-5",
+   "file": "File:Deejay Pico Professional Portrait 2020.jpg",
+   "licence": "CC BY 4.0",
+   "author": "VP083SA",
+   "source": "https://commons.wikimedia.org/wiki/File:Deejay_Pico_Professional_Portrait_2020.jpg"
+  },
+  {
+   "subject": "avatar:avatar-6",
+   "file": "File:Portrait of a young woman wearing a lace bonnet (by Jean Auguste Dominique Ingres).jpg",
+   "licence": "Public domain",
+   "author": "Jean-Auguste-Dominique Ingres",
+   "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_young_woman_wearing_a_lace_bonnet_(by_Jean_Auguste_Dominique_Ingres).jpg"
+  },
+  {
+   "subject": "avatar:avatar-7",
+   "file": "File:Portrait of a Young Man MET Bronzino detail of face.jpg",
+   "licence": "CC0",
+   "author": "Bronzino",
+   "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_Young_Man_MET_Bronzino_detail_of_face.jpg"
+  },
+  {
+   "subject": "cover:1",
+   "file": "File:Biriyani, Chicken Bharta & Tandoori Roti.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Subrata Ghose",
+   "source": "https://commons.wikimedia.org/wiki/File:Biriyani,_Chicken_Bharta_%26_Tandoori_Roti.jpg"
+  },
+  {
+   "subject": "cover:10",
+   "file": "File:Idli-sambar and coffee at Udupi Upahar, Wilson Garden, Bangalore (2025-09-19).jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Contrapunctus-1",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli-sambar_and_coffee_at_Udupi_Upahar,_Wilson_Garden,_Bangalore_(2025-09-19).jpg"
+  },
+  {
+   "subject": "cover:11",
+   "file": "File:\u725b\u8089\u9eb5 Chinese Braised Beef Noodles.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "avlxyz",
+   "source": "https://commons.wikimedia.org/wiki/File:%E7%89%9B%E8%82%89%E9%BA%B5_Chinese_Braised_Beef_Noodles.jpg"
+  },
+  {
+   "subject": "cover:12",
+   "file": "File:Hyderabadi Biryani 2.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "User:Hyderabadi biryani",
+   "source": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Biryani_2.jpg"
+  },
+  {
+   "subject": "cover:13",
+   "file": "File:Pizza Napoletana in Pompei, Italy.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Robot8A",
+   "source": "https://commons.wikimedia.org/wiki/File:Pizza_Napoletana_in_Pompei,_Italy.jpg"
+  },
+  {
+   "subject": "cover:14",
+   "file": "File:(A) plate full of Indian sweets mithai desserts.jpg",
+   "licence": "CC BY 2.0",
+   "author": "DDohler",
+   "source": "https://commons.wikimedia.org/wiki/File:(A)_plate_full_of_Indian_sweets_mithai_desserts.jpg"
+  },
+  {
+   "subject": "cover:15",
+   "file": "File:Indian filter coffee in Dabarah.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Unknown",
+   "source": "https://commons.wikimedia.org/wiki/File:Indian_filter_coffee_in_Dabarah.jpg"
+  },
+  {
+   "subject": "cover:16",
+   "file": "File:Vada Pav.jpg",
+   "licence": "CC BY 3.0",
+   "author": "Deepeshmd",
+   "source": "https://commons.wikimedia.org/wiki/File:Vada_Pav.jpg"
+  },
+  {
+   "subject": "cover:17",
+   "file": "File:Angamaly Mango curry, angamaly, kerala, india.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "ranjithsiji",
+   "source": "https://commons.wikimedia.org/wiki/File:Angamaly_Mango_curry,_angamaly,_kerala,_india.jpg"
+  },
+  {
+   "subject": "cover:18",
+   "file": "File:Idli and Medu Vada.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "OdetomyLife",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG"
+  },
+  {
+   "subject": "cover:19",
+   "file": "File:Sichuan food.JPG",
+   "licence": "CC BY-SA 3.0",
+   "author": "Cl\u00e9ment Bucco-Lechat",
+   "source": "https://commons.wikimedia.org/wiki/File:Sichuan_food.JPG"
+  },
+  {
+   "subject": "cover:2",
+   "file": "File:A Thali, famous South Indian meal served on a banana leaf.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Melanie M",
+   "source": "https://commons.wikimedia.org/wiki/File:A_Thali,_famous_South_Indian_meal_served_on_a_banana_leaf.jpg"
+  },
+  {
+   "subject": "cover:20",
+   "file": "File:Galouti kabab frankie at Marksmen, Hazratganj, Lucknow (2025-08-02).jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Contrapunctus-1",
+   "source": "https://commons.wikimedia.org/wiki/File:Galouti_kabab_frankie_at_Marksmen,_Hazratganj,_Lucknow_(2025-08-02).jpg"
+  },
+  {
+   "subject": "cover:21",
+   "file": "File:Brisket and grilled cheese sandwich with a side of French fries.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ser Amantio di Nicolao",
+   "source": "https://commons.wikimedia.org/wiki/File:Brisket_and_grilled_cheese_sandwich_with_a_side_of_French_fries.jpg"
+  },
+  {
+   "subject": "cover:22",
+   "file": "File:Two Gulab Jamun in a plate 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash.dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg"
+  },
+  {
+   "subject": "cover:23",
+   "file": "File:Lemonade at Scotty's Brewhouse.jpg",
+   "licence": "CC BY 2.0",
+   "author": "susi.bsu",
+   "source": "https://commons.wikimedia.org/wiki/File:Lemonade_at_Scotty%27s_Brewhouse.jpg"
+  },
+  {
+   "subject": "cover:24",
+   "file": "File:Chicken Kathi Roll (5646735923).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Andy Mitchell from Glasgow, UK",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg"
+  },
+  {
+   "subject": "cover:25",
+   "file": "File:Indian spice market.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "The open draft",
+   "source": "https://commons.wikimedia.org/wiki/File:Indian_spice_market.jpg"
+  },
+  {
+   "subject": "cover:3",
+   "file": "File:Grace Young.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Gary Stevens",
+   "source": "https://commons.wikimedia.org/wiki/File:Grace_Young.jpg"
+  },
+  {
+   "subject": "cover:4",
+   "file": "File:Chicken Dum Biryani 03.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Dum_Biryani_03.jpg"
+  },
+  {
+   "subject": "cover:5",
+   "file": "File:Wood Fired Pizza Oven @ Via Farina - Omaha, NE.jpg",
+   "licence": "CC BY 2.0",
+   "author": "Shelby L. Bell",
+   "source": "https://commons.wikimedia.org/wiki/File:Wood_Fired_Pizza_Oven_@_Via_Farina_-_Omaha,_NE.jpg"
+  },
+  {
+   "subject": "cover:6",
+   "file": "File:Cake and pastry display, Tokyo, Japan.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "OKJaguar",
+   "source": "https://commons.wikimedia.org/wiki/File:Cake_and_pastry_display,_Tokyo,_Japan.jpg"
+  },
+  {
+   "subject": "cover:7",
+   "file": "File:Tea Stall (7168699187).jpg",
+   "licence": "CC BY 2.0",
+   "author": "shankar s. from Dubai, united arab emirates",
+   "source": "https://commons.wikimedia.org/wiki/File:Tea_Stall_(7168699187).jpg"
+  },
+  {
+   "subject": "cover:8",
+   "file": "File:Papri chaat.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Charles Haynes",
+   "source": "https://commons.wikimedia.org/wiki/File:Papri_chaat.jpg"
+  },
+  {
+   "subject": "cover:9",
+   "file": "File:Aloo Paratha Thali.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Fatfoodie",
+   "source": "https://commons.wikimedia.org/wiki/File:Aloo_Paratha_Thali.jpg"
+  },
+  {
+   "subject": "item:1",
+   "file": "File:Paneer Tikka Seek.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "HARIOM.AWASTHI",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Tikka_Seek.JPG"
+  },
+  {
+   "subject": "item:10",
+   "file": "File:Lamb Rogan Josh at Restaurant Guru, Tallinn.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Lamb_Rogan_Josh_at_Restaurant_Guru,_Tallinn.jpg"
+  },
+  {
+   "subject": "item:100",
+   "file": "File:Bhel Puri at Juhu Beach.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Rakesh Krishna Kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Bhel_Puri_at_Juhu_Beach.jpg"
+  },
+  {
+   "subject": "item:101",
+   "file": "File:Odia Style Dahi bara Puri Odisha-IMG 953.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Subhransuphotography",
+   "source": "https://commons.wikimedia.org/wiki/File:Odia_Style_Dahi_bara_Puri_Odisha-IMG_953.jpg"
+  },
+  {
+   "subject": "item:102",
+   "file": "File:Samosa Chaat.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Samosa_Chaat.jpg"
+  },
+  {
+   "subject": "item:103",
+   "file": "File:Vada Pav.jpg",
+   "licence": "CC BY 3.0",
+   "author": "Deepeshmd",
+   "source": "https://commons.wikimedia.org/wiki/File:Vada_Pav.jpg"
+  },
+  {
+   "subject": "item:104",
+   "file": "File:Misal Pav - Khed Shivpur - Maharashtra - 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Krrisd",
+   "source": "https://commons.wikimedia.org/wiki/File:Misal_Pav_-_Khed_Shivpur_-_Maharashtra_-_01.jpg"
+  },
+  {
+   "subject": "item:105",
+   "file": "File:Chicken Kathi Roll (5646735923).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Andy Mitchell from Glasgow, UK",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg"
+  },
+  {
+   "subject": "item:106",
+   "file": "File:Beef wrap - Sunbirds 2023-09-14.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Beef_wrap_-_Sunbirds_2023-09-14.jpg"
+  },
+  {
+   "subject": "item:107",
+   "file": "File:Crispy Pani Puri.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Teena Sometimes",
+   "source": "https://commons.wikimedia.org/wiki/File:Crispy_Pani_Puri.jpg"
+  },
+  {
+   "subject": "item:108",
+   "file": "File:Bhel Puri at Juhu Beach.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Rakesh Krishna Kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Bhel_Puri_at_Juhu_Beach.jpg"
+  },
+  {
+   "subject": "item:109",
+   "file": "File:Odia Style Dahi bara Puri Odisha-IMG 953.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Subhransuphotography",
+   "source": "https://commons.wikimedia.org/wiki/File:Odia_Style_Dahi_bara_Puri_Odisha-IMG_953.jpg"
+  },
+  {
+   "subject": "item:11",
+   "file": "File:Bikaner chole bhature.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Aleemk72",
+   "source": "https://commons.wikimedia.org/wiki/File:Bikaner_chole_bhature.jpg"
+  },
+  {
+   "subject": "item:110",
+   "file": "File:Samosa Chaat.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Samosa_Chaat.jpg"
+  },
+  {
+   "subject": "item:111",
+   "file": "File:Vada Pav.jpg",
+   "licence": "CC BY 3.0",
+   "author": "Deepeshmd",
+   "source": "https://commons.wikimedia.org/wiki/File:Vada_Pav.jpg"
+  },
+  {
+   "subject": "item:112",
+   "file": "File:Misal Pav - Khed Shivpur - Maharashtra - 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Krrisd",
+   "source": "https://commons.wikimedia.org/wiki/File:Misal_Pav_-_Khed_Shivpur_-_Maharashtra_-_01.jpg"
+  },
+  {
+   "subject": "item:113",
+   "file": "File:Chicken Kathi Roll (5646735923).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Andy Mitchell from Glasgow, UK",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg"
+  },
+  {
+   "subject": "item:114",
+   "file": "File:Beef wrap - Sunbirds 2023-09-14.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Beef_wrap_-_Sunbirds_2023-09-14.jpg"
+  },
+  {
+   "subject": "item:115",
+   "file": "File:Paneer Tikka Seek.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "HARIOM.AWASTHI",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Tikka_Seek.JPG"
+  },
+  {
+   "subject": "item:116",
+   "file": "File:Hara bhara kabab-.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Kanikatwl",
+   "source": "https://commons.wikimedia.org/wiki/File:Hara_bhara_kabab-.JPG"
+  },
+  {
+   "subject": "item:117",
+   "file": "File:Afghani Malai Chicken Tikka.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Absar.1989",
+   "source": "https://commons.wikimedia.org/wiki/File:Afghani_Malai_Chicken_Tikka.jpg"
+  },
+  {
+   "subject": "item:118",
+   "file": "File:Marinated Tandoori Chicken pieces.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Marinated_Tandoori_Chicken_pieces.JPG"
+  },
+  {
+   "subject": "item:119",
+   "file": "File:Amritsari Fried Fish.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Amritsari_Fried_Fish.JPG"
+  },
+  {
+   "subject": "item:12",
+   "file": "File:Butter Naan Flatbread from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Naan_Flatbread_from_North_India.jpg"
+  },
+  {
+   "subject": "item:120",
+   "file": "File:Dal Makhani..JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Dal_Makhani..JPG"
+  },
+  {
+   "subject": "item:121",
+   "file": "File:Rotti and Paneer Butter Masala.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ganesh Mohan T",
+   "source": "https://commons.wikimedia.org/wiki/File:Rotti_and_Paneer_Butter_Masala.jpg"
+  },
+  {
+   "subject": "item:122",
+   "file": "File:Dumba Karahi 20210605.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shahzaib Damn Cruze",
+   "source": "https://commons.wikimedia.org/wiki/File:Dumba_Karahi_20210605.jpg"
+  },
+  {
+   "subject": "item:123",
+   "file": "File:Butter Chicken, City Grill Kottayam.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg"
+  },
+  {
+   "subject": "item:124",
+   "file": "File:Lamb Rogan Josh at Restaurant Guru, Tallinn.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Lamb_Rogan_Josh_at_Restaurant_Guru,_Tallinn.jpg"
+  },
+  {
+   "subject": "item:125",
+   "file": "File:Bikaner chole bhature.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Aleemk72",
+   "source": "https://commons.wikimedia.org/wiki/File:Bikaner_chole_bhature.jpg"
+  },
+  {
+   "subject": "item:126",
+   "file": "File:Butter Naan Flatbread from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Naan_Flatbread_from_North_India.jpg"
+  },
+  {
+   "subject": "item:127",
+   "file": "File:Cheese naan and Garlic naan.jpg",
+   "licence": "CC BY 4.0",
+   "author": "\u30ce\u30dc\u30db\u30b7\u30e7\u30b3\u30ed\u30c8\u30bd",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheese_naan_and_Garlic_naan.jpg"
+  },
+  {
+   "subject": "item:128",
+   "file": "File:Lachha-paratha.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal",
+   "source": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg"
+  },
+  {
+   "subject": "item:129",
+   "file": "File:Baking-roti-inside-tandoori.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Baking-roti-inside-tandoori.jpg"
+  },
+  {
+   "subject": "item:13",
+   "file": "File:Cheese naan and Garlic naan.jpg",
+   "licence": "CC BY 4.0",
+   "author": "\u30ce\u30dc\u30db\u30b7\u30e7\u30b3\u30ed\u30c8\u30bd",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheese_naan_and_Garlic_naan.jpg"
+  },
+  {
+   "subject": "item:130",
+   "file": "File:Masala dosa from Varanasi.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gannu03",
+   "source": "https://commons.wikimedia.org/wiki/File:Masala_dosa_from_Varanasi.jpg"
+  },
+  {
+   "subject": "item:131",
+   "file": "File:Plain Dosa from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Libreravi",
+   "source": "https://commons.wikimedia.org/wiki/File:Plain_Dosa_from_North_India.jpg"
+  },
+  {
+   "subject": "item:132",
+   "file": "File:Rava Dosa with ginger chutney.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Hartej.hundal",
+   "source": "https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_ginger_chutney.JPG"
+  },
+  {
+   "subject": "item:133",
+   "file": "File:Idli sambar.2.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Simranjeet Sidhu",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_sambar.2.jpg"
+  },
+  {
+   "subject": "item:134",
+   "file": "File:Idli and Medu Vada.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "OdetomyLife",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG"
+  },
+  {
+   "subject": "item:135",
+   "file": "File:Kolam Pongal 1stMain Uthandi Jan23 A7C 04882.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would m",
+   "source": "https://commons.wikimedia.org/wiki/File:Kolam_Pongal_1stMain_Uthandi_Jan23_A7C_04882.jpg"
+  },
+  {
+   "subject": "item:136",
+   "file": "File:South Indian Thali at Sarvana Bhawan.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Maskaravivek",
+   "source": "https://commons.wikimedia.org/wiki/File:South_Indian_Thali_at_Sarvana_Bhawan.jpg"
+  },
+  {
+   "subject": "item:137",
+   "file": "File:Curd rice in ICH Bhopal.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg"
+  },
+  {
+   "subject": "item:138",
+   "file": "File:Chitranna and Payasa.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Radhikapavan",
+   "source": "https://commons.wikimedia.org/wiki/File:Chitranna_and_Payasa.jpg"
+  },
+  {
+   "subject": "item:139",
+   "file": "File:Bisi Bele Bath.jpg",
+   "licence": "CC0",
+   "author": "Devika.pujari",
+   "source": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath.jpg"
+  },
+  {
+   "subject": "item:14",
+   "file": "File:Lachha-paratha.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal",
+   "source": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg"
+  },
+  {
+   "subject": "item:140",
+   "file": "File:Gaddavu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mahaveer Indra",
+   "source": "https://commons.wikimedia.org/wiki/File:Gaddavu.jpg"
+  },
+  {
+   "subject": "item:141",
+   "file": "File:Coconut Chutney - Home Made.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mailz2kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Coconut_Chutney_-_Home_Made.JPG"
+  },
+  {
+   "subject": "item:142",
+   "file": "File:Ghee Podi Idli - Murugan Idli Shop, Chennai - TamilNadu - PXL0246.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Harikrishnan N",
+   "source": "https://commons.wikimedia.org/wiki/File:Ghee_Podi_Idli_-_Murugan_Idli_Shop,_Chennai_-_TamilNadu_-_PXL0246.jpg"
+  },
+  {
+   "subject": "item:143",
+   "file": "File:Gobi manchurian.jpg",
+   "licence": "CC BY 2.5",
+   "author": "scaredy_kat",
+   "source": "https://commons.wikimedia.org/wiki/File:Gobi_manchurian.jpg"
+  },
+  {
+   "subject": "item:144",
+   "file": "File:Paneer Chilli.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Ramesh NG",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Chilli.jpg"
+  },
+  {
+   "subject": "item:145",
+   "file": "File:Chicken Lollipop.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Ramesh NG",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Lollipop.jpg"
+  },
+  {
+   "subject": "item:146",
+   "file": "File:Lonestar Migas- organic eggs scrambled with crispy corn strips, onion, cheese, shredded brisket and pico de gallo.jpg",
+   "licence": "CC BY 2.0",
+   "author": "T.Tseng",
+   "source": "https://commons.wikimedia.org/wiki/File:Lonestar_Migas-_organic_eggs_scrambled_with_crispy_corn_strips,_onion,_cheese,_shredded_brisket_and_pico_de_gallo.jpg"
+  },
+  {
+   "subject": "item:147",
+   "file": "File:Buff Chow Mein.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Buff_Chow_Mein.jpg"
+  },
+  {
+   "subject": "item:148",
+   "file": "File:Fried rice in home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Peachyeung316",
+   "source": "https://commons.wikimedia.org/wiki/File:Fried_rice_in_home.jpg"
+  },
+  {
+   "subject": "item:149",
+   "file": "File:Chicken fried rice - Stir Fry by CK 2023-12-02.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_fried_rice_-_Stir_Fry_by_CK_2023-12-02.jpg"
+  },
+  {
+   "subject": "item:15",
+   "file": "File:Baking-roti-inside-tandoori.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Baking-roti-inside-tandoori.jpg"
+  },
+  {
+   "subject": "item:150",
+   "file": "File:Sobameshi 001.jpg",
+   "licence": "CC0",
+   "author": "Ocdp",
+   "source": "https://commons.wikimedia.org/wiki/File:Sobameshi_001.jpg"
+  },
+  {
+   "subject": "item:151",
+   "file": "File:Kung Pao Chicken at Liqiaoshun Restaurant (20220310175424).jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "N509FZ",
+   "source": "https://commons.wikimedia.org/wiki/File:Kung_Pao_Chicken_at_Liqiaoshun_Restaurant_(20220310175424).jpg"
+  },
+  {
+   "subject": "item:152",
+   "file": "File:Chen Mapo Tofu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "ZhengZhou",
+   "source": "https://commons.wikimedia.org/wiki/File:Chen_Mapo_Tofu.jpg"
+  },
+  {
+   "subject": "item:153",
+   "file": "File:Chicken Dum Biryani 03.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Dum_Biryani_03.jpg"
+  },
+  {
+   "subject": "item:154",
+   "file": "File:Biryani Home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shyamveer.singh1982",
+   "source": "https://commons.wikimedia.org/wiki/File:Biryani_Home.jpg"
+  },
+  {
+   "subject": "item:155",
+   "file": "File:Vegetable biryani 03.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Turbo1232112321",
+   "source": "https://commons.wikimedia.org/wiki/File:Vegetable_biryani_03.JPG"
+  },
+  {
+   "subject": "item:156",
+   "file": "File:Egg Biryani and Chicken Chap.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Meghattay Saha",
+   "source": "https://commons.wikimedia.org/wiki/File:Egg_Biryani_and_Chicken_Chap.jpg"
+  },
+  {
+   "subject": "item:157",
+   "file": "File:Prawn Biryani.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Number55",
+   "source": "https://commons.wikimedia.org/wiki/File:Prawn_Biryani.jpg"
+  },
+  {
+   "subject": "item:158",
+   "file": "File:Hyderabadi Hari Mirchi Ka Salan.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Hari_Mirchi_Ka_Salan.JPG"
+  },
+  {
+   "subject": "item:159",
+   "file": "File:Aloo Raita Recipe By Sonia Goyal.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal Jaipur",
+   "source": "https://commons.wikimedia.org/wiki/File:Aloo_Raita_Recipe_By_Sonia_Goyal.jpg"
+  },
+  {
+   "subject": "item:16",
+   "file": "File:Chicken Dum Biryani 03.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Dum_Biryani_03.jpg"
+  },
+  {
+   "subject": "item:160",
+   "file": "File:Double Ka Meetha.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Double_Ka_Meetha.JPG"
+  },
+  {
+   "subject": "item:161",
+   "file": "File:Eq it-na pizza-margherita sep2005 sml.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Valerio Capello at English Wikipedia",
+   "source": "https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+  },
+  {
+   "subject": "item:162",
+   "file": "File:Eq it-na pizza-margherita sep2005 sml.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Valerio Capello at English Wikipedia",
+   "source": "https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+  },
+  {
+   "subject": "item:163",
+   "file": "File:Flame-grilled PERi-PERi chicken.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Banej",
+   "source": "https://commons.wikimedia.org/wiki/File:Flame-grilled_PERi-PERi_chicken.jpg"
+  },
+  {
+   "subject": "item:164",
+   "file": "File:Malai Paneer Pizza from India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Barthateslisa",
+   "source": "https://commons.wikimedia.org/wiki/File:Malai_Paneer_Pizza_from_India.jpg"
+  },
+  {
+   "subject": "item:165",
+   "file": "File:Pepperoni pizza- boella co. 2024-02-17.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Pepperoni_pizza-_boella_co._2024-02-17.jpg"
+  },
+  {
+   "subject": "item:166",
+   "file": "File:2021-02-14 17 58 44 A Giant brand Garlic Bread Stick in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Famartin",
+   "source": "https://commons.wikimedia.org/wiki/File:2021-02-14_17_58_44_A_Giant_brand_Garlic_Bread_Stick_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
+  },
+  {
+   "subject": "item:167",
+   "file": "File:Ban-yan day on board the Magnificent; or, pease porridge hot from the coppers! (BM 1851,0901.469).jpg",
+   "licence": "Public domain",
+   "author": "Print made by: John Nixon Published by: William Holland",
+   "source": "https://commons.wikimedia.org/wiki/File:Ban-yan_day_on_board_the_Magnificent;_or,_pease_porridge_hot_from_the_coppers!_(BM_1851,0901.469).jpg"
+  },
+  {
+   "subject": "item:168",
+   "file": "File:Argentine hamburgers made with Paty Cl\u00e1sicas patties served with a side of french fries.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Horacio Cambeiro",
+   "source": "https://commons.wikimedia.org/wiki/File:Argentine_hamburgers_made_with_Paty_Cl%C3%A1sicas_patties_served_with_a_side_of_french_fries.jpg"
+  },
+  {
+   "subject": "item:169",
+   "file": "File:Two Gulab Jamun in a plate 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash.dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg"
+  },
+  {
+   "subject": "item:17",
+   "file": "File:Biryani Home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shyamveer.singh1982",
+   "source": "https://commons.wikimedia.org/wiki/File:Biryani_Home.jpg"
+  },
+  {
+   "subject": "item:170",
+   "file": "File:Ras Malai.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Ras_Malai.JPG"
+  },
+  {
+   "subject": "item:171",
+   "file": "File:Gajar Ka Halwa a famous Indian Sweet Dish 02.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Bugatti Enthusiast Aishwary Raj",
+   "source": "https://commons.wikimedia.org/wiki/File:Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_02.jpg"
+  },
+  {
+   "subject": "item:172",
+   "file": "File:Chocolate Cake Slice in bin (32180558890).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Willis Lam",
+   "source": "https://commons.wikimedia.org/wiki/File:Chocolate_Cake_Slice_in_bin_(32180558890).jpg"
+  },
+  {
+   "subject": "item:173",
+   "file": "File:Slice of cheesecake.JPG",
+   "licence": "CC BY-SA 3.0",
+   "author": "Mythe",
+   "source": "https://commons.wikimedia.org/wiki/File:Slice_of_cheesecake.JPG"
+  },
+  {
+   "subject": "item:174",
+   "file": "File:Le Napolitain (Lyon) - tiramisu (1).jpg",
+   "licence": "CC0",
+   "author": "Beno\u00eet Prieur",
+   "source": "https://commons.wikimedia.org/wiki/File:Le_Napolitain_(Lyon)_-_tiramisu_(1).jpg"
+  },
+  {
+   "subject": "item:175",
+   "file": "File:Brownies with Ice cream.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Dr. Chinchu C.",
+   "source": "https://commons.wikimedia.org/wiki/File:Brownies_with_Ice_cream.jpg"
+  },
+  {
+   "subject": "item:176",
+   "file": "File:Chai Latte - T @ The Dials 2024-02-26.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chai_Latte_-_T_@_The_Dials_2024-02-26.jpg"
+  },
+  {
+   "subject": "item:177",
+   "file": "File:Indian filter coffee in Dabarah.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Unknown",
+   "source": "https://commons.wikimedia.org/wiki/File:Indian_filter_coffee_in_Dabarah.jpg"
+  },
+  {
+   "subject": "item:178",
+   "file": "File:Cappuccino-cup 20230110 104449.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ioacc1234red",
+   "source": "https://commons.wikimedia.org/wiki/File:Cappuccino-cup_20230110_104449.jpg"
+  },
+  {
+   "subject": "item:179",
+   "file": "File:Coffee and mango lassi at restaurant South Asian Street Food.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Coffee_and_mango_lassi_at_restaurant_South_Asian_Street_Food.jpg"
+  },
+  {
+   "subject": "item:18",
+   "file": "File:Vegetable biryani 03.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Turbo1232112321",
+   "source": "https://commons.wikimedia.org/wiki/File:Vegetable_biryani_03.JPG"
+  },
+  {
+   "subject": "item:180",
+   "file": "File:Iced Coffee in Glass - Sunshine Coffee - Laramie Cafe (53838344552).jpg",
+   "licence": "CC BY 2.0",
+   "author": "Tony Webster",
+   "source": "https://commons.wikimedia.org/wiki/File:Iced_Coffee_in_Glass_-_Sunshine_Coffee_-_Laramie_Cafe_(53838344552).jpg"
+  },
+  {
+   "subject": "item:181",
+   "file": "File:Glass bottled and shot necked Soda vendor - Jammu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Sanu N",
+   "source": "https://commons.wikimedia.org/wiki/File:Glass_bottled_and_shot_necked_Soda_vendor_-_Jammu.jpg"
+  },
+  {
+   "subject": "item:182",
+   "file": "File:Mango Milkshake.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "GoDakshin from Bangalore, India",
+   "source": "https://commons.wikimedia.org/wiki/File:Mango_Milkshake.jpg"
+  },
+  {
+   "subject": "item:183",
+   "file": "File:Masala dosa from Varanasi.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gannu03",
+   "source": "https://commons.wikimedia.org/wiki/File:Masala_dosa_from_Varanasi.jpg"
+  },
+  {
+   "subject": "item:184",
+   "file": "File:Plain Dosa from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Libreravi",
+   "source": "https://commons.wikimedia.org/wiki/File:Plain_Dosa_from_North_India.jpg"
+  },
+  {
+   "subject": "item:185",
+   "file": "File:Rava Dosa with ginger chutney.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Hartej.hundal",
+   "source": "https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_ginger_chutney.JPG"
+  },
+  {
+   "subject": "item:186",
+   "file": "File:Idli sambar.2.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Simranjeet Sidhu",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_sambar.2.jpg"
+  },
+  {
+   "subject": "item:187",
+   "file": "File:Idli and Medu Vada.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "OdetomyLife",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG"
+  },
+  {
+   "subject": "item:188",
+   "file": "File:Kolam Pongal 1stMain Uthandi Jan23 A7C 04882.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would m",
+   "source": "https://commons.wikimedia.org/wiki/File:Kolam_Pongal_1stMain_Uthandi_Jan23_A7C_04882.jpg"
+  },
+  {
+   "subject": "item:189",
+   "file": "File:South Indian Thali at Sarvana Bhawan.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Maskaravivek",
+   "source": "https://commons.wikimedia.org/wiki/File:South_Indian_Thali_at_Sarvana_Bhawan.jpg"
+  },
+  {
+   "subject": "item:19",
+   "file": "File:Egg Biryani and Chicken Chap.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Meghattay Saha",
+   "source": "https://commons.wikimedia.org/wiki/File:Egg_Biryani_and_Chicken_Chap.jpg"
+  },
+  {
+   "subject": "item:190",
+   "file": "File:Curd rice in ICH Bhopal.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg"
+  },
+  {
+   "subject": "item:191",
+   "file": "File:Chitranna and Payasa.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Radhikapavan",
+   "source": "https://commons.wikimedia.org/wiki/File:Chitranna_and_Payasa.jpg"
+  },
+  {
+   "subject": "item:192",
+   "file": "File:Bisi Bele Bath.jpg",
+   "licence": "CC0",
+   "author": "Devika.pujari",
+   "source": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath.jpg"
+  },
+  {
+   "subject": "item:193",
+   "file": "File:Gaddavu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mahaveer Indra",
+   "source": "https://commons.wikimedia.org/wiki/File:Gaddavu.jpg"
+  },
+  {
+   "subject": "item:194",
+   "file": "File:Coconut Chutney - Home Made.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mailz2kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Coconut_Chutney_-_Home_Made.JPG"
+  },
+  {
+   "subject": "item:195",
+   "file": "File:Ghee Podi Idli - Murugan Idli Shop, Chennai - TamilNadu - PXL0246.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Harikrishnan N",
+   "source": "https://commons.wikimedia.org/wiki/File:Ghee_Podi_Idli_-_Murugan_Idli_Shop,_Chennai_-_TamilNadu_-_PXL0246.jpg"
+  },
+  {
+   "subject": "item:196",
+   "file": "File:Crispy Pani Puri.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Teena Sometimes",
+   "source": "https://commons.wikimedia.org/wiki/File:Crispy_Pani_Puri.jpg"
+  },
+  {
+   "subject": "item:197",
+   "file": "File:Bhel Puri at Juhu Beach.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Rakesh Krishna Kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Bhel_Puri_at_Juhu_Beach.jpg"
+  },
+  {
+   "subject": "item:198",
+   "file": "File:Odia Style Dahi bara Puri Odisha-IMG 953.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Subhransuphotography",
+   "source": "https://commons.wikimedia.org/wiki/File:Odia_Style_Dahi_bara_Puri_Odisha-IMG_953.jpg"
+  },
+  {
+   "subject": "item:199",
+   "file": "File:Samosa Chaat.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Samosa_Chaat.jpg"
+  },
+  {
+   "subject": "item:2",
+   "file": "File:Hara bhara kabab-.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Kanikatwl",
+   "source": "https://commons.wikimedia.org/wiki/File:Hara_bhara_kabab-.JPG"
+  },
+  {
+   "subject": "item:20",
+   "file": "File:Prawn Biryani.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Number55",
+   "source": "https://commons.wikimedia.org/wiki/File:Prawn_Biryani.jpg"
+  },
+  {
+   "subject": "item:200",
+   "file": "File:Vada Pav.jpg",
+   "licence": "CC BY 3.0",
+   "author": "Deepeshmd",
+   "source": "https://commons.wikimedia.org/wiki/File:Vada_Pav.jpg"
+  },
+  {
+   "subject": "item:201",
+   "file": "File:Misal Pav - Khed Shivpur - Maharashtra - 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Krrisd",
+   "source": "https://commons.wikimedia.org/wiki/File:Misal_Pav_-_Khed_Shivpur_-_Maharashtra_-_01.jpg"
+  },
+  {
+   "subject": "item:202",
+   "file": "File:Chicken Kathi Roll (5646735923).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Andy Mitchell from Glasgow, UK",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg"
+  },
+  {
+   "subject": "item:203",
+   "file": "File:Beef wrap - Sunbirds 2023-09-14.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Beef_wrap_-_Sunbirds_2023-09-14.jpg"
+  },
+  {
+   "subject": "item:204",
+   "file": "File:Paneer Tikka Seek.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "HARIOM.AWASTHI",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Tikka_Seek.JPG"
+  },
+  {
+   "subject": "item:205",
+   "file": "File:Hara bhara kabab-.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Kanikatwl",
+   "source": "https://commons.wikimedia.org/wiki/File:Hara_bhara_kabab-.JPG"
+  },
+  {
+   "subject": "item:206",
+   "file": "File:Afghani Malai Chicken Tikka.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Absar.1989",
+   "source": "https://commons.wikimedia.org/wiki/File:Afghani_Malai_Chicken_Tikka.jpg"
+  },
+  {
+   "subject": "item:207",
+   "file": "File:Marinated Tandoori Chicken pieces.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Marinated_Tandoori_Chicken_pieces.JPG"
+  },
+  {
+   "subject": "item:208",
+   "file": "File:Amritsari Fried Fish.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Amritsari_Fried_Fish.JPG"
+  },
+  {
+   "subject": "item:209",
+   "file": "File:Dal Makhani..JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Dal_Makhani..JPG"
+  },
+  {
+   "subject": "item:21",
+   "file": "File:Hyderabadi Hari Mirchi Ka Salan.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Hari_Mirchi_Ka_Salan.JPG"
+  },
+  {
+   "subject": "item:210",
+   "file": "File:Rotti and Paneer Butter Masala.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ganesh Mohan T",
+   "source": "https://commons.wikimedia.org/wiki/File:Rotti_and_Paneer_Butter_Masala.jpg"
+  },
+  {
+   "subject": "item:211",
+   "file": "File:Dumba Karahi 20210605.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shahzaib Damn Cruze",
+   "source": "https://commons.wikimedia.org/wiki/File:Dumba_Karahi_20210605.jpg"
+  },
+  {
+   "subject": "item:212",
+   "file": "File:Butter Chicken, City Grill Kottayam.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg"
+  },
+  {
+   "subject": "item:213",
+   "file": "File:Lamb Rogan Josh at Restaurant Guru, Tallinn.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Lamb_Rogan_Josh_at_Restaurant_Guru,_Tallinn.jpg"
+  },
+  {
+   "subject": "item:214",
+   "file": "File:Bikaner chole bhature.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Aleemk72",
+   "source": "https://commons.wikimedia.org/wiki/File:Bikaner_chole_bhature.jpg"
+  },
+  {
+   "subject": "item:215",
+   "file": "File:Butter Naan Flatbread from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Naan_Flatbread_from_North_India.jpg"
+  },
+  {
+   "subject": "item:216",
+   "file": "File:Cheese naan and Garlic naan.jpg",
+   "licence": "CC BY 4.0",
+   "author": "\u30ce\u30dc\u30db\u30b7\u30e7\u30b3\u30ed\u30c8\u30bd",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheese_naan_and_Garlic_naan.jpg"
+  },
+  {
+   "subject": "item:217",
+   "file": "File:Lachha-paratha.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal",
+   "source": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg"
+  },
+  {
+   "subject": "item:218",
+   "file": "File:Baking-roti-inside-tandoori.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Baking-roti-inside-tandoori.jpg"
+  },
+  {
+   "subject": "item:219",
+   "file": "File:Masala dosa from Varanasi.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gannu03",
+   "source": "https://commons.wikimedia.org/wiki/File:Masala_dosa_from_Varanasi.jpg"
+  },
+  {
+   "subject": "item:22",
+   "file": "File:Aloo Raita Recipe By Sonia Goyal.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal Jaipur",
+   "source": "https://commons.wikimedia.org/wiki/File:Aloo_Raita_Recipe_By_Sonia_Goyal.jpg"
+  },
+  {
+   "subject": "item:220",
+   "file": "File:Plain Dosa from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Libreravi",
+   "source": "https://commons.wikimedia.org/wiki/File:Plain_Dosa_from_North_India.jpg"
+  },
+  {
+   "subject": "item:221",
+   "file": "File:Rava Dosa with ginger chutney.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Hartej.hundal",
+   "source": "https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_ginger_chutney.JPG"
+  },
+  {
+   "subject": "item:222",
+   "file": "File:Idli sambar.2.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Simranjeet Sidhu",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_sambar.2.jpg"
+  },
+  {
+   "subject": "item:223",
+   "file": "File:Idli and Medu Vada.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "OdetomyLife",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG"
+  },
+  {
+   "subject": "item:224",
+   "file": "File:Kolam Pongal 1stMain Uthandi Jan23 A7C 04882.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would m",
+   "source": "https://commons.wikimedia.org/wiki/File:Kolam_Pongal_1stMain_Uthandi_Jan23_A7C_04882.jpg"
+  },
+  {
+   "subject": "item:225",
+   "file": "File:South Indian Thali at Sarvana Bhawan.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Maskaravivek",
+   "source": "https://commons.wikimedia.org/wiki/File:South_Indian_Thali_at_Sarvana_Bhawan.jpg"
+  },
+  {
+   "subject": "item:226",
+   "file": "File:Curd rice in ICH Bhopal.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg"
+  },
+  {
+   "subject": "item:227",
+   "file": "File:Chitranna and Payasa.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Radhikapavan",
+   "source": "https://commons.wikimedia.org/wiki/File:Chitranna_and_Payasa.jpg"
+  },
+  {
+   "subject": "item:228",
+   "file": "File:Bisi Bele Bath.jpg",
+   "licence": "CC0",
+   "author": "Devika.pujari",
+   "source": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath.jpg"
+  },
+  {
+   "subject": "item:229",
+   "file": "File:Gaddavu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mahaveer Indra",
+   "source": "https://commons.wikimedia.org/wiki/File:Gaddavu.jpg"
+  },
+  {
+   "subject": "item:23",
+   "file": "File:Double Ka Meetha.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Double_Ka_Meetha.JPG"
+  },
+  {
+   "subject": "item:230",
+   "file": "File:Coconut Chutney - Home Made.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mailz2kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Coconut_Chutney_-_Home_Made.JPG"
+  },
+  {
+   "subject": "item:231",
+   "file": "File:Ghee Podi Idli - Murugan Idli Shop, Chennai - TamilNadu - PXL0246.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Harikrishnan N",
+   "source": "https://commons.wikimedia.org/wiki/File:Ghee_Podi_Idli_-_Murugan_Idli_Shop,_Chennai_-_TamilNadu_-_PXL0246.jpg"
+  },
+  {
+   "subject": "item:232",
+   "file": "File:Masala dosa from Varanasi.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gannu03",
+   "source": "https://commons.wikimedia.org/wiki/File:Masala_dosa_from_Varanasi.jpg"
+  },
+  {
+   "subject": "item:233",
+   "file": "File:Plain Dosa from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Libreravi",
+   "source": "https://commons.wikimedia.org/wiki/File:Plain_Dosa_from_North_India.jpg"
+  },
+  {
+   "subject": "item:234",
+   "file": "File:Rava Dosa with ginger chutney.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Hartej.hundal",
+   "source": "https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_ginger_chutney.JPG"
+  },
+  {
+   "subject": "item:235",
+   "file": "File:Idli sambar.2.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Simranjeet Sidhu",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_sambar.2.jpg"
+  },
+  {
+   "subject": "item:236",
+   "file": "File:Idli and Medu Vada.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "OdetomyLife",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG"
+  },
+  {
+   "subject": "item:237",
+   "file": "File:Kolam Pongal 1stMain Uthandi Jan23 A7C 04882.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would m",
+   "source": "https://commons.wikimedia.org/wiki/File:Kolam_Pongal_1stMain_Uthandi_Jan23_A7C_04882.jpg"
+  },
+  {
+   "subject": "item:238",
+   "file": "File:South Indian Thali at Sarvana Bhawan.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Maskaravivek",
+   "source": "https://commons.wikimedia.org/wiki/File:South_Indian_Thali_at_Sarvana_Bhawan.jpg"
+  },
+  {
+   "subject": "item:239",
+   "file": "File:Curd rice in ICH Bhopal.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg"
+  },
+  {
+   "subject": "item:24",
+   "file": "File:Masala dosa from Varanasi.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gannu03",
+   "source": "https://commons.wikimedia.org/wiki/File:Masala_dosa_from_Varanasi.jpg"
+  },
+  {
+   "subject": "item:240",
+   "file": "File:Chitranna and Payasa.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Radhikapavan",
+   "source": "https://commons.wikimedia.org/wiki/File:Chitranna_and_Payasa.jpg"
+  },
+  {
+   "subject": "item:241",
+   "file": "File:Bisi Bele Bath.jpg",
+   "licence": "CC0",
+   "author": "Devika.pujari",
+   "source": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath.jpg"
+  },
+  {
+   "subject": "item:242",
+   "file": "File:Gaddavu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mahaveer Indra",
+   "source": "https://commons.wikimedia.org/wiki/File:Gaddavu.jpg"
+  },
+  {
+   "subject": "item:243",
+   "file": "File:Coconut Chutney - Home Made.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mailz2kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Coconut_Chutney_-_Home_Made.JPG"
+  },
+  {
+   "subject": "item:244",
+   "file": "File:Ghee Podi Idli - Murugan Idli Shop, Chennai - TamilNadu - PXL0246.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Harikrishnan N",
+   "source": "https://commons.wikimedia.org/wiki/File:Ghee_Podi_Idli_-_Murugan_Idli_Shop,_Chennai_-_TamilNadu_-_PXL0246.jpg"
+  },
+  {
+   "subject": "item:245",
+   "file": "File:Gobi manchurian.jpg",
+   "licence": "CC BY 2.5",
+   "author": "scaredy_kat",
+   "source": "https://commons.wikimedia.org/wiki/File:Gobi_manchurian.jpg"
+  },
+  {
+   "subject": "item:246",
+   "file": "File:Paneer Chilli.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Ramesh NG",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Chilli.jpg"
+  },
+  {
+   "subject": "item:247",
+   "file": "File:Chicken Lollipop.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Ramesh NG",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Lollipop.jpg"
+  },
+  {
+   "subject": "item:248",
+   "file": "File:Lonestar Migas- organic eggs scrambled with crispy corn strips, onion, cheese, shredded brisket and pico de gallo.jpg",
+   "licence": "CC BY 2.0",
+   "author": "T.Tseng",
+   "source": "https://commons.wikimedia.org/wiki/File:Lonestar_Migas-_organic_eggs_scrambled_with_crispy_corn_strips,_onion,_cheese,_shredded_brisket_and_pico_de_gallo.jpg"
+  },
+  {
+   "subject": "item:249",
+   "file": "File:Buff Chow Mein.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Buff_Chow_Mein.jpg"
+  },
+  {
+   "subject": "item:25",
+   "file": "File:Plain Dosa from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Libreravi",
+   "source": "https://commons.wikimedia.org/wiki/File:Plain_Dosa_from_North_India.jpg"
+  },
+  {
+   "subject": "item:250",
+   "file": "File:Fried rice in home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Peachyeung316",
+   "source": "https://commons.wikimedia.org/wiki/File:Fried_rice_in_home.jpg"
+  },
+  {
+   "subject": "item:251",
+   "file": "File:Chicken fried rice - Stir Fry by CK 2023-12-02.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_fried_rice_-_Stir_Fry_by_CK_2023-12-02.jpg"
+  },
+  {
+   "subject": "item:252",
+   "file": "File:Sobameshi 001.jpg",
+   "licence": "CC0",
+   "author": "Ocdp",
+   "source": "https://commons.wikimedia.org/wiki/File:Sobameshi_001.jpg"
+  },
+  {
+   "subject": "item:253",
+   "file": "File:Kung Pao Chicken at Liqiaoshun Restaurant (20220310175424).jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "N509FZ",
+   "source": "https://commons.wikimedia.org/wiki/File:Kung_Pao_Chicken_at_Liqiaoshun_Restaurant_(20220310175424).jpg"
+  },
+  {
+   "subject": "item:254",
+   "file": "File:Chen Mapo Tofu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "ZhengZhou",
+   "source": "https://commons.wikimedia.org/wiki/File:Chen_Mapo_Tofu.jpg"
+  },
+  {
+   "subject": "item:255",
+   "file": "File:Chicken Dum Biryani 03.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Dum_Biryani_03.jpg"
+  },
+  {
+   "subject": "item:256",
+   "file": "File:Biryani Home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shyamveer.singh1982",
+   "source": "https://commons.wikimedia.org/wiki/File:Biryani_Home.jpg"
+  },
+  {
+   "subject": "item:257",
+   "file": "File:Vegetable biryani 03.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Turbo1232112321",
+   "source": "https://commons.wikimedia.org/wiki/File:Vegetable_biryani_03.JPG"
+  },
+  {
+   "subject": "item:258",
+   "file": "File:Egg Biryani and Chicken Chap.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Meghattay Saha",
+   "source": "https://commons.wikimedia.org/wiki/File:Egg_Biryani_and_Chicken_Chap.jpg"
+  },
+  {
+   "subject": "item:259",
+   "file": "File:Prawn Biryani.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Number55",
+   "source": "https://commons.wikimedia.org/wiki/File:Prawn_Biryani.jpg"
+  },
+  {
+   "subject": "item:26",
+   "file": "File:Rava Dosa with ginger chutney.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Hartej.hundal",
+   "source": "https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_ginger_chutney.JPG"
+  },
+  {
+   "subject": "item:260",
+   "file": "File:Hyderabadi Hari Mirchi Ka Salan.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Hari_Mirchi_Ka_Salan.JPG"
+  },
+  {
+   "subject": "item:261",
+   "file": "File:Aloo Raita Recipe By Sonia Goyal.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal Jaipur",
+   "source": "https://commons.wikimedia.org/wiki/File:Aloo_Raita_Recipe_By_Sonia_Goyal.jpg"
+  },
+  {
+   "subject": "item:262",
+   "file": "File:Double Ka Meetha.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Double_Ka_Meetha.JPG"
+  },
+  {
+   "subject": "item:263",
+   "file": "File:Paneer Tikka Seek.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "HARIOM.AWASTHI",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Tikka_Seek.JPG"
+  },
+  {
+   "subject": "item:264",
+   "file": "File:Hara bhara kabab-.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Kanikatwl",
+   "source": "https://commons.wikimedia.org/wiki/File:Hara_bhara_kabab-.JPG"
+  },
+  {
+   "subject": "item:265",
+   "file": "File:Afghani Malai Chicken Tikka.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Absar.1989",
+   "source": "https://commons.wikimedia.org/wiki/File:Afghani_Malai_Chicken_Tikka.jpg"
+  },
+  {
+   "subject": "item:266",
+   "file": "File:Marinated Tandoori Chicken pieces.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Marinated_Tandoori_Chicken_pieces.JPG"
+  },
+  {
+   "subject": "item:267",
+   "file": "File:Amritsari Fried Fish.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Amritsari_Fried_Fish.JPG"
+  },
+  {
+   "subject": "item:268",
+   "file": "File:Dal Makhani..JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Dal_Makhani..JPG"
+  },
+  {
+   "subject": "item:269",
+   "file": "File:Rotti and Paneer Butter Masala.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ganesh Mohan T",
+   "source": "https://commons.wikimedia.org/wiki/File:Rotti_and_Paneer_Butter_Masala.jpg"
+  },
+  {
+   "subject": "item:27",
+   "file": "File:Idli sambar.2.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Simranjeet Sidhu",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_sambar.2.jpg"
+  },
+  {
+   "subject": "item:270",
+   "file": "File:Dumba Karahi 20210605.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shahzaib Damn Cruze",
+   "source": "https://commons.wikimedia.org/wiki/File:Dumba_Karahi_20210605.jpg"
+  },
+  {
+   "subject": "item:271",
+   "file": "File:Butter Chicken, City Grill Kottayam.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg"
+  },
+  {
+   "subject": "item:272",
+   "file": "File:Lamb Rogan Josh at Restaurant Guru, Tallinn.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Lamb_Rogan_Josh_at_Restaurant_Guru,_Tallinn.jpg"
+  },
+  {
+   "subject": "item:273",
+   "file": "File:Bikaner chole bhature.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Aleemk72",
+   "source": "https://commons.wikimedia.org/wiki/File:Bikaner_chole_bhature.jpg"
+  },
+  {
+   "subject": "item:274",
+   "file": "File:Butter Naan Flatbread from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Naan_Flatbread_from_North_India.jpg"
+  },
+  {
+   "subject": "item:275",
+   "file": "File:Cheese naan and Garlic naan.jpg",
+   "licence": "CC BY 4.0",
+   "author": "\u30ce\u30dc\u30db\u30b7\u30e7\u30b3\u30ed\u30c8\u30bd",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheese_naan_and_Garlic_naan.jpg"
+  },
+  {
+   "subject": "item:276",
+   "file": "File:Lachha-paratha.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal",
+   "source": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg"
+  },
+  {
+   "subject": "item:277",
+   "file": "File:Baking-roti-inside-tandoori.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Baking-roti-inside-tandoori.jpg"
+  },
+  {
+   "subject": "item:278",
+   "file": "File:Eq it-na pizza-margherita sep2005 sml.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Valerio Capello at English Wikipedia",
+   "source": "https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+  },
+  {
+   "subject": "item:279",
+   "file": "File:Eq it-na pizza-margherita sep2005 sml.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Valerio Capello at English Wikipedia",
+   "source": "https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+  },
+  {
+   "subject": "item:28",
+   "file": "File:Idli and Medu Vada.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "OdetomyLife",
+   "source": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG"
+  },
+  {
+   "subject": "item:280",
+   "file": "File:Flame-grilled PERi-PERi chicken.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Banej",
+   "source": "https://commons.wikimedia.org/wiki/File:Flame-grilled_PERi-PERi_chicken.jpg"
+  },
+  {
+   "subject": "item:281",
+   "file": "File:Malai Paneer Pizza from India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Barthateslisa",
+   "source": "https://commons.wikimedia.org/wiki/File:Malai_Paneer_Pizza_from_India.jpg"
+  },
+  {
+   "subject": "item:282",
+   "file": "File:Pepperoni pizza- boella co. 2024-02-17.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Pepperoni_pizza-_boella_co._2024-02-17.jpg"
+  },
+  {
+   "subject": "item:283",
+   "file": "File:2021-02-14 17 58 44 A Giant brand Garlic Bread Stick in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Famartin",
+   "source": "https://commons.wikimedia.org/wiki/File:2021-02-14_17_58_44_A_Giant_brand_Garlic_Bread_Stick_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
+  },
+  {
+   "subject": "item:284",
+   "file": "File:Ban-yan day on board the Magnificent; or, pease porridge hot from the coppers! (BM 1851,0901.469).jpg",
+   "licence": "Public domain",
+   "author": "Print made by: John Nixon Published by: William Holland",
+   "source": "https://commons.wikimedia.org/wiki/File:Ban-yan_day_on_board_the_Magnificent;_or,_pease_porridge_hot_from_the_coppers!_(BM_1851,0901.469).jpg"
+  },
+  {
+   "subject": "item:285",
+   "file": "File:Argentine hamburgers made with Paty Cl\u00e1sicas patties served with a side of french fries.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Horacio Cambeiro",
+   "source": "https://commons.wikimedia.org/wiki/File:Argentine_hamburgers_made_with_Paty_Cl%C3%A1sicas_patties_served_with_a_side_of_french_fries.jpg"
+  },
+  {
+   "subject": "item:286",
+   "file": "File:Two Gulab Jamun in a plate 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash.dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg"
+  },
+  {
+   "subject": "item:287",
+   "file": "File:Ras Malai.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Ras_Malai.JPG"
+  },
+  {
+   "subject": "item:288",
+   "file": "File:Gajar Ka Halwa a famous Indian Sweet Dish 02.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Bugatti Enthusiast Aishwary Raj",
+   "source": "https://commons.wikimedia.org/wiki/File:Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_02.jpg"
+  },
+  {
+   "subject": "item:289",
+   "file": "File:Chocolate Cake Slice in bin (32180558890).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Willis Lam",
+   "source": "https://commons.wikimedia.org/wiki/File:Chocolate_Cake_Slice_in_bin_(32180558890).jpg"
+  },
+  {
+   "subject": "item:29",
+   "file": "File:Kolam Pongal 1stMain Uthandi Jan23 A7C 04882.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would m",
+   "source": "https://commons.wikimedia.org/wiki/File:Kolam_Pongal_1stMain_Uthandi_Jan23_A7C_04882.jpg"
+  },
+  {
+   "subject": "item:290",
+   "file": "File:Slice of cheesecake.JPG",
+   "licence": "CC BY-SA 3.0",
+   "author": "Mythe",
+   "source": "https://commons.wikimedia.org/wiki/File:Slice_of_cheesecake.JPG"
+  },
+  {
+   "subject": "item:291",
+   "file": "File:Le Napolitain (Lyon) - tiramisu (1).jpg",
+   "licence": "CC0",
+   "author": "Beno\u00eet Prieur",
+   "source": "https://commons.wikimedia.org/wiki/File:Le_Napolitain_(Lyon)_-_tiramisu_(1).jpg"
+  },
+  {
+   "subject": "item:292",
+   "file": "File:Brownies with Ice cream.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Dr. Chinchu C.",
+   "source": "https://commons.wikimedia.org/wiki/File:Brownies_with_Ice_cream.jpg"
+  },
+  {
+   "subject": "item:293",
+   "file": "File:Two Gulab Jamun in a plate 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash.dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg"
+  },
+  {
+   "subject": "item:294",
+   "file": "File:Ras Malai.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Ras_Malai.JPG"
+  },
+  {
+   "subject": "item:295",
+   "file": "File:Gajar Ka Halwa a famous Indian Sweet Dish 02.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Bugatti Enthusiast Aishwary Raj",
+   "source": "https://commons.wikimedia.org/wiki/File:Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_02.jpg"
+  },
+  {
+   "subject": "item:296",
+   "file": "File:Chocolate Cake Slice in bin (32180558890).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Willis Lam",
+   "source": "https://commons.wikimedia.org/wiki/File:Chocolate_Cake_Slice_in_bin_(32180558890).jpg"
+  },
+  {
+   "subject": "item:297",
+   "file": "File:Slice of cheesecake.JPG",
+   "licence": "CC BY-SA 3.0",
+   "author": "Mythe",
+   "source": "https://commons.wikimedia.org/wiki/File:Slice_of_cheesecake.JPG"
+  },
+  {
+   "subject": "item:298",
+   "file": "File:Le Napolitain (Lyon) - tiramisu (1).jpg",
+   "licence": "CC0",
+   "author": "Beno\u00eet Prieur",
+   "source": "https://commons.wikimedia.org/wiki/File:Le_Napolitain_(Lyon)_-_tiramisu_(1).jpg"
+  },
+  {
+   "subject": "item:299",
+   "file": "File:Brownies with Ice cream.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Dr. Chinchu C.",
+   "source": "https://commons.wikimedia.org/wiki/File:Brownies_with_Ice_cream.jpg"
+  },
+  {
+   "subject": "item:3",
+   "file": "File:Afghani Malai Chicken Tikka.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Absar.1989",
+   "source": "https://commons.wikimedia.org/wiki/File:Afghani_Malai_Chicken_Tikka.jpg"
+  },
+  {
+   "subject": "item:30",
+   "file": "File:South Indian Thali at Sarvana Bhawan.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Maskaravivek",
+   "source": "https://commons.wikimedia.org/wiki/File:South_Indian_Thali_at_Sarvana_Bhawan.jpg"
+  },
+  {
+   "subject": "item:300",
+   "file": "File:Chai Latte - T @ The Dials 2024-02-26.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chai_Latte_-_T_@_The_Dials_2024-02-26.jpg"
+  },
+  {
+   "subject": "item:301",
+   "file": "File:Indian filter coffee in Dabarah.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Unknown",
+   "source": "https://commons.wikimedia.org/wiki/File:Indian_filter_coffee_in_Dabarah.jpg"
+  },
+  {
+   "subject": "item:302",
+   "file": "File:Cappuccino-cup 20230110 104449.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ioacc1234red",
+   "source": "https://commons.wikimedia.org/wiki/File:Cappuccino-cup_20230110_104449.jpg"
+  },
+  {
+   "subject": "item:303",
+   "file": "File:Coffee and mango lassi at restaurant South Asian Street Food.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Coffee_and_mango_lassi_at_restaurant_South_Asian_Street_Food.jpg"
+  },
+  {
+   "subject": "item:304",
+   "file": "File:Iced Coffee in Glass - Sunshine Coffee - Laramie Cafe (53838344552).jpg",
+   "licence": "CC BY 2.0",
+   "author": "Tony Webster",
+   "source": "https://commons.wikimedia.org/wiki/File:Iced_Coffee_in_Glass_-_Sunshine_Coffee_-_Laramie_Cafe_(53838344552).jpg"
+  },
+  {
+   "subject": "item:305",
+   "file": "File:Glass bottled and shot necked Soda vendor - Jammu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Sanu N",
+   "source": "https://commons.wikimedia.org/wiki/File:Glass_bottled_and_shot_necked_Soda_vendor_-_Jammu.jpg"
+  },
+  {
+   "subject": "item:306",
+   "file": "File:Mango Milkshake.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "GoDakshin from Bangalore, India",
+   "source": "https://commons.wikimedia.org/wiki/File:Mango_Milkshake.jpg"
+  },
+  {
+   "subject": "item:307",
+   "file": "File:Crispy Pani Puri.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Teena Sometimes",
+   "source": "https://commons.wikimedia.org/wiki/File:Crispy_Pani_Puri.jpg"
+  },
+  {
+   "subject": "item:308",
+   "file": "File:Bhel Puri at Juhu Beach.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Rakesh Krishna Kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Bhel_Puri_at_Juhu_Beach.jpg"
+  },
+  {
+   "subject": "item:309",
+   "file": "File:Odia Style Dahi bara Puri Odisha-IMG 953.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Subhransuphotography",
+   "source": "https://commons.wikimedia.org/wiki/File:Odia_Style_Dahi_bara_Puri_Odisha-IMG_953.jpg"
+  },
+  {
+   "subject": "item:31",
+   "file": "File:Curd rice in ICH Bhopal.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg"
+  },
+  {
+   "subject": "item:310",
+   "file": "File:Samosa Chaat.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Samosa_Chaat.jpg"
+  },
+  {
+   "subject": "item:311",
+   "file": "File:Vada Pav.jpg",
+   "licence": "CC BY 3.0",
+   "author": "Deepeshmd",
+   "source": "https://commons.wikimedia.org/wiki/File:Vada_Pav.jpg"
+  },
+  {
+   "subject": "item:312",
+   "file": "File:Misal Pav - Khed Shivpur - Maharashtra - 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Krrisd",
+   "source": "https://commons.wikimedia.org/wiki/File:Misal_Pav_-_Khed_Shivpur_-_Maharashtra_-_01.jpg"
+  },
+  {
+   "subject": "item:313",
+   "file": "File:Chicken Kathi Roll (5646735923).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Andy Mitchell from Glasgow, UK",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg"
+  },
+  {
+   "subject": "item:314",
+   "file": "File:Beef wrap - Sunbirds 2023-09-14.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Beef_wrap_-_Sunbirds_2023-09-14.jpg"
+  },
+  {
+   "subject": "item:315",
+   "file": "File:Paneer Tikka Seek.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "HARIOM.AWASTHI",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Tikka_Seek.JPG"
+  },
+  {
+   "subject": "item:316",
+   "file": "File:Hara bhara kabab-.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Kanikatwl",
+   "source": "https://commons.wikimedia.org/wiki/File:Hara_bhara_kabab-.JPG"
+  },
+  {
+   "subject": "item:317",
+   "file": "File:Afghani Malai Chicken Tikka.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Absar.1989",
+   "source": "https://commons.wikimedia.org/wiki/File:Afghani_Malai_Chicken_Tikka.jpg"
+  },
+  {
+   "subject": "item:318",
+   "file": "File:Marinated Tandoori Chicken pieces.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Marinated_Tandoori_Chicken_pieces.JPG"
+  },
+  {
+   "subject": "item:319",
+   "file": "File:Amritsari Fried Fish.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Amritsari_Fried_Fish.JPG"
+  },
+  {
+   "subject": "item:32",
+   "file": "File:Chitranna and Payasa.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Radhikapavan",
+   "source": "https://commons.wikimedia.org/wiki/File:Chitranna_and_Payasa.jpg"
+  },
+  {
+   "subject": "item:320",
+   "file": "File:Dal Makhani..JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Dal_Makhani..JPG"
+  },
+  {
+   "subject": "item:321",
+   "file": "File:Rotti and Paneer Butter Masala.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ganesh Mohan T",
+   "source": "https://commons.wikimedia.org/wiki/File:Rotti_and_Paneer_Butter_Masala.jpg"
+  },
+  {
+   "subject": "item:322",
+   "file": "File:Dumba Karahi 20210605.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shahzaib Damn Cruze",
+   "source": "https://commons.wikimedia.org/wiki/File:Dumba_Karahi_20210605.jpg"
+  },
+  {
+   "subject": "item:323",
+   "file": "File:Butter Chicken, City Grill Kottayam.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg"
+  },
+  {
+   "subject": "item:324",
+   "file": "File:Lamb Rogan Josh at Restaurant Guru, Tallinn.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Lamb_Rogan_Josh_at_Restaurant_Guru,_Tallinn.jpg"
+  },
+  {
+   "subject": "item:325",
+   "file": "File:Bikaner chole bhature.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Aleemk72",
+   "source": "https://commons.wikimedia.org/wiki/File:Bikaner_chole_bhature.jpg"
+  },
+  {
+   "subject": "item:326",
+   "file": "File:Butter Naan Flatbread from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Naan_Flatbread_from_North_India.jpg"
+  },
+  {
+   "subject": "item:327",
+   "file": "File:Cheese naan and Garlic naan.jpg",
+   "licence": "CC BY 4.0",
+   "author": "\u30ce\u30dc\u30db\u30b7\u30e7\u30b3\u30ed\u30c8\u30bd",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheese_naan_and_Garlic_naan.jpg"
+  },
+  {
+   "subject": "item:328",
+   "file": "File:Lachha-paratha.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal",
+   "source": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg"
+  },
+  {
+   "subject": "item:329",
+   "file": "File:Baking-roti-inside-tandoori.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Baking-roti-inside-tandoori.jpg"
+  },
+  {
+   "subject": "item:33",
+   "file": "File:Bisi Bele Bath.jpg",
+   "licence": "CC0",
+   "author": "Devika.pujari",
+   "source": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath.jpg"
+  },
+  {
+   "subject": "item:330",
+   "file": "File:Buff Chow Mein.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Buff_Chow_Mein.jpg"
+  },
+  {
+   "subject": "item:331",
+   "file": "File:Fried rice in home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Peachyeung316",
+   "source": "https://commons.wikimedia.org/wiki/File:Fried_rice_in_home.jpg"
+  },
+  {
+   "subject": "item:332",
+   "file": "File:Chicken fried rice - Stir Fry by CK 2023-12-02.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_fried_rice_-_Stir_Fry_by_CK_2023-12-02.jpg"
+  },
+  {
+   "subject": "item:333",
+   "file": "File:Sobameshi 001.jpg",
+   "licence": "CC0",
+   "author": "Ocdp",
+   "source": "https://commons.wikimedia.org/wiki/File:Sobameshi_001.jpg"
+  },
+  {
+   "subject": "item:34",
+   "file": "File:Gaddavu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mahaveer Indra",
+   "source": "https://commons.wikimedia.org/wiki/File:Gaddavu.jpg"
+  },
+  {
+   "subject": "item:35",
+   "file": "File:Coconut Chutney - Home Made.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Mailz2kumar",
+   "source": "https://commons.wikimedia.org/wiki/File:Coconut_Chutney_-_Home_Made.JPG"
+  },
+  {
+   "subject": "item:36",
+   "file": "File:Ghee Podi Idli - Murugan Idli Shop, Chennai - TamilNadu - PXL0246.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Harikrishnan N",
+   "source": "https://commons.wikimedia.org/wiki/File:Ghee_Podi_Idli_-_Murugan_Idli_Shop,_Chennai_-_TamilNadu_-_PXL0246.jpg"
+  },
+  {
+   "subject": "item:37",
+   "file": "File:Gobi manchurian.jpg",
+   "licence": "CC BY 2.5",
+   "author": "scaredy_kat",
+   "source": "https://commons.wikimedia.org/wiki/File:Gobi_manchurian.jpg"
+  },
+  {
+   "subject": "item:38",
+   "file": "File:Paneer Chilli.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Ramesh NG",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Chilli.jpg"
+  },
+  {
+   "subject": "item:39",
+   "file": "File:Chicken Lollipop.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Ramesh NG",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Lollipop.jpg"
+  },
+  {
+   "subject": "item:4",
+   "file": "File:Marinated Tandoori Chicken pieces.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Marinated_Tandoori_Chicken_pieces.JPG"
+  },
+  {
+   "subject": "item:40",
+   "file": "File:Lonestar Migas- organic eggs scrambled with crispy corn strips, onion, cheese, shredded brisket and pico de gallo.jpg",
+   "licence": "CC BY 2.0",
+   "author": "T.Tseng",
+   "source": "https://commons.wikimedia.org/wiki/File:Lonestar_Migas-_organic_eggs_scrambled_with_crispy_corn_strips,_onion,_cheese,_shredded_brisket_and_pico_de_gallo.jpg"
+  },
+  {
+   "subject": "item:41",
+   "file": "File:Buff Chow Mein.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Gaurav Dhwaj Khadka",
+   "source": "https://commons.wikimedia.org/wiki/File:Buff_Chow_Mein.jpg"
+  },
+  {
+   "subject": "item:42",
+   "file": "File:Fried rice in home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Peachyeung316",
+   "source": "https://commons.wikimedia.org/wiki/File:Fried_rice_in_home.jpg"
+  },
+  {
+   "subject": "item:43",
+   "file": "File:Chicken fried rice - Stir Fry by CK 2023-12-02.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_fried_rice_-_Stir_Fry_by_CK_2023-12-02.jpg"
+  },
+  {
+   "subject": "item:44",
+   "file": "File:Sobameshi 001.jpg",
+   "licence": "CC0",
+   "author": "Ocdp",
+   "source": "https://commons.wikimedia.org/wiki/File:Sobameshi_001.jpg"
+  },
+  {
+   "subject": "item:45",
+   "file": "File:Kung Pao Chicken at Liqiaoshun Restaurant (20220310175424).jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "N509FZ",
+   "source": "https://commons.wikimedia.org/wiki/File:Kung_Pao_Chicken_at_Liqiaoshun_Restaurant_(20220310175424).jpg"
+  },
+  {
+   "subject": "item:46",
+   "file": "File:Chen Mapo Tofu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "ZhengZhou",
+   "source": "https://commons.wikimedia.org/wiki/File:Chen_Mapo_Tofu.jpg"
+  },
+  {
+   "subject": "item:47",
+   "file": "File:Chicken Dum Biryani 03.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Chicken_Dum_Biryani_03.jpg"
+  },
+  {
+   "subject": "item:48",
+   "file": "File:Biryani Home.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shyamveer.singh1982",
+   "source": "https://commons.wikimedia.org/wiki/File:Biryani_Home.jpg"
+  },
+  {
+   "subject": "item:49",
+   "file": "File:Vegetable biryani 03.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Turbo1232112321",
+   "source": "https://commons.wikimedia.org/wiki/File:Vegetable_biryani_03.JPG"
+  },
+  {
+   "subject": "item:5",
+   "file": "File:Amritsari Fried Fish.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Amritsari_Fried_Fish.JPG"
+  },
+  {
+   "subject": "item:50",
+   "file": "File:Egg Biryani and Chicken Chap.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Meghattay Saha",
+   "source": "https://commons.wikimedia.org/wiki/File:Egg_Biryani_and_Chicken_Chap.jpg"
+  },
+  {
+   "subject": "item:51",
+   "file": "File:Prawn Biryani.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Number55",
+   "source": "https://commons.wikimedia.org/wiki/File:Prawn_Biryani.jpg"
+  },
+  {
+   "subject": "item:52",
+   "file": "File:Hyderabadi Hari Mirchi Ka Salan.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Hari_Mirchi_Ka_Salan.JPG"
+  },
+  {
+   "subject": "item:53",
+   "file": "File:Aloo Raita Recipe By Sonia Goyal.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal Jaipur",
+   "source": "https://commons.wikimedia.org/wiki/File:Aloo_Raita_Recipe_By_Sonia_Goyal.jpg"
+  },
+  {
+   "subject": "item:54",
+   "file": "File:Double Ka Meetha.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Double_Ka_Meetha.JPG"
+  },
+  {
+   "subject": "item:55",
+   "file": "File:Paneer Tikka Seek.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "HARIOM.AWASTHI",
+   "source": "https://commons.wikimedia.org/wiki/File:Paneer_Tikka_Seek.JPG"
+  },
+  {
+   "subject": "item:56",
+   "file": "File:Hara bhara kabab-.JPG",
+   "licence": "CC BY-SA 4.0",
+   "author": "Kanikatwl",
+   "source": "https://commons.wikimedia.org/wiki/File:Hara_bhara_kabab-.JPG"
+  },
+  {
+   "subject": "item:57",
+   "file": "File:Afghani Malai Chicken Tikka.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Absar.1989",
+   "source": "https://commons.wikimedia.org/wiki/File:Afghani_Malai_Chicken_Tikka.jpg"
+  },
+  {
+   "subject": "item:58",
+   "file": "File:Marinated Tandoori Chicken pieces.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Marinated_Tandoori_Chicken_pieces.JPG"
+  },
+  {
+   "subject": "item:59",
+   "file": "File:Amritsari Fried Fish.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Amritsari_Fried_Fish.JPG"
+  },
+  {
+   "subject": "item:6",
+   "file": "File:Dal Makhani..JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Dal_Makhani..JPG"
+  },
+  {
+   "subject": "item:60",
+   "file": "File:Dal Makhani..JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Dal_Makhani..JPG"
+  },
+  {
+   "subject": "item:61",
+   "file": "File:Rotti and Paneer Butter Masala.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ganesh Mohan T",
+   "source": "https://commons.wikimedia.org/wiki/File:Rotti_and_Paneer_Butter_Masala.jpg"
+  },
+  {
+   "subject": "item:62",
+   "file": "File:Dumba Karahi 20210605.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shahzaib Damn Cruze",
+   "source": "https://commons.wikimedia.org/wiki/File:Dumba_Karahi_20210605.jpg"
+  },
+  {
+   "subject": "item:63",
+   "file": "File:Butter Chicken, City Grill Kottayam.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg"
+  },
+  {
+   "subject": "item:64",
+   "file": "File:Lamb Rogan Josh at Restaurant Guru, Tallinn.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Lamb_Rogan_Josh_at_Restaurant_Guru,_Tallinn.jpg"
+  },
+  {
+   "subject": "item:65",
+   "file": "File:Bikaner chole bhature.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Aleemk72",
+   "source": "https://commons.wikimedia.org/wiki/File:Bikaner_chole_bhature.jpg"
+  },
+  {
+   "subject": "item:66",
+   "file": "File:Butter Naan Flatbread from North India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Naan_Flatbread_from_North_India.jpg"
+  },
+  {
+   "subject": "item:67",
+   "file": "File:Cheese naan and Garlic naan.jpg",
+   "licence": "CC BY 4.0",
+   "author": "\u30ce\u30dc\u30db\u30b7\u30e7\u30b3\u30ed\u30c8\u30bd",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheese_naan_and_Garlic_naan.jpg"
+  },
+  {
+   "subject": "item:68",
+   "file": "File:Lachha-paratha.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Sonia Goyal",
+   "source": "https://commons.wikimedia.org/wiki/File:Lachha-paratha.jpg"
+  },
+  {
+   "subject": "item:69",
+   "file": "File:Baking-roti-inside-tandoori.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ravi Dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Baking-roti-inside-tandoori.jpg"
+  },
+  {
+   "subject": "item:7",
+   "file": "File:Rotti and Paneer Butter Masala.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ganesh Mohan T",
+   "source": "https://commons.wikimedia.org/wiki/File:Rotti_and_Paneer_Butter_Masala.jpg"
+  },
+  {
+   "subject": "item:70",
+   "file": "File:Eq it-na pizza-margherita sep2005 sml.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Valerio Capello at English Wikipedia",
+   "source": "https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+  },
+  {
+   "subject": "item:71",
+   "file": "File:Eq it-na pizza-margherita sep2005 sml.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Valerio Capello at English Wikipedia",
+   "source": "https://commons.wikimedia.org/wiki/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+  },
+  {
+   "subject": "item:72",
+   "file": "File:Flame-grilled PERi-PERi chicken.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Banej",
+   "source": "https://commons.wikimedia.org/wiki/File:Flame-grilled_PERi-PERi_chicken.jpg"
+  },
+  {
+   "subject": "item:73",
+   "file": "File:Malai Paneer Pizza from India.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Barthateslisa",
+   "source": "https://commons.wikimedia.org/wiki/File:Malai_Paneer_Pizza_from_India.jpg"
+  },
+  {
+   "subject": "item:74",
+   "file": "File:Pepperoni pizza- boella co. 2024-02-17.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Pepperoni_pizza-_boella_co._2024-02-17.jpg"
+  },
+  {
+   "subject": "item:75",
+   "file": "File:2021-02-14 17 58 44 A Giant brand Garlic Bread Stick in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Famartin",
+   "source": "https://commons.wikimedia.org/wiki/File:2021-02-14_17_58_44_A_Giant_brand_Garlic_Bread_Stick_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
+  },
+  {
+   "subject": "item:76",
+   "file": "File:Ban-yan day on board the Magnificent; or, pease porridge hot from the coppers! (BM 1851,0901.469).jpg",
+   "licence": "Public domain",
+   "author": "Print made by: John Nixon Published by: William Holland",
+   "source": "https://commons.wikimedia.org/wiki/File:Ban-yan_day_on_board_the_Magnificent;_or,_pease_porridge_hot_from_the_coppers!_(BM_1851,0901.469).jpg"
+  },
+  {
+   "subject": "item:77",
+   "file": "File:Argentine hamburgers made with Paty Cl\u00e1sicas patties served with a side of french fries.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Horacio Cambeiro",
+   "source": "https://commons.wikimedia.org/wiki/File:Argentine_hamburgers_made_with_Paty_Cl%C3%A1sicas_patties_served_with_a_side_of_french_fries.jpg"
+  },
+  {
+   "subject": "item:78",
+   "file": "File:Two Gulab Jamun in a plate 01.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Suyash.dwivedi",
+   "source": "https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg"
+  },
+  {
+   "subject": "item:79",
+   "file": "File:Ras Malai.JPG",
+   "licence": "CC0",
+   "author": "Miansari66",
+   "source": "https://commons.wikimedia.org/wiki/File:Ras_Malai.JPG"
+  },
+  {
+   "subject": "item:8",
+   "file": "File:Dumba Karahi 20210605.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Shahzaib Damn Cruze",
+   "source": "https://commons.wikimedia.org/wiki/File:Dumba_Karahi_20210605.jpg"
+  },
+  {
+   "subject": "item:80",
+   "file": "File:Gajar Ka Halwa a famous Indian Sweet Dish 02.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Bugatti Enthusiast Aishwary Raj",
+   "source": "https://commons.wikimedia.org/wiki/File:Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_02.jpg"
+  },
+  {
+   "subject": "item:81",
+   "file": "File:Chocolate Cake Slice in bin (32180558890).jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "Willis Lam",
+   "source": "https://commons.wikimedia.org/wiki/File:Chocolate_Cake_Slice_in_bin_(32180558890).jpg"
+  },
+  {
+   "subject": "item:82",
+   "file": "File:Slice of cheesecake.JPG",
+   "licence": "CC BY-SA 3.0",
+   "author": "Mythe",
+   "source": "https://commons.wikimedia.org/wiki/File:Slice_of_cheesecake.JPG"
+  },
+  {
+   "subject": "item:83",
+   "file": "File:Le Napolitain (Lyon) - tiramisu (1).jpg",
+   "licence": "CC0",
+   "author": "Beno\u00eet Prieur",
+   "source": "https://commons.wikimedia.org/wiki/File:Le_Napolitain_(Lyon)_-_tiramisu_(1).jpg"
+  },
+  {
+   "subject": "item:84",
+   "file": "File:Brownies with Ice cream.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Dr. Chinchu C.",
+   "source": "https://commons.wikimedia.org/wiki/File:Brownies_with_Ice_cream.jpg"
+  },
+  {
+   "subject": "item:85",
+   "file": "File:Chai Latte - T @ The Dials 2024-02-26.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chai_Latte_-_T_@_The_Dials_2024-02-26.jpg"
+  },
+  {
+   "subject": "item:86",
+   "file": "File:Indian filter coffee in Dabarah.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Unknown",
+   "source": "https://commons.wikimedia.org/wiki/File:Indian_filter_coffee_in_Dabarah.jpg"
+  },
+  {
+   "subject": "item:87",
+   "file": "File:Cappuccino-cup 20230110 104449.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ioacc1234red",
+   "source": "https://commons.wikimedia.org/wiki/File:Cappuccino-cup_20230110_104449.jpg"
+  },
+  {
+   "subject": "item:88",
+   "file": "File:Coffee and mango lassi at restaurant South Asian Street Food.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Coffee_and_mango_lassi_at_restaurant_South_Asian_Street_Food.jpg"
+  },
+  {
+   "subject": "item:89",
+   "file": "File:Iced Coffee in Glass - Sunshine Coffee - Laramie Cafe (53838344552).jpg",
+   "licence": "CC BY 2.0",
+   "author": "Tony Webster",
+   "source": "https://commons.wikimedia.org/wiki/File:Iced_Coffee_in_Glass_-_Sunshine_Coffee_-_Laramie_Cafe_(53838344552).jpg"
+  },
+  {
+   "subject": "item:9",
+   "file": "File:Butter Chicken, City Grill Kottayam.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Vis M",
+   "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken,_City_Grill_Kottayam.jpg"
+  },
+  {
+   "subject": "item:90",
+   "file": "File:Glass bottled and shot necked Soda vendor - Jammu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Sanu N",
+   "source": "https://commons.wikimedia.org/wiki/File:Glass_bottled_and_shot_necked_Soda_vendor_-_Jammu.jpg"
+  },
+  {
+   "subject": "item:91",
+   "file": "File:Mango Milkshake.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "GoDakshin from Bangalore, India",
+   "source": "https://commons.wikimedia.org/wiki/File:Mango_Milkshake.jpg"
+  },
+  {
+   "subject": "item:92",
+   "file": "File:Chai Latte - T @ The Dials 2024-02-26.jpg",
+   "licence": "CC0",
+   "author": "Andy Li",
+   "source": "https://commons.wikimedia.org/wiki/File:Chai_Latte_-_T_@_The_Dials_2024-02-26.jpg"
+  },
+  {
+   "subject": "item:93",
+   "file": "File:Indian filter coffee in Dabarah.jpg",
+   "licence": "CC BY-SA 3.0",
+   "author": "Unknown",
+   "source": "https://commons.wikimedia.org/wiki/File:Indian_filter_coffee_in_Dabarah.jpg"
+  },
+  {
+   "subject": "item:94",
+   "file": "File:Cappuccino-cup 20230110 104449.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Ioacc1234red",
+   "source": "https://commons.wikimedia.org/wiki/File:Cappuccino-cup_20230110_104449.jpg"
+  },
+  {
+   "subject": "item:95",
+   "file": "File:Coffee and mango lassi at restaurant South Asian Street Food.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "JIP",
+   "source": "https://commons.wikimedia.org/wiki/File:Coffee_and_mango_lassi_at_restaurant_South_Asian_Street_Food.jpg"
+  },
+  {
+   "subject": "item:96",
+   "file": "File:Iced Coffee in Glass - Sunshine Coffee - Laramie Cafe (53838344552).jpg",
+   "licence": "CC BY 2.0",
+   "author": "Tony Webster",
+   "source": "https://commons.wikimedia.org/wiki/File:Iced_Coffee_in_Glass_-_Sunshine_Coffee_-_Laramie_Cafe_(53838344552).jpg"
+  },
+  {
+   "subject": "item:97",
+   "file": "File:Glass bottled and shot necked Soda vendor - Jammu.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Sanu N",
+   "source": "https://commons.wikimedia.org/wiki/File:Glass_bottled_and_shot_necked_Soda_vendor_-_Jammu.jpg"
+  },
+  {
+   "subject": "item:98",
+   "file": "File:Mango Milkshake.jpg",
+   "licence": "CC BY-SA 2.0",
+   "author": "GoDakshin from Bangalore, India",
+   "source": "https://commons.wikimedia.org/wiki/File:Mango_Milkshake.jpg"
+  },
+  {
+   "subject": "item:99",
+   "file": "File:Crispy Pani Puri.jpg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Teena Sometimes",
+   "source": "https://commons.wikimedia.org/wiki/File:Crispy_Pani_Puri.jpg"
+  }
+ ]
+}
