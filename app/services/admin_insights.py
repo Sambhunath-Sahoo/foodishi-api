@@ -31,6 +31,7 @@ from app.models.delivery import Delivery
 from app.models.enums import DeliveryStatus, OrderStatus, PaymentStatus, RefundStatus
 from app.models.order import Order
 from app.models.payment import Payment, Refund
+from app.services import onboarding
 from app.services.money import money
 from app.services.order_state import TERMINAL
 
@@ -238,6 +239,11 @@ class WorkloadCounts:
     payments_failed: int
     refunds_breached: int
     refunds_owed: Decimal
+    #: Restaurants waiting to be let onto the platform. Unlike every other
+    #: figure here this one never resolves itself — an application sits in the
+    #: queue until a person answers it — which is exactly why it belongs in the
+    #: chrome rather than on a page somebody has to remember to open.
+    applications_pending: int
 
 
 async def workload(session: AsyncSession) -> WorkloadCounts:
@@ -310,6 +316,11 @@ async def workload(session: AsyncSession) -> WorkloadCounts:
 
     rows = await kitchen_rows(session, days=0, now=now)
 
+    # Delegated rather than counted here: app/services/onboarding.py owns the
+    # applications table, and a second copy of "what pending means" is a second
+    # thing to update when a state is added.
+    applications_pending = await onboarding.pending_count(session)
+
     return WorkloadCounts(
         live_orders=int(live_orders or 0),
         orders_late=int(orders_late or 0),
@@ -320,6 +331,7 @@ async def workload(session: AsyncSession) -> WorkloadCounts:
         payments_failed=int(payments_failed or 0),
         refunds_breached=int(breached_count or 0),
         refunds_owed=money(breached_owed),
+        applications_pending=applications_pending,
     )
 
 

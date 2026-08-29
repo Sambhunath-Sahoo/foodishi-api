@@ -58,6 +58,9 @@ class Workload(BaseModel):
     refunds_breached: int
     #: What those refunds are worth — money the platform is holding.
     refunds_owed: Decimal
+    #: Restaurants asking to join, still unanswered. The only figure here that
+    #: cannot resolve itself: an application waits until a person decides.
+    applications_pending: int
 
 
 # ---------------------------------------------------------------- settings

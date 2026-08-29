@@ -4,6 +4,7 @@ erDiagram
     USERS ||--o{ COUPON_REDEMPTIONS : "redeems"
     USERS ||--o{ CONVERSATIONS : "opens"
     USERS ||--o{ RESTAURANT_STAFF : "works for"
+    USERS ||--o{ RESTAURANT_APPLICATIONS : "applies with"
 
     RESTAURANTS ||--|| RESTAURANT_POLICIES : "governed by"
     RESTAURANTS ||--o{ RESTAURANT_CUISINES : "tagged"
@@ -11,6 +12,7 @@ erDiagram
     RESTAURANTS ||--o{ MENU_CATEGORIES : "organizes"
     RESTAURANTS ||--o{ MENU_ITEMS : "offers"
     RESTAURANTS ||--o{ RESTAURANT_STAFF : "staffed by"
+    RESTAURANT_APPLICATIONS |o--o| RESTAURANTS : "becomes, once approved"
     MENU_CATEGORIES ||--o{ MENU_ITEMS : "groups"
     MENU_ITEMS ||--o{ MENU_ITEM_IMAGES : "illustrated by"
 
@@ -43,6 +45,31 @@ erDiagram
         varchar phone
         varchar city
         bool is_active
+        timestamptz created_at
+        timestamptz updated_at
+    }
+
+    RESTAURANT_APPLICATIONS {
+        int id PK
+        int applicant_user_id FK "one PENDING row per person"
+        enum status "pending, approved, rejected"
+        varchar name
+        varchar slug "NOT unique here; restaurants.slug is"
+        varchar city
+        varchar area
+        varchar address_line
+        numeric latitude
+        numeric longitude
+        varchar phone
+        numeric price_for_two
+        int avg_prep_minutes
+        time opens_at
+        time closes_at
+        text note "the applicant, to the operator"
+        int reviewed_by_user_id FK "nullable, SET NULL"
+        timestamptz reviewed_at
+        text decision_note "the operator, to the applicant"
+        int restaurant_id FK "what an approval created"
         timestamptz created_at
         timestamptz updated_at
     }

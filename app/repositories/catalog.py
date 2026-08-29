@@ -98,6 +98,32 @@ def restaurants_statement(
     return statement.order_by(*_SORTS[sort], Restaurant.id.asc())
 
 
+def platform_restaurants_statement(*, is_active: bool | None = None) -> Select:
+    """Every restaurant on the platform, whatever state it is in.
+
+    The deliberate twin of restaurants_statement above, and separate from it
+    rather than a flag on it. That function opens with
+    `where(is_active.is_(True))` and is reached by an UNAUTHENTICATED route; a
+    parameter that could switch the filter off would put "show customers the
+    kitchens that are closed" one wrong argument away, on the one endpoint where
+    that mistake is public.
+
+    So this one is only ever called from a route behind require_platform_role,
+    and it is the answer to a question only Foodishi asks: which kitchens exist.
+    An approved application creates a restaurant with is_active false, and until
+    this existed the operations console — which reads the customer listing —
+    could not see the restaurant it had just created anywhere.
+
+    Ordered by name because this is a directory somebody looks a kitchen up in,
+    not a ranking. `rating desc` is right for discovery and wrong here.
+    """
+    statement = select(Restaurant)
+    if is_active is not None:
+        statement = statement.where(Restaurant.is_active.is_(is_active))
+    # id breaks ties so paging is stable across requests, as in the listing above.
+    return statement.order_by(Restaurant.name.asc(), Restaurant.id.asc())
+
+
 def menu_search_statement(
     restaurant_id: int,
     *,

@@ -12,10 +12,13 @@ from app.db import Base, engine
 from app.models import registry  # noqa: F401 - registers every model on Base.metadata
 from app.routers import (
     addresses,
+    admin_applications,
+    admin_catalog,
     admin_finance,
     admin_operations,
     admin_platform,
     admin_reports,
+    applications,
     catalog,
     catalog_admin,
     coupons,
@@ -357,8 +360,9 @@ for module in (
     # Customer
     users, addresses, orders, payments, refunds, reviews, me,
     # Restaurant (the partner console)
-    catalog_admin, modifiers, staff, reports, finance, delivery,
+    catalog_admin, modifiers, staff, reports, finance, delivery, applications,
     # Foodishi operations (the operator console)
     metrics, admin_platform, admin_operations, admin_finance, admin_reports,
+    admin_applications, admin_catalog,
 ):
     app.include_router(module.router)

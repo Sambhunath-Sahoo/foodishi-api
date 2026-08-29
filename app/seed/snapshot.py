@@ -46,6 +46,7 @@ TABLES = (
     "restaurant_policies",
     "restaurant_staff",
     "platform_staff",
+    "restaurant_applications",
     "menu_categories",
     "menu_items",
     "menu_item_images",

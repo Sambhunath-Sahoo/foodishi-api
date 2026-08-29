@@ -76,6 +76,12 @@ TABLES = [
     "menu_item_modifier_options", "menu_item_modifier_groups",
     "menu_items", "menu_categories",
     "restaurant_policies", "restaurant_cuisines", "coupons",
+    # restaurant_applications holds foreign keys into BOTH restaurants and
+    # users, so leaving it out does not merely skip a table — it makes the
+    # whole TRUNCATE fail, because there is no CASCADE to reach it. Listed for
+    # the same reason restaurant_staff is, and it is emptied for the same
+    # reason: an application is seed data, not a hand-made row.
+    "restaurant_applications",
     "restaurant_staff", "platform_staff", "addresses",
     "restaurants", "cuisines", "delivery_partners", "users",
 ]

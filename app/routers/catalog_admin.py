@@ -122,6 +122,17 @@ class RestaurantOnboard(RestaurantCreate):
     # yet can still onboard; see the route docstring for what that costs.
     owner_user_id: int | None = Field(default=None, ge=1)
 
+    # The DEFAULT is overridden, not the field: an operator who means to open a
+    # kitchen the moment it is created may still say so, and one who says
+    # nothing gets a restaurant customers cannot see yet.
+    #
+    # False because discovery filters on this column alone
+    # (app/repositories/catalog.py), so the old default published a restaurant
+    # with no menu and no policy the instant this route returned — findable in
+    # search, and failing at the customer's checkout, until somebody remembered
+    # to come back and finish it. Same reason approval creates a dormant
+    # restaurant; see app/services/onboarding.approve.
+    is_active: bool = False
 
 
 # Onboarding mints a tenancy: a restaurant plus the first login that can staff
@@ -154,6 +165,16 @@ async def create_restaurant(
     restaurant reachable but leaves them holding a live owner login on somebody
     else's kitchen until they hand it over — POST /restaurants/{id}/staff to
     appoint the partner, then PATCH /staff/{id} to revoke themselves.
+
+    The restaurant is created DORMANT unless the body says otherwise: customers
+    cannot see it until somebody turns it on with PUT
+    /restaurants/{id}/availability. Creating and publishing are two decisions,
+    and the second one belongs after the policy and the menu exist.
+
+    This is the operator-driven path. A restaurant that asked to join arrives
+    instead through POST /restaurant-applications and is created by an approval
+    — app/routers/admin_applications.py — which mints the same two rows this
+    route does.
     """
     owner_user_id = payload.owner_user_id
     if owner_user_id is None:

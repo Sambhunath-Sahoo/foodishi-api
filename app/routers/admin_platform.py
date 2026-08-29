@@ -110,6 +110,7 @@ async def get_workload(session: SessionDep):
         payments_failed=counts.payments_failed,
         refunds_breached=counts.refunds_breached,
         refunds_owed=counts.refunds_owed,
+        applications_pending=counts.applications_pending,
     )
 
 

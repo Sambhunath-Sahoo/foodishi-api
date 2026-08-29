@@ -50,7 +50,19 @@ class _PatchBase(_WriteBase):
         return self
 
 
-class RestaurantCreate(_WriteBase):
+class RestaurantDetails(_WriteBase):
+    """Everything the `restaurants` table requires, and nothing it decides.
+
+    Shared by two callers who describe the same kitchen from opposite sides:
+    RestaurantCreate below, used by the operator onboarding a partner, and
+    ApplicationSubmit in app/schemas/application.py, used by a restaurant asking
+    to join. Stated once so a field the applicant may leave blank cannot quietly
+    become one the create route requires.
+
+    is_active is deliberately NOT here. Whether a kitchen is taking orders is
+    not a description of it, and an applicant has no business declaring it.
+    """
+
     name: str = Field(min_length=2, max_length=160)
     slug: str = Field(min_length=2, max_length=180, pattern=SLUG_PATTERN)
     description: str | None = Field(default=None, max_length=2000)
@@ -70,6 +82,13 @@ class RestaurantCreate(_WriteBase):
     opens_at: time
     closes_at: time
 
+
+class RestaurantCreate(RestaurantDetails):
+    """The details, plus the one thing only whoever creates the row may set."""
+
+    # True keeps POST /restaurants behaving as it always has for a caller that
+    # says nothing. The onboarding route overrides the DEFAULT to false rather
+    # than the field — see RestaurantOnboard in app/routers/catalog_admin.py.
     is_active: bool = True
 
 

@@ -67,6 +67,7 @@ unanswerable without the log.
 | `delivery_status` | `assigned` · `picked_up` · `delivered` · `failed` |
 | `spice_level` | `none` · `mild` · `medium` · `hot` |
 | `staff_role` | `owner` · `manager` · `staff` |
+| `application_status` | `pending` · `approved` · `rejected` |
 
 `staff_role` is deliberately ordered most-privileged first, and the API ranks it
 that way: `owner` > `manager` > `staff`. Postgres enum sort order matches, but
@@ -88,6 +89,7 @@ erDiagram
     USERS ||--o{ COUPON_REDEMPTIONS : "redeems"
     USERS ||--o{ CONVERSATIONS : "opens"
     USERS ||--o{ RESTAURANT_STAFF : "works for"
+    USERS ||--o{ RESTAURANT_APPLICATIONS : "applies with"
 
     RESTAURANTS ||--|| RESTAURANT_POLICIES : "governed by"
     RESTAURANTS ||--o{ RESTAURANT_CUISINES : "tagged"
@@ -95,6 +97,7 @@ erDiagram
     RESTAURANTS ||--o{ MENU_CATEGORIES : "organizes"
     RESTAURANTS ||--o{ MENU_ITEMS : "offers"
     RESTAURANTS ||--o{ RESTAURANT_STAFF : "staffed by"
+    RESTAURANT_APPLICATIONS |o--o| RESTAURANTS : "becomes, once approved"
     MENU_CATEGORIES ||--o{ MENU_ITEMS : "groups"
     MENU_ITEMS ||--o{ MENU_ITEM_IMAGES : "illustrated by"
 
@@ -127,6 +130,31 @@ erDiagram
         varchar phone
         varchar city
         bool is_active
+        timestamptz created_at
+        timestamptz updated_at
+    }
+
+    RESTAURANT_APPLICATIONS {
+        int id PK
+        int applicant_user_id FK "one PENDING row per person"
+        enum status "pending, approved, rejected"
+        varchar name
+        varchar slug "NOT unique here; restaurants.slug is"
+        varchar city
+        varchar area
+        varchar address_line
+        numeric latitude
+        numeric longitude
+        varchar phone
+        numeric price_for_two
+        int avg_prep_minutes
+        time opens_at
+        time closes_at
+        text note "the applicant, to the operator"
+        int reviewed_by_user_id FK "nullable, SET NULL"
+        timestamptz reviewed_at
+        text decision_note "the operator, to the applicant"
+        int restaurant_id FK "what an approval created"
         timestamptz created_at
         timestamptz updated_at
     }
@@ -685,6 +713,95 @@ If PostgREST ever becomes a real client, policies stop being optional and the
 first two must be `users` (a row is yours when `auth_user_id = auth.uid()`) and
 `restaurant_staff` (a row is visible to staff of that restaurant). Until then,
 enabled-and-empty is the deny-by-default posture, not a to-do.
+
+### 5.9 Restaurants asking to join
+
+Added 2026-08-22, when self-serve onboarding landed. Until then the only way onto
+the platform was `POST /restaurants`, which is platform-staff-only — so every
+restaurant arrived because a Foodishi operator typed it in, and a restaurateur
+who found the site had nowhere to go.
+
+```sql
+CREATE TABLE restaurant_applications (
+    id                  serial PRIMARY KEY,
+    applicant_user_id   int NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    status              application_status NOT NULL DEFAULT 'pending',
+
+    -- The restaurant as proposed. Every column `restaurants` requires.
+    name                varchar(160) NOT NULL,
+    slug                varchar(180) NOT NULL,
+    description         text,
+    city                varchar(60)  NOT NULL,
+    area                varchar(80)  NOT NULL,
+    address_line        varchar(240) NOT NULL,
+    latitude            numeric(9,6) NOT NULL,
+    longitude           numeric(9,6) NOT NULL,
+    phone               varchar(20)  NOT NULL,
+    price_for_two       numeric(10,2) NOT NULL,
+    avg_prep_minutes    int NOT NULL,
+    opens_at            time NOT NULL,
+    closes_at           time NOT NULL,
+    note                text,
+
+    -- How it was answered.
+    reviewed_by_user_id int REFERENCES users(id)       ON DELETE SET NULL,
+    reviewed_at         timestamptz,
+    decision_note       text,
+    restaurant_id       int REFERENCES restaurants(id) ON DELETE SET NULL,
+
+    created_at          timestamptz NOT NULL DEFAULT now(),
+    updated_at          timestamptz NOT NULL DEFAULT now()
+);
+
+CREATE UNIQUE INDEX uq_one_pending_application_per_user
+    ON restaurant_applications (applicant_user_id) WHERE status = 'pending';
+CREATE INDEX ix_restaurant_applications_status_created
+    ON restaurant_applications (status, created_at);
+CREATE INDEX ix_restaurant_applications_applicant_user_id
+    ON restaurant_applications (applicant_user_id);
+```
+
+**Why a separate table rather than a status column on `restaurants`.** A
+`restaurants` row is reachable by every catalog query, every scope check and
+every report on the platform. Making "not accepted yet" one more value all of
+those have to exclude means every one of them is a place to forget it, and the
+first forgotten one publishes a kitchen nobody approved. A separate table cannot
+be forgotten by a query that never names it.
+
+**The details are copied, not referenced.** There is no restaurant to point at
+until an approval mints one — this is the only table in the schema whose row
+describes something that does not exist. `app/services/onboarding.DETAIL_COLUMNS`
+is the explicit list of what gets copied across, named rather than derived so a
+column added here for the operator's benefit (a score, a source, an internal
+note) cannot silently become a column written to `restaurants`.
+
+**`slug` is not unique here, deliberately.** Two applicants may propose the same
+one and both rows are legitimate until one is approved. Uniqueness belongs to
+`restaurants.slug`, where it already exists, and the approval reports the clash;
+enforcing it here as well would refuse the second applicant for something the
+first had not been granted yet. Submission still checks the slug against live
+restaurants as a courtesy — it is the one field an applicant cannot change later
+without breaking every link to them.
+
+**One PENDING row per person, and only pending.** The partial unique index is
+what makes a double-tapped submit button harmless. A rejected applicant may apply
+again and an approved one may apply for a second restaurant; nobody can sit in
+the operator's queue twice at once.
+
+**Approval creates the restaurant with `is_active = false`.** Discovery filters
+on that column alone, so an approved kitchen is invisible to customers until its
+own owner opens it — by which time they have had the chance to write a policy and
+a menu. Approving and publishing are two decisions taken by two different people,
+and collapsing them means every approval publishes a kitchen with no food on it,
+which fails at the customer's checkout rather than in the operator's console.
+`POST /restaurants` was changed to default the same way.
+
+**Nothing is deleted on a refusal.** The row stays with its reason, because
+*"did we already turn these people down, and why"* is a question an operator asks
+about a resubmission, and because that reason is the only thing the applicant can
+act on. `reviewed_by_user_id` is `users.id` rather than `platform_staff.id` and
+`ON DELETE SET NULL`: a person can leave Foodishi and lose their platform row,
+and the record of who approved a restaurant must outlive their employment.
 
 ---
 

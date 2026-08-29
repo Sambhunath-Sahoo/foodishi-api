@@ -129,3 +129,18 @@ class ModifierKind(enum.StrEnum):
 
     VARIANT = "variant"
     ADDON = "addon"
+
+
+class ApplicationStatus(enum.StrEnum):
+    """Where a restaurant's request to join Foodishi has got to.
+
+    Three states and no more: `pending` is the queue an operator works through,
+    and the other two are terminal. There is deliberately no `changes_requested`
+    tier — a half-refused application is a conversation, and this table holds
+    no messages to have it in. An operator who wants changes rejects with the
+    reason, and the applicant submits again.
+    """
+
+    PENDING = "pending"
+    APPROVED = "approved"
+    REJECTED = "rejected"

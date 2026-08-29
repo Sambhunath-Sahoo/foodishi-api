@@ -240,10 +240,63 @@ Real browser, real clicks, screenshots reviewed by eye — not just HTTP 200.
 | J5 | `/health` with the database unreachable **[local]** | 503, not 200 |
 | J6 | CORS preflight from a frontend origin | allowed |
 
+## Suite K — Restaurants asking to join **[any]**
+
+Self-serve onboarding, added 2026-08-22. Two things this suite exists to prove,
+and they are the two that would hurt most if wrong: that nobody but Foodishi can
+turn an application into a restaurant, and that an approved restaurant is not
+visible to customers until its own owner opens it.
+
+Needs one throwaway Supabase account — call it `applicant` — created through the
+partner console's `/apply` screen rather than seeded, because the account and the
+profile are two writes and the point is that one screen does both.
+
+| # | Step | Expected |
+|---|---|---|
+| K1 | `POST /restaurant-applications` with no token | **401** — the queue is not a public inbox |
+| K2 | `applicant` signs up at `/apply`, then `POST /restaurant-applications` | 201, `status: "pending"`, `restaurant_id: null` |
+| K3 | Same body again | **409** naming the application already waiting — the partial unique index, not a second row |
+| K4 | `POST /restaurant-applications` with a slug an existing restaurant trades under | **409** naming the slug |
+| K5 | `POST /restaurant-applications` with `is_active: true` in the body | **422** — `extra="forbid"`; an applicant does not declare this |
+| K6 | `GET /restaurant-applications/mine` as `applicant` | their own row, pending first |
+| K7 | `GET /admin/restaurant-applications` as `applicant` | **403** — a restaurant admin is not platform staff |
+| K8 | `POST /admin/.../{id}/approve` as `applicant` | **403** |
+| K9 | `GET /admin/restaurant-applications?status=pending` as an operator | the row, oldest first |
+| K10 | `POST /admin/.../{id}/reject` with a 3-character reason | **422** — a refusal must be actionable |
+| K11 | `POST /admin/.../{id}/reject` with a real reason | 200, `status: "rejected"`, the reason echoed |
+| K12 | K11 again | **409** — the answer was already given, not overwritten |
+| K13 | `GET /restaurant-applications/mine` as `applicant` | the rejection, `decision_note` verbatim |
+| K14 | `applicant` submits again (the pending index is partial) | 201 |
+| K15 | Deactivate `applicant` via `PUT /users/{id}/active`, then approve | **422** naming the deactivated account — no restaurant written |
+| K16 | Reactivate, then `POST /admin/.../{id}/approve` | 200; `restaurant_id` populated |
+| K17 | `SELECT is_active FROM restaurants WHERE id = {new}` | **false** — approving is not publishing |
+| K18 | `GET /restaurants?city={theirs}` as anyone | the new kitchen is **absent** from discovery |
+| K19 | `GET /restaurants/{new}` | 200 — its own page loads, which is what lets its owner open it |
+| K20 | `SELECT * FROM restaurant_staff WHERE restaurant_id = {new}` | one row, `role = admin`, `user_id = applicant` |
+| K21 | `POST /orders/quote` against the new restaurant | 422 — no policy row yet. **Known gap:** the message says *"No restaurant with id N"* |
+| K22 | `applicant` signs in to the partner console | their kitchen is there, closed |
+| K23 | `PUT /restaurants/{new}/policy` then `PUT /restaurants/{new}/availability {is_active:true}` as `applicant` | 200 both; the kitchen now appears in K18's listing |
+| K24 | `GET /admin/workload` | `applications_pending` matches the queue count |
+| K25 | `POST /restaurants` as an operator with no `is_active` | 201 with `is_active: false` — the same default as approval |
+| K26 | `GET /admin/restaurants` as an operator | the approved kitchen IS listed, `is_active: false` — the customer listing cannot answer this, which is why the route exists |
+| K27 | `GET /admin/restaurants` unauthenticated | **401** |
+| K28 | Operator console → Restaurants | the approved kitchen is on the board, switched off, and its row opens |
+
+### What this suite cannot prove **[any]**
+
+The partner console's fixture source draws this flow too, and its approval is a
+drawing: `lib/services/fixtures/applications.ts` creates the kitchen but cannot
+grant the membership, because that source has no roster. Every assertion above
+must be run with `NEXT_PUBLIC_DATA_SOURCE=api` on both consoles, or K20 and K22
+are testing bundled JSON.
+
 ## Cleanup
 
 - Delete every test auth user via the Admin API
 - Delete orders, refunds, payments and staff rows created during the run
+- Delete the restaurant Suite K approved, its `restaurant_staff` row and its
+  `restaurant_applications` rows — in that order, because `orders` is the only
+  thing that would block the restaurant and Suite K never gives it one
 - Confirm the seeded baseline is intact
 
 ## Results

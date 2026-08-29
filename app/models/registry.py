@@ -7,6 +7,7 @@ instead of a list that silently goes stale when a model is added.
 
 from app.db import Base
 from app.models.address import Address
+from app.models.application import RestaurantApplication
 from app.models.catalog import (
     Cuisine,
     MenuCategory,
@@ -58,6 +59,7 @@ __all__ = [
     "PlatformStaff",
     "Refund",
     "Restaurant",
+    "RestaurantApplication",
     "RestaurantPolicy",
     "RestaurantStaff",
     "Review",
