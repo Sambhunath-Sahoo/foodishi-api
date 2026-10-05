@@ -24,7 +24,7 @@ from app.dependencies.scope import (
     staff_of_order_with,
 )
 from app.models.enums import ActorType, OrderStatus
-from app.models.order import Order, OrderStatusEvent
+from app.models.order import Order, OrderItem, OrderStatusEvent
 from app.models.staff import RestaurantStaff
 from app.repositories import orders as repo
 from app.schemas.order import (
@@ -33,9 +33,11 @@ from app.schemas.order import (
     OrderCreate,
     OrderDetail,
     OrderEventRead,
+    OrderItemIn,
     OrderRead,
     OrderStatusRead,
     OrderStatusUpdate,
+    QuoteLineRead,
     QuoteRead,
     QuoteRequest,
 )
@@ -109,7 +111,7 @@ async def quote_order(payload: QuoteRequest, session: SessionDep, owner_id: Orde
             session,
             restaurant_id=payload.restaurant_id,
             address_id=payload.address_id,
-            items=[(i.menu_item_id, i.quantity) for i in payload.items],
+            items=_cart_lines(payload.items),
             coupon_code=payload.coupon_code,
             user_id=owner_id,
             placed_at=ordering.utcnow(),
@@ -119,7 +121,9 @@ async def quote_order(payload: QuoteRequest, session: SessionDep, owner_id: Orde
 
     q = priced.quote
     return QuoteRead(
-        lines=[line.__dict__ for line in q.lines],
+        lines=[
+            QuoteLineRead.model_validate(line, from_attributes=True) for line in q.lines
+        ],
         subtotal=q.subtotal,
         packaging_fee=q.packaging_fee,
         delivery_fee=q.delivery_fee,
@@ -202,7 +206,7 @@ async def place_order(
                 user_id=owner_id,
                 restaurant_id=payload.restaurant_id,
                 address_id=payload.address_id,
-                items=[(i.menu_item_id, i.quantity, i.notes) for i in payload.items],
+                items=_cart_lines(payload.items),
                 coupon_code=payload.coupon_code,
                 idempotency_key=idempotency_key,
                 delivery_note=payload.delivery_note,
@@ -560,9 +564,27 @@ async def cancel_order(
     return _cancel_result(result)
 
 
+def _cart_lines(items: list[OrderItemIn]) -> list[ordering.CartLine]:
+    """The request's lines in the service's shape — quote and placement must
+    read a cart identically, so both build it here."""
+    return [
+        ordering.CartLine(
+            menu_item_id=i.menu_item_id,
+            quantity=i.quantity,
+            notes=i.notes,
+            option_ids=tuple(i.option_ids),
+        )
+        for i in items
+    ]
+
+
 async def _detail(session: SessionDep, order_id: int) -> Order:
+    # Chained, so the lines' chosen options arrive in ONE more query for the
+    # whole order (WHERE order_item_id IN (...)), not one per line.
     order = await session.scalar(
-        select(Order).where(Order.id == order_id).options(selectinload(Order.items))
+        select(Order)
+        .where(Order.id == order_id)
+        .options(selectinload(Order.items).selectinload(OrderItem.modifiers))
     )
     if order is None:
         raise not_found("order", order_id)

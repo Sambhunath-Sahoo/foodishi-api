@@ -3,11 +3,13 @@ from decimal import Decimal
 
 from sqlalchemy import Select, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import noload
 
 from app.models.address import Address
 from app.models.catalog import MenuItem, Restaurant, RestaurantPolicy, restaurant_cuisines
 from app.models.coupon import Coupon, CouponRedemption
 from app.models.enums import OrderStatus, PaymentStatus, RefundStatus
+from app.models.modifiers import MenuItemModifierGroup, menu_item_modifier_links
 from app.models.order import Order
 from app.models.payment import Payment, Refund
 from app.services.order_state import TERMINAL
@@ -25,6 +27,36 @@ async def load_menu_items(session: AsyncSession, ids: list[int]) -> dict[int, Me
     """One query for every line, not one per line."""
     rows = await session.execute(select(MenuItem).where(MenuItem.id.in_(ids)))
     return {item.id: item for item in rows.scalars()}
+
+
+async def load_modifier_groups(
+    session: AsyncSession, menu_item_ids: list[int]
+) -> dict[int, list[MenuItemModifierGroup]]:
+    """`menu_item_id` -> the groups that dish asks, options included.
+
+    Two queries for the whole cart however many lines it has: the groups via the
+    link table, then every group's options through the relationship's selectin.
+    A dish that asks nothing is simply absent from the result.
+    """
+    if not menu_item_ids:
+        return {}
+    rows = await session.execute(
+        select(menu_item_modifier_links.c.menu_item_id, MenuItemModifierGroup)
+        .join(
+            menu_item_modifier_links,
+            menu_item_modifier_links.c.group_id == MenuItemModifierGroup.id,
+        )
+        .where(menu_item_modifier_links.c.menu_item_id.in_(menu_item_ids))
+        .order_by(MenuItemModifierGroup.sort_order, MenuItemModifierGroup.id)
+        # The group's own `items` list is selectin by default and is not needed
+        # here — the link row already says which dish asked — so it is skipped
+        # rather than paid for as a third query.
+        .options(noload(MenuItemModifierGroup.items))
+    )
+    groups: dict[int, list[MenuItemModifierGroup]] = {}
+    for menu_item_id, group in rows:
+        groups.setdefault(menu_item_id, []).append(group)
+    return groups
 
 
 async def load_address(session: AsyncSession, address_id: int) -> Address | None:

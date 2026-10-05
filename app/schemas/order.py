@@ -5,6 +5,11 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from app.core.ids import DbId
 from app.models.enums import ActorType, OrderStatus
+from app.schemas.modifiers import MAX_OPTIONS_PER_GROUP
+
+#: More answers than this on one line is not a dish, it is a second order. Sized
+#: from the per-group cap so a line can fill two groups to the brim.
+MAX_OPTIONS_PER_LINE = 2 * MAX_OPTIONS_PER_GROUP
 
 
 class OrderItemIn(BaseModel):
@@ -13,6 +18,14 @@ class OrderItemIn(BaseModel):
     menu_item_id: DbId
     quantity: int = Field(ge=1, le=50)
     notes: str | None = Field(default=None, max_length=280)
+    # The customer's answers to the dish's questions — "Full plate", "No onion"
+    # — as menu_item_modifier_options ids. Optional with an empty default so a
+    # client that has never offered a choice keeps working unchanged. Checked
+    # against the dish's own groups and their bounds at pricing time, not here:
+    # whether an id is a legal answer depends on the menu, which a schema
+    # cannot see. Two lines of the same dish with different answers ("1 x Half,
+    # 1 x Full") are two entries in `items`, not one.
+    option_ids: list[DbId] = Field(default_factory=list, max_length=MAX_OPTIONS_PER_LINE)
 
 
 class QuoteRequest(BaseModel):
@@ -41,12 +54,37 @@ class OrderCreate(QuoteRequest):
     delivery_note: str | None = Field(default=None, max_length=200)
 
 
+class OrderItemModifierRead(BaseModel):
+    """One answer on a line, as the customer chose it and as it was priced.
+
+    Read from the FROZEN copy on order_item_modifiers, never joined to the live
+    option: renaming "Half plate" on the menu must not rewrite a ticket the
+    kitchen is cooking from or a receipt the customer already has.
+    """
+
+    model_config = ConfigDict(from_attributes=True)
+
+    # Null once the choice has been deleted from the menu. The names and the
+    # price below still say what was ordered; this id is only a link back.
+    option_id: int | None
+    group_name: str
+    option_name: str
+    #: Already included in the line's unit_price — shown so a receipt can say
+    #: where the extra 60.00 came from, not to be added again.
+    price_delta: Decimal
+
+
 class QuoteLineRead(BaseModel):
     menu_item_id: int
     item_name: str
+    #: The dish price plus every chosen option's price_delta, per unit.
     unit_price: Decimal
     quantity: int
     line_total: Decimal
+    # No default, here or on OrderItemRead: always present, so the OpenAPI
+    # schema marks it required and a client never has to guess whether an
+    # absent list means "no choices" or "not loaded".
+    modifiers: list[OrderItemModifierRead]
 
 
 class QuoteRead(BaseModel):
@@ -74,6 +112,10 @@ class OrderItemRead(BaseModel):
     quantity: int
     line_total: Decimal
     notes: str | None
+    # What the kitchen must cook differently: "2 x Masala Chai" is not a ticket
+    # without "Full plate · Less sugar". Ordered group by group in menu order
+    # (see OrderItem.modifiers); empty for a dish that asks nothing.
+    modifiers: list[OrderItemModifierRead]
 
 
 class OrderRead(BaseModel):

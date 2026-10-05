@@ -8,11 +8,12 @@ that renders a customer's choices with no data behind them.
 
 ONE THING TO KNOW BEFORE READING THE `order_item_modifiers` PART.
 
-The API cannot currently produce those rows. `OrderItemIn` accepts only
-`menu_item_id`, `quantity` and `notes`, and `pricing.quote` computes
-`line_total = money(menu_item.price * quantity)` with no reference to
-`price_delta` — so a customer's selection has nowhere to go, and the modifier
-catalogue is read-only in practice.
+When this seeder was written the API could not produce those rows. It can now:
+`OrderItemIn.option_ids` carries the answers, `pricing.quote` folds each
+`price_delta` into the line's unit price, and `ordering.place` writes the frozen
+copies. This seeder still does NOT go through that path — it builds historic
+orders by calling `quote()` without modifiers and attaches answers afterwards —
+so everything below about seeded answers still holds.
 
 Seeding the answers anyway is deliberate, and it is a trade worth stating:
 
@@ -29,9 +30,9 @@ That is a fixture, not a claim about how pricing works, and the `price_delta` on
 these rows is set to **0.00** rather than a real surcharge precisely so nobody
 reconciles a receipt against a total and finds it short. Paid add-ons are
 represented in the CATALOGUE (where the price is real and visible in the editor)
-and answered only with free options on orders. When `OrderItemIn` grows
-`option_ids` and `quote()` starts adding `price_delta`, drop
-`FREE_ANSWERS_ONLY` below and let the seeder pick any option.
+and answered only with free options on orders. To seed paid answers, pick
+them BEFORE pricing and pass them to `quote(modifiers=...)`, then drop
+`FREE_ANSWERS_ONLY` — mind the rng draw order (people.build_users comes first).
 """
 
 import logging

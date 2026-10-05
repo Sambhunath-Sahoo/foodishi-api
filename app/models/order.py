@@ -1,5 +1,6 @@
 from datetime import datetime
 from decimal import Decimal
+from typing import TYPE_CHECKING
 
 from sqlalchemy import (
     CheckConstraint,
@@ -18,6 +19,9 @@ from app.db import Base
 from app.models.enums import ActorType, OrderStatus
 from app.models.mixins import TimestampMixin
 from app.models.types import pg_enum
+
+if TYPE_CHECKING:  # pragma: no cover - resolved by the mapper at runtime
+    from app.models.modifiers import OrderItemModifier
 
 
 class Order(Base, TimestampMixin):
@@ -129,6 +133,21 @@ class OrderItem(Base):
     notes: Mapped[str | None] = mapped_column(Text)
 
     order: Mapped["Order"] = relationship("Order", back_populates="items")
+    # The choices the customer made for this line ("Full plate", "No onion"),
+    # frozen at placement. Lazy like Order.items, for the same reason: only the
+    # detail read renders lines, and it asks for these with a chained
+    # selectinload — one query for every line of the order, not one per line.
+    #
+    # Ordered by id because the table carries no sort column of its own and its
+    # option_id may have gone NULL with a deleted choice. Placement inserts the
+    # rows group-by-group in menu order (see services/modifier_choices.py), so id
+    # order IS menu order: "Portion" before "Add-ons", however the menu has been
+    # rearranged since.
+    modifiers: Mapped[list["OrderItemModifier"]] = relationship(
+        "OrderItemModifier",
+        cascade="all, delete-orphan",
+        order_by="OrderItemModifier.id",
+    )
 
 
 class OrderStatusEvent(Base):

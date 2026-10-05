@@ -6,20 +6,23 @@ cancellation and its event and its refund -- so no endpoint can perform half of
 one and leave the other half missing.
 """
 
-from dataclasses import dataclass
+from collections.abc import Sequence
+from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from decimal import Decimal
 
 from sqlalchemy import or_, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.models.catalog import MenuItem
 from app.models.coupon import Coupon, CouponRedemption
 from app.models.enums import ActorType, OrderStatus, RefundReason, RefundStatus
+from app.models.modifiers import OrderItemModifier
 from app.models.order import Order, OrderItem, OrderStatusEvent
 from app.models.payment import Payment, Refund
 from app.repositories import orders as repo
 from app.services import coupons as coupon_service
-from app.services import order_state
+from app.services import modifier_choices, order_state
 from app.services import policy as policy_service
 from app.services.money import money
 from app.services.pricing import PricingError, Quote
@@ -28,6 +31,22 @@ from app.services.pricing import quote as build_quote
 
 def utcnow() -> datetime:
     return datetime.now(UTC)
+
+
+@dataclass(frozen=True)
+class CartLine:
+    """One line as the customer sent it, before anything has been checked.
+
+    Replaces the bare (menu_item_id, quantity, notes) tuples these functions
+    took. A fourth positional field was one too many to read at a call site,
+    and the tuples invited joining lines back up by menu_item_id — which is
+    wrong as soon as one dish appears twice with different answers.
+    """
+
+    menu_item_id: int
+    quantity: int
+    notes: str | None = None
+    option_ids: tuple[int, ...] = field(default_factory=tuple)
 
 
 @dataclass(frozen=True)
@@ -42,7 +61,7 @@ async def price(
     *,
     restaurant_id: int,
     address_id: int,
-    items: list[tuple[int, int]],
+    items: Sequence[CartLine],
     coupon_code: str | None,
     user_id: int,
     placed_at: datetime,
@@ -74,13 +93,15 @@ async def price(
     if address is None or address.user_id != user_id:
         raise PricingError(f"No address with id {address_id}")
 
-    menu_items = await repo.load_menu_items(session, [i for i, _ in items])
+    dish_ids = [line.menu_item_id for line in items]
+    menu_items = await repo.load_menu_items(session, dish_ids)
     resolved = []
-    for menu_item_id, quantity in items:
-        menu_item = menu_items.get(menu_item_id)
+    for line in items:
+        menu_item = menu_items.get(line.menu_item_id)
         if menu_item is None:
-            raise PricingError(f"No menu item with id {menu_item_id}")
-        resolved.append((menu_item, quantity))
+            raise PricingError(f"No menu item with id {line.menu_item_id}")
+        resolved.append((menu_item, line.quantity))
+    modifiers = await _resolve_modifiers(session, items, resolved)
 
     # Priced once without a discount, so the coupon can be judged against the
     # real subtotal rather than a guess.
@@ -91,6 +112,7 @@ async def price(
         latitude=address.latitude,
         longitude=address.longitude,
         placed_at=placed_at,
+        modifiers=modifiers,
     )
 
     coupon, discount, message = None, Decimal("0"), None
@@ -112,8 +134,31 @@ async def price(
         longitude=address.longitude,
         discount=discount,
         placed_at=placed_at,
+        modifiers=modifiers,
     )
     return PricedOrder(quote=final, coupon=coupon, coupon_message=message)
+
+
+async def _resolve_modifiers(
+    session: AsyncSession,
+    items: Sequence[CartLine],
+    resolved: Sequence[tuple[MenuItem, int]],
+) -> list[tuple[modifier_choices.ChosenModifier, ...]]:
+    """Each line's answers, validated against its own dish, in line order.
+
+    The groups are loaded only when some line carries answers, so a cart with
+    no choices costs no extra query — which is every cart the customer app
+    sends today.
+    """
+    if not any(line.option_ids for line in items):
+        return [() for _ in items]
+    groups = await repo.load_modifier_groups(
+        session, sorted({line.menu_item_id for line in items if line.option_ids})
+    )
+    return [
+        modifier_choices.resolve(menu_item, line.option_ids, groups.get(menu_item.id, []))
+        for line, (menu_item, _) in zip(items, resolved, strict=True)
+    ]
 
 
 async def _apply_coupon(
@@ -151,7 +196,7 @@ async def place(
     user_id: int,
     restaurant_id: int,
     address_id: int,
-    items: list[tuple[int, int, str | None]],
+    items: Sequence[CartLine],
     coupon_code: str | None,
     idempotency_key: str | None,
     # Keyword-only with a default so every existing caller keeps working. It
@@ -163,7 +208,7 @@ async def place(
         session,
         restaurant_id=restaurant_id,
         address_id=address_id,
-        items=[(i, q) for i, q, _ in items],
+        items=items,
         coupon_code=coupon_code,
         user_id=user_id,
         placed_at=placed_at,
@@ -204,7 +249,10 @@ async def place(
     session.add(order)
     await session.flush()
 
-    notes = {menu_item_id: note for menu_item_id, _, note in items}
+    # Paired with the request by POSITION, not by menu_item_id. quote() keeps
+    # line order, and the same dish can be two lines — "1 x Half plate" and
+    # "1 x Full plate" Masala Chai — whose notes and answers a dish-id lookup
+    # would collapse onto one of them.
     session.add_all(
         OrderItem(
             order_id=order.id,
@@ -213,9 +261,20 @@ async def place(
             unit_price=line.unit_price,
             quantity=line.quantity,
             line_total=line.line_total,
-            notes=notes.get(line.menu_item_id),
+            notes=sent.notes,
+            # Frozen copies, written in menu order so OrderItem.modifiers reads
+            # them back in that order by id. Cascades in with the line.
+            modifiers=[
+                OrderItemModifier(
+                    option_id=chosen.option_id,
+                    group_name=chosen.group_name,
+                    option_name=chosen.option_name,
+                    price_delta=chosen.price_delta,
+                )
+                for chosen in line.modifiers
+            ],
         )
-        for line in q.lines
+        for line, sent in zip(q.lines, items, strict=True)
     )
     session.add(
         OrderStatusEvent(
