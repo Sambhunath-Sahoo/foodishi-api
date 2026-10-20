@@ -1,0 +1,15 @@
+# Secrets: passed at runtime with --env-file, never baked into the image
+.env
+.env.*
+
+# Local tooling and build output
+.venv
+.git
+.ruff_cache
+__pycache__
+*.py[oc]
+
+# Not needed to run the API
+docs
+migrations
+README.md
